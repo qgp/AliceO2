@@ -1,22 +1,8 @@
 var searchData=
 [
-  ['scelsius',['sCelsius',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#adf4964d3bf8536a0bd39ac823ff300fa',1,'AliceO2::ITS::V11Geometry']]],
-  ['scm',['sCm',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#afb1cd1265bfaf62305c36735b237108c',1,'AliceO2::ITS::V11Geometry']]],
-  ['sdegree',['sDegree',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#aae9153c11813df66aa03ac425e3763ad',1,'AliceO2::ITS::V11Geometry']]],
-  ['sev',['sEV',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#a9d7ab974a29f410789b3399398f07285',1,'AliceO2::ITS::V11Geometry']]],
-  ['sgcm3',['sGCm3',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#a2288560ea26cf76b452f5d5fcc9271fe',1,'AliceO2::ITS::V11Geometry']]],
-  ['sgev',['sGEV',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#ad3fd48bde89fe57e5facec1769fa8924',1,'AliceO2::ITS::V11Geometry']]],
-  ['skev',['sKEV',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#a11a7f8357f96461719b0624ec4956b8a',1,'AliceO2::ITS::V11Geometry']]],
-  ['skgdm3',['sKgdm3',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#ac492a36f5d434d11f89cf32dabd4809d',1,'AliceO2::ITS::V11Geometry']]],
-  ['skgm3',['sKgm3',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#a8d90e5796ba218d0d19b2dc400c14bb6',1,'AliceO2::ITS::V11Geometry']]],
-  ['skpascal',['sKPascal',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#a64dfdaa08caa36ab18634477eb3969e1',1,'AliceO2::ITS::V11Geometry']]],
-  ['smev',['sMEV',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#af36eec056b9e67b9523cf2d0c740ad4b',1,'AliceO2::ITS::V11Geometry']]],
-  ['smicron',['sMicron',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#a971f523f51cf57098888b0e8867f8b55',1,'AliceO2::ITS::V11Geometry']]],
-  ['sminimumprecision',['sMinimumPrecision',['../class_alice_o2_1_1_math_utils_1_1_chebyshev3_d.html#a04a5755e8cb3e28aa7788e481f17df08',1,'AliceO2::MathUtils::Chebyshev3D']]],
-  ['smm',['sMm',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#a2dbce25c5c9fb367e718a5d535c63ab2',1,'AliceO2::ITS::V11Geometry']]],
-  ['spascal',['sPascal',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#aab4a62d4c90ec2ab9e41099f49bc2652',1,'AliceO2::ITS::V11Geometry']]],
-  ['spolarityconvention',['sPolarityConvention',['../class_alice_o2_1_1_field_1_1_magnetic_field.html#af188c298cb668f7c1b03d4e804438e73',1,'AliceO2::Field::MagneticField']]],
-  ['sradian',['sRadian',['../class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#adbfc046886345eabdcaae2dfe97923fc',1,'AliceO2::ITS::V11Geometry']]],
-  ['ssegmentationslistname',['sSegmentationsListName',['../class_alice_o2_1_1_i_t_s_1_1_upgrade_segmentation_pixel.html#a204177c250ebc92595af5b6ad11c3334',1,'AliceO2::ITS::UpgradeSegmentationPixel']]],
-  ['ssolenoidtodipolez',['sSolenoidToDipoleZ',['../class_alice_o2_1_1_field_1_1_magnetic_field.html#a5ecd015fe7ba02953971808012a972df',1,'AliceO2::Field::MagneticField']]]
+  ['end',['end',['../d2/d9a/structAliceO2_1_1Devices_1_1timeframeDuration.html#a2c51ec0a7e7309c10d644bc0daa8adc1',1,'AliceO2::Devices::timeframeDuration']]],
+  ['endtime',['endTime',['../d2/d7e/structAliceO2_1_1Devices_1_1timeframeBuffer.html#abf5e05e1aca09ac31e6a4d84cfff099d',1,'AliceO2::Devices::timeframeBuffer']]],
+  ['epn',['epn',['../de/d52/runEPN_8cxx.html#a692bccf059873db42c1b49d70f10171a',1,'epn():&#160;runEPN.cxx'],['../dd/d10/runEPN__M_8cxx.html#a9c96ca2ea69c7110c4db831008958f0b',1,'epn():&#160;runEPN_M.cxx'],['../d0/d55/runEPNReceiver_8cxx.html#a5d42e04015f6e6be52b96cbe54299142',1,'epn():&#160;runEPNReceiver.cxx'],['../da/db2/2Prototype_2runEPNReceiver_8cxx.html#a5d42e04015f6e6be52b96cbe54299142',1,'epn():&#160;runEPNReceiver.cxx'],['../d2/dcc/runEPN__dynamic_8cxx.html#a692bccf059873db42c1b49d70f10171a',1,'epn():&#160;runEPN_dynamic.cxx']]],
+  ['eventrate',['eventRate',['../d7/def/structDeviceOptions.html#a660f2547d13b9f23e594ead733d56cf6',1,'DeviceOptions']]],
+  ['eventsize',['eventSize',['../d7/def/structDeviceOptions.html#a8bedc3ef7033daef4fb61922773c97fb',1,'DeviceOptions']]]
 ];

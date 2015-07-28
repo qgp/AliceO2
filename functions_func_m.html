@@ -45,7 +45,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -81,6 +80,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
+      <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -99,6 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func_n.html#index_n"><span>n</span></a></li>
       <li><a href="functions_func_o.html#index_o"><span>o</span></a></li>
       <li><a href="functions_func_p.html#index_p"><span>p</span></a></li>
+      <li><a href="functions_func_q.html#index_q"><span>q</span></a></li>
       <li><a href="functions_func_r.html#index_r"><span>r</span></a></li>
       <li><a href="functions_func_s.html#index_s"><span>s</span></a></li>
       <li><a href="functions_func_t.html#index_t"><span>t</span></a></li>
@@ -131,7 +134,7 @@ $(document).ready(function(){initNavTree('functions_func_m.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Modules</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -144,26 +147,56 @@ $(document).ready(function(){initNavTree('functions_func_m.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>MachineField()
+: <a class="el" href="d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#a6a3d05b64b3ff4246d0b1d336e2a6c72">AliceO2::Field::MagneticField</a>
+</li>
+<li>Magnet()
+: <a class="el" href="d0/d2e/classAliceO2_1_1Passive_1_1Magnet.html#a3a3c9a557d363d2f164cfbb265835cca">AliceO2::Passive::Magnet</a>
+</li>
 <li>MagneticField()
-: <a class="el" href="class_alice_o2_1_1_field_1_1_magnetic_field.html#ad10a16d53feef92eb78ed4789ba6fc0f">AliceO2::Field::MagneticField</a>
+: <a class="el" href="d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#ad10a16d53feef92eb78ed4789ba6fc0f">AliceO2::Field::MagneticField</a>
 </li>
 <li>MagneticWrapperChebyshev()
-: <a class="el" href="class_alice_o2_1_1_field_1_1_magnetic_wrapper_chebyshev.html#a795621e2403ca7ed79722c560bc3d4b3">AliceO2::Field::MagneticWrapperChebyshev</a>
+: <a class="el" href="d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a795621e2403ca7ed79722c560bc3d4b3">AliceO2::Field::MagneticWrapperChebyshev</a>
 </li>
 <li>makeFigure1()
-: <a class="el" href="class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html#a704932d687e4015e66d26becd466eefe">AliceO2::ITS::V11Geometry</a>
+: <a class="el" href="dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a704932d687e4015e66d26becd466eefe">AliceO2::ITS::V11Geometry</a>
+</li>
+<li>makeFromString()
+: <a class="el" href="df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#a874173237d827f0439f2a46edd4814a9">AliceO2::CDB::ConditionId</a>
+</li>
+<li>Manager()
+: <a class="el" href="db/dea/classAliceO2_1_1CDB_1_1Manager.html#a1658ff9f18e38ccd9cb8b0b371b9c20b">AliceO2::CDB::Manager</a>
+</li>
+<li>mapToExternal()
+: <a class="el" href="d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html#a2eede94ee5d7de2ff21c228b08929568">AliceO2::MathUtils::Chebyshev3D</a>
 </li>
 <li>mapToInternal()
-: <a class="el" href="class_alice_o2_1_1_math_utils_1_1_chebyshev3_d.html#a84ecab5cdb300da5f1ec7625887c5c86">AliceO2::MathUtils::Chebyshev3D</a>
+: <a class="el" href="d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html#a834f5c9b2bb37492dc4e603657e8e759">AliceO2::MathUtils::Chebyshev3D</a>
+</li>
+<li>Material()
+: <a class="el" href="d3/d5c/classAliceO2_1_1Base_1_1Detector.html#a6d8dbd93ae070d59e134008397f8d5db">AliceO2::Base::Detector</a>
 </li>
 <li>Matrix()
-: <a class="el" href="class_alice_o2_1_1_base_1_1_detector.html#ac9d86b97dd20e2778876cfb70259e362">AliceO2::Base::Detector</a>
+: <a class="el" href="d3/d5c/classAliceO2_1_1Base_1_1Detector.html#ac9d86b97dd20e2778876cfb70259e362">AliceO2::Base::Detector</a>
+</li>
+<li>Max()
+: <a class="el" href="d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#a7cec1e379755df7c0dd1c2a975e1fad2">AliceO2::Field::MagneticField</a>
 </li>
 <li>MCTrack()
-: <a class="el" href="class_m_c_track.html#a1a2ed104ebe1a4d772129405be8b2a8d">MCTrack</a>
+: <a class="el" href="d9/d12/classMCTrack.html#a5f5ed29b12ebe6e72313ef565492b19a">MCTrack</a>
+</li>
+<li>Medium()
+: <a class="el" href="d3/d5c/classAliceO2_1_1Base_1_1Detector.html#a7ec7fc6114005a71c1c76be541b75889">AliceO2::Base::Detector</a>
 </li>
 <li>MessageFormat()
-: <a class="el" href="class_alice_o2_1_1_alice_h_l_t_1_1_message_format.html#a73f254207f45e88091d3a50b0480a227">AliceO2::AliceHLT::MessageFormat</a>
+: <a class="el" href="d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a73f254207f45e88091d3a50b0480a227">AliceO2::AliceHLT::MessageFormat</a>
+</li>
+<li>MisalignmentParameter()
+: <a class="el" href="db/da0/classAliceO2_1_1ITS_1_1MisalignmentParameter.html#a556c3210c99764c315aeb3528776c2a7">AliceO2::ITS::MisalignmentParameter</a>
+</li>
+<li>Mixture()
+: <a class="el" href="d3/d5c/classAliceO2_1_1Base_1_1Detector.html#a3fd00d90f753f85f98649b9d54c2b0db">AliceO2::Base::Detector</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -171,7 +204,7 @@ $(document).ready(function(){initNavTree('functions_func_m.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Feb 17 2015 10:36:00 for AliceO2 by
+    <li class="footer">Generated on Tue Jul 28 2015 18:05:23 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

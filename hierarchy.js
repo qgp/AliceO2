@@ -1,141 +1,152 @@
 var hierarchy =
 [
-    [ "AliHLTAnalysisEnvironment", "struct_ali_h_l_t_analysis_environment.html", null ],
-    [ "AliHLTComponentBlockData", "struct_ali_h_l_t_component_block_data.html", null ],
-    [ "AliHLTComponentDataType", "struct_ali_h_l_t_component_data_type.html", null ],
-    [ "AliHLTComponentEnvironment", "struct_ali_h_l_t_component_environment.html", null ],
-    [ "AliHLTComponentEventData", "struct_ali_h_l_t_component_event_data.html", null ],
-    [ "AliHLTComponentEventDoneData", "struct_ali_h_l_t_component_event_done_data.html", null ],
-    [ "AliHLTComponentShmData", "struct_ali_h_l_t_component_shm_data.html", null ],
-    [ "AliHLTComponentStatistics", "struct_ali_h_l_t_component_statistics.html", null ],
-    [ "AliHLTComponentTableEntry", "struct_ali_h_l_t_component_table_entry.html", null ],
-    [ "AliHLTComponentTriggerData", "struct_ali_h_l_t_component_trigger_data.html", null ],
-    [ "AliHLTEventDDLV0", "struct_ali_h_l_t_event_d_d_l_v0.html", null ],
-    [ "AliHLTEventDDLV1", "struct_ali_h_l_t_event_d_d_l_v1.html", null ],
-    [ "AliHLTEventTriggerData", "struct_ali_h_l_t_event_trigger_data.html", null ],
-    [ "AliHLTFXSHeader", "struct_ali_h_l_t_f_x_s_header.html", null ],
-    [ "AliHLTHOMERBlockDescriptor", "class_ali_h_l_t_h_o_m_e_r_block_descriptor.html", null ],
-    [ "AliHLTHOMERWriter::AliHLTHOMERWriterAlignment16TestStructure", "struct_ali_h_l_t_h_o_m_e_r_writer_1_1_ali_h_l_t_h_o_m_e_r_writer_alignment16_test_structure.html", null ],
-    [ "AliHLTHOMERWriter::AliHLTHOMERWriterAlignment32TestStructure", "struct_ali_h_l_t_h_o_m_e_r_writer_1_1_ali_h_l_t_h_o_m_e_r_writer_alignment32_test_structure.html", null ],
-    [ "AliHLTHOMERWriter::AliHLTHOMERWriterAlignment64TestStructure", "struct_ali_h_l_t_h_o_m_e_r_writer_1_1_ali_h_l_t_h_o_m_e_r_writer_alignment64_test_structure.html", null ],
-    [ "AliHLTHOMERWriter::AliHLTHOMERWriterAlignment8TestStructure", "struct_ali_h_l_t_h_o_m_e_r_writer_1_1_ali_h_l_t_h_o_m_e_r_writer_alignment8_test_structure.html", null ],
-    [ "AliHLTHOMERWriter::AliHLTHOMERWriterAlignmentDoubleTestStructure", "struct_ali_h_l_t_h_o_m_e_r_writer_1_1_ali_h_l_t_h_o_m_e_r_writer_alignment_double_test_structure.html", null ],
-    [ "AliHLTHOMERWriter::AliHLTHOMERWriterAlignmentFloatTestStructure", "struct_ali_h_l_t_h_o_m_e_r_writer_1_1_ali_h_l_t_h_o_m_e_r_writer_alignment_float_test_structure.html", null ],
-    [ "AliHLTMonitoringReader", "class_ali_h_l_t_monitoring_reader.html", [
-      [ "AliHLTHOMERReader", "class_ali_h_l_t_h_o_m_e_r_reader.html", null ]
+    [ "AliHLTAnalysisEnvironment", "db/d77/structAliHLTAnalysisEnvironment.html", null ],
+    [ "AliHLTComponentBlockData", "d7/d8d/structAliHLTComponentBlockData.html", null ],
+    [ "AliHLTComponentDataType", "df/dcd/structAliHLTComponentDataType.html", null ],
+    [ "AliHLTComponentEnvironment", "de/d45/structAliHLTComponentEnvironment.html", null ],
+    [ "AliHLTComponentEventData", "dd/d2f/structAliHLTComponentEventData.html", null ],
+    [ "AliHLTComponentEventDoneData", "d8/d91/structAliHLTComponentEventDoneData.html", null ],
+    [ "AliHLTComponentShmData", "d0/d30/structAliHLTComponentShmData.html", null ],
+    [ "AliHLTComponentStatistics", "df/de7/structAliHLTComponentStatistics.html", null ],
+    [ "AliHLTComponentTableEntry", "dd/dd2/structAliHLTComponentTableEntry.html", null ],
+    [ "AliHLTComponentTriggerData", "df/da3/structAliHLTComponentTriggerData.html", null ],
+    [ "AliHLTEventDDLV0", "d2/d7b/structAliHLTEventDDLV0.html", null ],
+    [ "AliHLTEventDDLV1", "de/dd6/structAliHLTEventDDLV1.html", null ],
+    [ "AliHLTEventTriggerData", "d4/d8d/structAliHLTEventTriggerData.html", null ],
+    [ "AliHLTFXSHeader", "d2/d11/structAliHLTFXSHeader.html", null ],
+    [ "AliHLTHOMERBlockDescriptor", "d5/dd4/classAliHLTHOMERBlockDescriptor.html", null ],
+    [ "AliHLTHOMERWriter::AliHLTHOMERWriterAlignment16TestStructure", "d7/d12/structAliHLTHOMERWriter_1_1AliHLTHOMERWriterAlignment16TestStructure.html", null ],
+    [ "AliHLTHOMERWriter::AliHLTHOMERWriterAlignment32TestStructure", "d5/d5a/structAliHLTHOMERWriter_1_1AliHLTHOMERWriterAlignment32TestStructure.html", null ],
+    [ "AliHLTHOMERWriter::AliHLTHOMERWriterAlignment64TestStructure", "d5/d2f/structAliHLTHOMERWriter_1_1AliHLTHOMERWriterAlignment64TestStructure.html", null ],
+    [ "AliHLTHOMERWriter::AliHLTHOMERWriterAlignment8TestStructure", "d9/d29/structAliHLTHOMERWriter_1_1AliHLTHOMERWriterAlignment8TestStructure.html", null ],
+    [ "AliHLTHOMERWriter::AliHLTHOMERWriterAlignmentDoubleTestStructure", "d7/d85/structAliHLTHOMERWriter_1_1AliHLTHOMERWriterAlignmentDoubleTestStructure.html", null ],
+    [ "AliHLTHOMERWriter::AliHLTHOMERWriterAlignmentFloatTestStructure", "d3/d3e/structAliHLTHOMERWriter_1_1AliHLTHOMERWriterAlignmentFloatTestStructure.html", null ],
+    [ "AliHLTMonitoringReader", "db/daf/classAliHLTMonitoringReader.html", [
+      [ "AliHLTHOMERReader", "d5/d54/classAliHLTHOMERReader.html", null ]
     ] ],
-    [ "AliHLTMonitoringWriter", "class_ali_h_l_t_monitoring_writer.html", [
-      [ "AliHLTHOMERWriter", "class_ali_h_l_t_h_o_m_e_r_writer.html", null ]
+    [ "AliHLTMonitoringWriter", "df/d17/classAliHLTMonitoringWriter.html", [
+      [ "AliHLTHOMERWriter", "dd/d46/classAliHLTHOMERWriter.html", null ]
     ] ],
-    [ "AliHLTRunDesc", "struct_ali_h_l_t_run_desc.html", null ],
-    [ "AliceO2::AliceHLT::MessageFormat::BufferDesc_t", "struct_alice_o2_1_1_alice_h_l_t_1_1_message_format_1_1_buffer_desc__t.html", null ],
-    [ "ALICE::HLT::Component", "class_a_l_i_c_e_1_1_h_l_t_1_1_component.html", null ],
-    [ "Content", "struct_content.html", null ],
-    [ "AliHLTHOMERReader::DataBlock", "struct_ali_h_l_t_h_o_m_e_r_reader_1_1_data_block.html", null ],
-    [ "AliHLTHOMERReader::DataSource", "struct_ali_h_l_t_h_o_m_e_r_reader_1_1_data_source.html", null ],
-    [ "DeviceOptions", "struct_device_options.html", null ],
-    [ "f2eHeader", "structf2e_header.html", null ],
+    [ "AliHLTRunDesc", "d7/d1a/structAliHLTRunDesc.html", null ],
+    [ "AliceO2::AliceHLT::MessageFormat::BufferDesc_t", "db/dd8/structAliceO2_1_1AliceHLT_1_1MessageFormat_1_1BufferDesc__t.html", null ],
+    [ "ALICE::HLT::Component", "d2/de2/classALICE_1_1HLT_1_1Component.html", null ],
+    [ "Content", "d0/dc6/structContent.html", null ],
+    [ "AliHLTHOMERReader::DataBlock", "da/d00/structAliHLTHOMERReader_1_1DataBlock.html", null ],
+    [ "AliHLTHOMERReader::DataSource", "dc/d1c/structAliHLTHOMERReader_1_1DataSource.html", null ],
+    [ "DeviceOptions", "d7/def/structDeviceOptions.html", null ],
+    [ "AliceO2::ITS::DigitContainer", "db/d18/classAliceO2_1_1ITS_1_1DigitContainer.html", null ],
+    [ "AliceO2::ITS::DigitLayer", "d7/d56/classAliceO2_1_1ITS_1_1DigitLayer.html", null ],
+    [ "AliceO2::ITS::DigitStave", "db/d02/classAliceO2_1_1ITS_1_1DigitStave.html", null ],
+    [ "f2eHeader", "d9/d55/structf2eHeader.html", null ],
     [ "FairContFact", null, [
-      [ "AliceO2::ITS::ContainerFactory", "class_alice_o2_1_1_i_t_s_1_1_container_factory.html", null ],
-      [ "AliceO2::Passive::PassiveContFact", "class_alice_o2_1_1_passive_1_1_passive_cont_fact.html", null ],
-      [ "AliceO2::TPC::ContainerFactory", "class_alice_o2_1_1_t_p_c_1_1_container_factory.html", null ]
+      [ "AliceO2::ITS::ContainerFactory", "db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html", null ],
+      [ "AliceO2::Passive::PassiveContFact", "d2/db3/classAliceO2_1_1Passive_1_1PassiveContFact.html", null ],
+      [ "AliceO2::TPC::ContainerFactory", "d4/d69/classAliceO2_1_1TPC_1_1ContainerFactory.html", null ]
     ] ],
     [ "FairDetector", null, [
-      [ "AliceO2::Base::Detector", "class_alice_o2_1_1_base_1_1_detector.html", [
-        [ "AliceO2::ITS::Detector", "class_alice_o2_1_1_i_t_s_1_1_detector.html", null ],
-        [ "AliceO2::TPC::Detector", "class_alice_o2_1_1_t_p_c_1_1_detector.html", null ]
+      [ "AliceO2::Base::Detector", "d3/d5c/classAliceO2_1_1Base_1_1Detector.html", [
+        [ "AliceO2::ITS::Detector", "d9/d51/classAliceO2_1_1ITS_1_1Detector.html", null ],
+        [ "AliceO2::TPC::Detector", "d1/d0c/classAliceO2_1_1TPC_1_1Detector.html", null ]
       ] ]
     ] ],
     [ "FairGenerator", null, [
-      [ "Pythia6Generator", "class_pythia6_generator.html", null ],
-      [ "Pythia8Generator", "class_pythia8_generator.html", null ]
+      [ "Pythia6Generator", "d9/d2a/classPythia6Generator.html", null ],
+      [ "Pythia8Generator", "de/d55/classPythia8Generator.html", null ]
     ] ],
     [ "FairGenericStack", null, [
-      [ "AliceO2::Data::Stack", "class_alice_o2_1_1_data_1_1_stack.html", null ]
+      [ "AliceO2::Data::Stack", "d8/d98/classAliceO2_1_1Data_1_1Stack.html", null ]
     ] ],
     [ "FairGeoSet", null, [
-      [ "AliceO2::Passive::GeoCave", "class_alice_o2_1_1_passive_1_1_geo_cave.html", null ]
+      [ "AliceO2::Passive::GeoCave", "dc/d29/classAliceO2_1_1Passive_1_1GeoCave.html", null ]
     ] ],
     [ "FairMCPoint", null, [
-      [ "AliceO2::ITS::Point", "class_alice_o2_1_1_i_t_s_1_1_point.html", null ],
-      [ "AliceO2::TPC::Point", "class_alice_o2_1_1_t_p_c_1_1_point.html", null ]
+      [ "AliceO2::ITS::Point", "df/d7a/classAliceO2_1_1ITS_1_1Point.html", null ],
+      [ "AliceO2::TPC::Point", "d7/d7f/classAliceO2_1_1TPC_1_1Point.html", null ]
     ] ],
     [ "FairModule", null, [
-      [ "AliceO2::Passive::Cave", "class_alice_o2_1_1_passive_1_1_cave.html", null ],
-      [ "AliceO2::Passive::Magnet", "class_alice_o2_1_1_passive_1_1_magnet.html", null ],
-      [ "AliceO2::Passive::Pipe", "class_alice_o2_1_1_passive_1_1_pipe.html", null ]
+      [ "AliceO2::Passive::Cave", "d7/d47/classAliceO2_1_1Passive_1_1Cave.html", null ],
+      [ "AliceO2::Passive::Magnet", "d0/d2e/classAliceO2_1_1Passive_1_1Magnet.html", null ],
+      [ "AliceO2::Passive::Pipe", "d2/d4d/classAliceO2_1_1Passive_1_1Pipe.html", null ]
     ] ],
     [ "FairMQDevice", null, [
-      [ "ALICE::HLT::WrapperDevice", "class_a_l_i_c_e_1_1_h_l_t_1_1_wrapper_device.html", null ],
-      [ "AliceO2::Devices::EPNex", "class_alice_o2_1_1_devices_1_1_e_p_nex.html", null ],
-      [ "AliceO2::Devices::FLPex", "class_alice_o2_1_1_devices_1_1_f_l_pex.html", null ],
-      [ "AliceO2::Devices::FLPexSampler", "class_alice_o2_1_1_devices_1_1_f_l_pex_sampler.html", null ],
-      [ "AliceO2::Devices::FrameBuilder", "class_alice_o2_1_1_devices_1_1_frame_builder.html", null ],
-      [ "O2EPNex", "class_o2_e_p_nex.html", null ],
-      [ "O2EPNex", "class_o2_e_p_nex.html", null ],
-      [ "O2EpnMerger", "class_o2_epn_merger.html", null ],
-      [ "O2FLPex", "class_o2_f_l_pex.html", null ],
-      [ "O2FLPex", "class_o2_f_l_pex.html", null ],
-      [ "O2Merger", "class_o2_merger.html", null ],
-      [ "O2Proxy", "class_o2_proxy.html", null ],
-      [ "RoundtripClient", "class_roundtrip_client.html", null ],
-      [ "RoundtripServer", "class_roundtrip_server.html", null ]
+      [ "ALICE::HLT::EventSampler", "d2/dd9/classALICE_1_1HLT_1_1EventSampler.html", null ],
+      [ "ALICE::HLT::WrapperDevice", "d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html", null ],
+      [ "AliceO2::Devices::EPNReceiver", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html", null ],
+      [ "AliceO2::Devices::FLPSender", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html", null ],
+      [ "AliceO2::Devices::FLPSyncSampler", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html", null ],
+      [ "AliceO2::Devices::FrameBuilder", "d0/d4f/classAliceO2_1_1Devices_1_1FrameBuilder.html", null ],
+      [ "O2EPNex", "d3/d79/classO2EPNex.html", null ],
+      [ "O2EPNex", "d3/d79/classO2EPNex.html", null ],
+      [ "O2EpnMerger", "d0/d48/classO2EpnMerger.html", null ],
+      [ "O2FLPex", "d4/d82/classO2FLPex.html", null ],
+      [ "O2FLPex", "d4/d82/classO2FLPex.html", null ],
+      [ "O2Merger", "db/daa/classO2Merger.html", null ],
+      [ "O2Proxy", "d9/d07/classO2Proxy.html", null ],
+      [ "RoundtripClient", "d4/dec/classRoundtripClient.html", null ],
+      [ "RoundtripServer", "d5/d4e/classRoundtripServer.html", null ]
     ] ],
     [ "FairParGenericSet", null, [
-      [ "AliceO2::ITS::MisalignmentParameter", "class_alice_o2_1_1_i_t_s_1_1_misalignment_parameter.html", null ]
+      [ "AliceO2::ITS::MisalignmentParameter", "db/da0/classAliceO2_1_1ITS_1_1MisalignmentParameter.html", null ]
     ] ],
-    [ "ALICE::HLT::HOMERFactory", "class_a_l_i_c_e_1_1_h_l_t_1_1_h_o_m_e_r_factory.html", null ],
-    [ "AliceO2::AliceHLT::MessageFormat", "class_alice_o2_1_1_alice_h_l_t_1_1_message_format.html", null ],
+    [ "FairTask", null, [
+      [ "AliceO2::ITS::DigitizerTask", "d0/dcc/classAliceO2_1_1ITS_1_1DigitizerTask.html", null ]
+    ] ],
+    [ "FairTimeStamp", null, [
+      [ "AliceO2::ITS::Digit", "db/d9e/classAliceO2_1_1ITS_1_1Digit.html", null ]
+    ] ],
+    [ "ALICE::HLT::HOMERFactory", "d5/de6/classALICE_1_1HLT_1_1HOMERFactory.html", null ],
+    [ "AliceO2::AliceHLT::MessageFormat", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html", null ],
     [ "RndmEngine", null, [
-      [ "PyTr1Rng", "class_py_tr1_rng.html", null ],
-      [ "PyTr3Rng", "class_py_tr3_rng.html", null ]
+      [ "PyTr1Rng", "d5/d4d/classPyTr1Rng.html", null ],
+      [ "PyTr3Rng", "dd/d80/classPyTr3Rng.html", null ]
     ] ],
-    [ "SocketProperties_t", "struct_socket_properties__t.html", null ],
-    [ "ALICE::HLT::SystemInterface", "class_a_l_i_c_e_1_1_h_l_t_1_1_system_interface.html", null ],
-    [ "AliHLTHOMERWriter::TBlockData", "struct_ali_h_l_t_h_o_m_e_r_writer_1_1_t_block_data.html", null ],
-    [ "AliceO2::Devices::timeframeBuffer", "struct_alice_o2_1_1_devices_1_1timeframe_buffer.html", null ],
-    [ "AliceO2::Devices::timeframeDuration", "struct_alice_o2_1_1_devices_1_1timeframe_duration.html", null ],
+    [ "SocketProperties_t", "dc/d2f/structSocketProperties__t.html", null ],
+    [ "ALICE::HLT::SystemInterface", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html", null ],
+    [ "AliHLTHOMERWriter::TBlockData", "d8/de3/structAliHLTHOMERWriter_1_1TBlockData.html", null ],
+    [ "AliceO2::Devices::timeframeBuffer", "d2/d7e/structAliceO2_1_1Devices_1_1timeframeBuffer.html", null ],
+    [ "AliceO2::Devices::timeframeDuration", "d2/d9a/structAliceO2_1_1Devices_1_1timeframeDuration.html", null ],
     [ "TNamed", null, [
-      [ "AliceO2::Field::MagneticWrapperChebyshev", "class_alice_o2_1_1_field_1_1_magnetic_wrapper_chebyshev.html", null ],
-      [ "AliceO2::MathUtils::Chebyshev3D", "class_alice_o2_1_1_math_utils_1_1_chebyshev3_d.html", null ],
-      [ "AliceO2::MathUtils::Chebyshev3DCalc", "class_alice_o2_1_1_math_utils_1_1_chebyshev3_d_calc.html", null ]
+      [ "AliceO2::Field::MagneticWrapperChebyshev", "d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html", null ],
+      [ "AliceO2::MathUtils::Chebyshev3D", "d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html", null ],
+      [ "AliceO2::MathUtils::Chebyshev3DCalc", "d6/db8/classAliceO2_1_1MathUtils_1_1Chebyshev3DCalc.html", null ]
     ] ],
     [ "TObject", null, [
-      [ "AliceO2::Base::TrackReference", "class_alice_o2_1_1_base_1_1_track_reference.html", null ],
-      [ "AliceO2::CDB::Condition", "class_alice_o2_1_1_c_d_b_1_1_condition.html", null ],
-      [ "AliceO2::CDB::ConditionId", "class_alice_o2_1_1_c_d_b_1_1_condition_id.html", null ],
-      [ "AliceO2::CDB::ConditionMetaData", "class_alice_o2_1_1_c_d_b_1_1_condition_meta_data.html", null ],
-      [ "AliceO2::CDB::IdPath", "class_alice_o2_1_1_c_d_b_1_1_id_path.html", null ],
-      [ "AliceO2::CDB::IdRunRange", "class_alice_o2_1_1_c_d_b_1_1_id_run_range.html", null ],
-      [ "AliceO2::CDB::Manager", "class_alice_o2_1_1_c_d_b_1_1_manager.html", null ],
-      [ "AliceO2::CDB::Storage", "class_alice_o2_1_1_c_d_b_1_1_storage.html", [
-        [ "AliceO2::CDB::FileStorage", "class_alice_o2_1_1_c_d_b_1_1_file_storage.html", null ],
-        [ "AliceO2::CDB::GridStorage", "class_alice_o2_1_1_c_d_b_1_1_grid_storage.html", null ],
-        [ "AliceO2::CDB::LocalStorage", "class_alice_o2_1_1_c_d_b_1_1_local_storage.html", null ]
+      [ "AliceO2::Base::TrackReference", "da/d18/classAliceO2_1_1Base_1_1TrackReference.html", null ],
+      [ "AliceO2::CDB::Condition", "df/d2c/classAliceO2_1_1CDB_1_1Condition.html", null ],
+      [ "AliceO2::CDB::ConditionId", "df/de3/classAliceO2_1_1CDB_1_1ConditionId.html", null ],
+      [ "AliceO2::CDB::ConditionMetaData", "d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html", null ],
+      [ "AliceO2::CDB::IdPath", "d0/d27/classAliceO2_1_1CDB_1_1IdPath.html", null ],
+      [ "AliceO2::CDB::IdRunRange", "d6/d60/classAliceO2_1_1CDB_1_1IdRunRange.html", null ],
+      [ "AliceO2::CDB::Manager", "db/dea/classAliceO2_1_1CDB_1_1Manager.html", null ],
+      [ "AliceO2::CDB::Storage", "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html", [
+        [ "AliceO2::CDB::FileStorage", "d4/d01/classAliceO2_1_1CDB_1_1FileStorage.html", null ],
+        [ "AliceO2::CDB::GridStorage", "d2/dee/classAliceO2_1_1CDB_1_1GridStorage.html", null ],
+        [ "AliceO2::CDB::LocalStorage", "d7/ddc/classAliceO2_1_1CDB_1_1LocalStorage.html", null ]
       ] ],
-      [ "AliceO2::CDB::StorageFactory", "class_alice_o2_1_1_c_d_b_1_1_storage_factory.html", [
-        [ "AliceO2::CDB::FileStorageFactory", "class_alice_o2_1_1_c_d_b_1_1_file_storage_factory.html", null ],
-        [ "AliceO2::CDB::GridStorageFactory", "class_alice_o2_1_1_c_d_b_1_1_grid_storage_factory.html", null ],
-        [ "AliceO2::CDB::LocalStorageFactory", "class_alice_o2_1_1_c_d_b_1_1_local_storage_factory.html", null ]
+      [ "AliceO2::CDB::StorageFactory", "d0/d96/classAliceO2_1_1CDB_1_1StorageFactory.html", [
+        [ "AliceO2::CDB::FileStorageFactory", "d4/dc7/classAliceO2_1_1CDB_1_1FileStorageFactory.html", null ],
+        [ "AliceO2::CDB::GridStorageFactory", "dc/dbf/classAliceO2_1_1CDB_1_1GridStorageFactory.html", null ],
+        [ "AliceO2::CDB::LocalStorageFactory", "d9/d75/classAliceO2_1_1CDB_1_1LocalStorageFactory.html", null ]
       ] ],
-      [ "AliceO2::CDB::StorageParameters", "class_alice_o2_1_1_c_d_b_1_1_storage_parameters.html", [
-        [ "AliceO2::CDB::FileStorageParameters", "class_alice_o2_1_1_c_d_b_1_1_file_storage_parameters.html", null ],
-        [ "AliceO2::CDB::GridStorageParameters", "class_alice_o2_1_1_c_d_b_1_1_grid_storage_parameters.html", null ],
-        [ "AliceO2::CDB::LocalStorageParameters", "class_alice_o2_1_1_c_d_b_1_1_local_storage_parameters.html", null ]
+      [ "AliceO2::CDB::StorageParameters", "db/ddd/classAliceO2_1_1CDB_1_1StorageParameters.html", [
+        [ "AliceO2::CDB::FileStorageParameters", "dc/ddb/classAliceO2_1_1CDB_1_1FileStorageParameters.html", null ],
+        [ "AliceO2::CDB::GridStorageParameters", "d7/d5a/classAliceO2_1_1CDB_1_1GridStorageParameters.html", null ],
+        [ "AliceO2::CDB::LocalStorageParameters", "d8/dbb/classAliceO2_1_1CDB_1_1LocalStorageParameters.html", null ]
       ] ],
-      [ "AliceO2::CDB::XmlHandler", "class_alice_o2_1_1_c_d_b_1_1_xml_handler.html", null ],
-      [ "AliceO2::ITS::GeometryHandler", "class_alice_o2_1_1_i_t_s_1_1_geometry_handler.html", null ],
-      [ "AliceO2::ITS::GeometryManager", "class_alice_o2_1_1_i_t_s_1_1_geometry_manager.html", null ],
-      [ "AliceO2::ITS::Segmentation", "class_alice_o2_1_1_i_t_s_1_1_segmentation.html", [
-        [ "AliceO2::ITS::UpgradeSegmentationPixel", "class_alice_o2_1_1_i_t_s_1_1_upgrade_segmentation_pixel.html", null ]
+      [ "AliceO2::CDB::XmlHandler", "d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html", null ],
+      [ "AliceO2::ITS::Digitizer", "d0/d2d/classAliceO2_1_1ITS_1_1Digitizer.html", null ],
+      [ "AliceO2::ITS::GeometryHandler", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html", null ],
+      [ "AliceO2::ITS::GeometryManager", "d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html", null ],
+      [ "AliceO2::ITS::Segmentation", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html", [
+        [ "AliceO2::ITS::UpgradeSegmentationPixel", "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html", null ]
       ] ],
-      [ "AliceO2::ITS::UpgradeGeometryTGeo", "class_alice_o2_1_1_i_t_s_1_1_upgrade_geometry_t_geo.html", null ],
-      [ "AliceO2::ITS::V11Geometry", "class_alice_o2_1_1_i_t_s_1_1_v11_geometry.html", [
-        [ "AliceO2::ITS::UpgradeV1Layer", "class_alice_o2_1_1_i_t_s_1_1_upgrade_v1_layer.html", null ]
+      [ "AliceO2::ITS::UpgradeGeometryTGeo", "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html", null ],
+      [ "AliceO2::ITS::V11Geometry", "dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html", [
+        [ "AliceO2::ITS::UpgradeV1Layer", "d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html", null ]
       ] ],
-      [ "MCTrack", "class_m_c_track.html", null ]
+      [ "MCTrack", "d9/d12/classMCTrack.html", null ]
     ] ],
     [ "TVirtualMagField", null, [
-      [ "AliceO2::Field::MagneticField", "class_alice_o2_1_1_field_1_1_magnetic_field.html", null ]
+      [ "AliceO2::Field::MagneticField", "d4/d91/classAliceO2_1_1Field_1_1MagneticField.html", null ]
     ] ]
 ];

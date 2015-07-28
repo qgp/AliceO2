@@ -1,4 +1,5 @@
 var namespaces =
 [
-    [ "AliceO2", "namespace_alice_o2.html", null ]
+    [ "ALICE", "d3/d1b/namespaceALICE.html", "d3/d1b/namespaceALICE" ],
+    [ "AliceO2", "dc/d65/namespaceAliceO2.html", "dc/d65/namespaceAliceO2" ]
 ];

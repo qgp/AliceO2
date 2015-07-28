@@ -45,7 +45,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -81,6 +80,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
+      <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -99,6 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions_func_n.html#index_n"><span>n</span></a></li>
       <li><a href="functions_func_o.html#index_o"><span>o</span></a></li>
       <li><a href="functions_func_p.html#index_p"><span>p</span></a></li>
+      <li><a href="functions_func_q.html#index_q"><span>q</span></a></li>
       <li><a href="functions_func_r.html#index_r"><span>r</span></a></li>
       <li><a href="functions_func_s.html#index_s"><span>s</span></a></li>
       <li><a href="functions_func_t.html#index_t"><span>t</span></a></li>
@@ -131,7 +134,7 @@ $(document).ready(function(){initNavTree('functions_func_n.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Modules</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -144,17 +147,20 @@ $(document).ready(function(){initNavTree('functions_func_n.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>navigateTo()
+: <a class="el" href="db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#aa990c420bb33c10443ac4cd4c9d588b1">AliceO2::ITS::GeometryHandler</a>
+</li>
 <li>neighbours()
-: <a class="el" href="class_alice_o2_1_1_i_t_s_1_1_segmentation.html#a32d4698687cc221d4a0d53f2968d23d6">AliceO2::ITS::Segmentation</a>
-, <a class="el" href="class_alice_o2_1_1_i_t_s_1_1_upgrade_segmentation_pixel.html#ad826562b26da32b8f4acca661d4c5957">AliceO2::ITS::UpgradeSegmentationPixel</a>
+: <a class="el" href="d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a32d4698687cc221d4a0d53f2968d23d6">AliceO2::ITS::Segmentation</a>
+, <a class="el" href="d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#ad826562b26da32b8f4acca661d4c5957">AliceO2::ITS::UpgradeSegmentationPixel</a>
 </li>
 <li>numberOfCellsInX()
-: <a class="el" href="class_alice_o2_1_1_i_t_s_1_1_segmentation.html#a139387109c56672b44964060499edf8e">AliceO2::ITS::Segmentation</a>
-, <a class="el" href="class_alice_o2_1_1_i_t_s_1_1_upgrade_segmentation_pixel.html#a48e4eac0dcb3b91438908811c3fbb162">AliceO2::ITS::UpgradeSegmentationPixel</a>
+: <a class="el" href="d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a139387109c56672b44964060499edf8e">AliceO2::ITS::Segmentation</a>
+, <a class="el" href="d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a48e4eac0dcb3b91438908811c3fbb162">AliceO2::ITS::UpgradeSegmentationPixel</a>
 </li>
 <li>numberOfCellsInZ()
-: <a class="el" href="class_alice_o2_1_1_i_t_s_1_1_segmentation.html#a2d01a19dcc205b624e794d7cb97eefd4">AliceO2::ITS::Segmentation</a>
-, <a class="el" href="class_alice_o2_1_1_i_t_s_1_1_upgrade_segmentation_pixel.html#a6a17b5af2c0b780293afadc1ec570ee0">AliceO2::ITS::UpgradeSegmentationPixel</a>
+: <a class="el" href="d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a2d01a19dcc205b624e794d7cb97eefd4">AliceO2::ITS::Segmentation</a>
+, <a class="el" href="d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a6a17b5af2c0b780293afadc1ec570ee0">AliceO2::ITS::UpgradeSegmentationPixel</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -162,7 +168,7 @@ $(document).ready(function(){initNavTree('functions_func_n.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Feb 17 2015 10:36:00 for AliceO2 by
+    <li class="footer">Generated on Tue Jul 28 2015 18:05:23 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

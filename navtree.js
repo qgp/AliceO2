@@ -1,12 +1,14 @@
 var NAVTREE =
 [
   [ "AliceO2", "index.html", [
-    [ "Hough Transform", "md___users_turany_fairsoft_docs_src__alice_o2_devices_hough__r_e_a_d_m_e.html", null ],
-    [ "Generating Doxygen documentation", "md___users_turany_fairsoft_docs_src__alice_o2_doxygen__r_e_a_d_m_e.html", null ],
-    [ "AliceO2", "md___users_turany_fairsoft_docs_src__alice_o2__r_e_a_d_m_e.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", null, [
-      [ "Namespace List", "namespaces.html", "namespaces" ]
+      [ "Namespace List", "namespaces.html", "namespaces" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
+      ] ]
     ] ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
@@ -15,7 +17,10 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", "functions_vars" ]
+        [ "Variables", "functions_vars.html", "functions_vars" ],
+        [ "Enumerations", "functions_enum.html", null ],
+        [ "Enumerator", "functions_eval.html", null ],
+        [ "Related Functions", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", null, [
@@ -35,16 +40,19 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-".html",
-"class_ali_h_l_t_h_o_m_e_r_block_descriptor.html#a4c2042d1a948b4eaab7a19ac4d763dee",
-"class_alice_o2_1_1_c_d_b_1_1_condition_id.html",
-"class_alice_o2_1_1_c_d_b_1_1_manager.html#ac00507a49739f9251a64d64a1cf09263",
-"class_alice_o2_1_1_field_1_1_magnetic_field.html#ab9dd9bcb11e361cd13e20d43e47f7c39",
-"class_alice_o2_1_1_i_t_s_1_1_misalignment_parameter.html#a36031e01c1e6f8021f02e7293b901338",
-"class_alice_o2_1_1_i_t_s_1_1_upgrade_v1_layer.html#aafa2ccdcf5004a30fac2372cf0ce1eca",
-"class_m_c_track.html#ac8e52ad31a797d247c1b1313d710b40c",
-"group__alihlt__component__datatypes.html#ga2b8e2e558f9ee1e512b8e6dbae75e3be",
-"md___users_turany_fairsoft_docs_src__alice_o2_doxygen__r_e_a_d_m_e.html"
+"annotated.html",
+"d2/d1c/Condition_8cxx_source.html",
+"d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#ac770d27dcf36f55ce861240cbb9d23cf",
+"d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#aeac7d0a5ac3d9b3b1b45df9170b24d99",
+"d5/d8c/group__alihlt__component__datatypes.html#ga550963b55b36d578a1347307809b32f7",
+"d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a355f119449effbcbdb508fad8007e2de",
+"d6/d34/AliHLTDataTypes_8h.html#a2d767648b1e67d474a1f477103d1a360",
+"d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a9890be7716e2da4d02747ba8b88f3de4",
+"d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab453be7e0ed7d4f53b31f85d941f006d",
+"da/d18/classAliceO2_1_1Base_1_1TrackReference.html#a5db197233decd39a35d9b32928d74360",
+"db/dea/classAliceO2_1_1CDB_1_1Manager.html#a5b75790cb930fdbe882a4a555b99d8c8",
+"dd/deb/2Prototype_2runFLPSyncSampler_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627",
+"functions_i.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

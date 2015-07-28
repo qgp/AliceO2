@@ -1,13 +1,13 @@
 var dir_ca5804704856f872b19c32ec102a36d8 =
 [
-    [ "DataLinkDef.h", "_data_link_def_8h_source.html", null ],
-    [ "DetectorList.h", "_detector_list_8h_source.html", null ],
-    [ "MCTrack.cxx", "_m_c_track_8cxx.html", null ],
-    [ "MCTrack.h", "_m_c_track_8h.html", [
-      [ "MCTrack", "class_m_c_track.html", "class_m_c_track" ]
+    [ "DataLinkDef.h", "da/d8d/DataLinkDef_8h.html", null ],
+    [ "DetectorList.h", "df/dbf/DetectorList_8h.html", "df/dbf/DetectorList_8h" ],
+    [ "MCTrack.cxx", "d2/db4/MCTrack_8cxx.html", null ],
+    [ "MCTrack.h", "d2/de2/MCTrack_8h.html", [
+      [ "MCTrack", "d9/d12/classMCTrack.html", "d9/d12/classMCTrack" ]
     ] ],
-    [ "Stack.cxx", "_stack_8cxx.html", null ],
-    [ "Stack.h", "_stack_8h.html", [
-      [ "Stack", "class_alice_o2_1_1_data_1_1_stack.html", "class_alice_o2_1_1_data_1_1_stack" ]
+    [ "Stack.cxx", "dd/d20/Stack_8cxx.html", null ],
+    [ "Stack.h", "dc/db6/Stack_8h.html", [
+      [ "Stack", "d8/d98/classAliceO2_1_1Data_1_1Stack.html", "d8/d98/classAliceO2_1_1Data_1_1Stack" ]
     ] ]
 ];

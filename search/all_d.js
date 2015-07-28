@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['o2epnex',['O2EPNex',['../class_o2_e_p_nex.html',1,'O2EPNex'],['../class_o2_e_p_nex.html#a2de6cd65df532615797100563fecc87f',1,'O2EPNex::O2EPNex()']]],
-  ['o2epnmerger',['O2EpnMerger',['../class_o2_epn_merger.html',1,'O2EpnMerger'],['../class_o2_epn_merger.html#ac420536976f823962732862d670087a9',1,'O2EpnMerger::O2EpnMerger()']]],
-  ['o2flpex',['O2FLPex',['../class_o2_f_l_pex.html',1,'O2FLPex'],['../class_o2_f_l_pex.html#aad3fafa9c99bbc2534c1d26d512ad52a',1,'O2FLPex::O2FLPex()']]],
-  ['o2merger',['O2Merger',['../class_o2_merger.html',1,'O2Merger'],['../class_o2_merger.html#a620901acb882a8afec3abca0ba6bfb6d',1,'O2Merger::O2Merger()']]],
-  ['o2proxy',['O2Proxy',['../class_o2_proxy.html',1,'O2Proxy'],['../class_o2_proxy.html#a9c83a4cf18716fff71670563aeb24b3a',1,'O2Proxy::O2Proxy()']]],
-  ['openreader',['OpenReader',['../class_a_l_i_c_e_1_1_h_l_t_1_1_h_o_m_e_r_factory.html#a86477ecf4ec92990f616d677bc6ea8f2',1,'ALICE::HLT::HOMERFactory::OpenReader(const char *hostname, unsigned short port)'],['../class_a_l_i_c_e_1_1_h_l_t_1_1_h_o_m_e_r_factory.html#a3ea3013204d27f61c0aa12e971782bf3',1,'ALICE::HLT::HOMERFactory::OpenReader(unsigned int tcpCnt, const char **hostnames, unsigned short *ports)']]],
-  ['openreaderbuffer',['OpenReaderBuffer',['../class_a_l_i_c_e_1_1_h_l_t_1_1_h_o_m_e_r_factory.html#a1fd845f09bee0c27f487be288b147113',1,'ALICE::HLT::HOMERFactory']]],
-  ['openwriter',['OpenWriter',['../class_a_l_i_c_e_1_1_h_l_t_1_1_h_o_m_e_r_factory.html#a90a069bfbb249c578a6ded1cc2396b82',1,'ALICE::HLT::HOMERFactory']]],
-  ['operator_21_3d',['operator!=',['../group__alihlt__component__datatypes.html#ga6617b84d4bbf883a6f9e39a5c59a6290',1,'AliHLTDataTypes.h']]],
-  ['operator_3d',['operator=',['../class_alice_o2_1_1_field_1_1_magnetic_wrapper_chebyshev.html#a025a283b077dde912d70ef376ad70cfd',1,'AliceO2::Field::MagneticWrapperChebyshev::operator=()'],['../class_alice_o2_1_1_i_t_s_1_1_upgrade_v1_layer.html#a299b8206cda877d69348475bf4649605',1,'AliceO2::ITS::UpgradeV1Layer::operator=()'],['../class_alice_o2_1_1_math_utils_1_1_chebyshev3_d_calc.html#a3ea41e30f37904a837396d4d00b023be',1,'AliceO2::MathUtils::Chebyshev3DCalc::operator=()']]],
-  ['operator_3d_3d',['operator==',['../group__alihlt__component__datatypes.html#ga8d0a8a7273520df152d71ecf4deda501',1,'AliHLTDataTypes.h']]],
-  ['operator_7c',['operator|',['../group__alihlt__component__datatypes.html#ga6cbdb065673b12eb55bc08b7358f959b',1,'AliHLTDataTypes.h']]]
+  ['name',['name',['../dc/d29/classAliceO2_1_1Passive_1_1GeoCave.html#a0d6c060fdd8392aaf7b884cc51a510d8',1,'AliceO2::Passive::GeoCave']]],
+  ['navigateto',['navigateTo',['../db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html#aa990c420bb33c10443ac4cd4c9d588b1',1,'AliceO2::ITS::GeometryHandler']]],
+  ['neighbours',['neighbours',['../d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a32d4698687cc221d4a0d53f2968d23d6',1,'AliceO2::ITS::Segmentation::neighbours()'],['../d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#ad826562b26da32b8f4acca661d4c5957',1,'AliceO2::ITS::UpgradeSegmentationPixel::neighbours()']]],
+  ['nextstepbufsize',['nextStepBufSize',['../d7/def/structDeviceOptions.html#aeedafcf67cbc5189d58670cea47cdff5',1,'DeviceOptions']]],
+  ['nextstepmethod',['nextStepMethod',['../d7/def/structDeviceOptions.html#a46ba87eebc7e912cf5db516806c71150',1,'DeviceOptions']]],
+  ['nextstepratelogging',['nextStepRateLogging',['../d7/def/structDeviceOptions.html#ae9e0add44861d78274ed1bac607bf267',1,'DeviceOptions']]],
+  ['nextstepsockettype',['nextStepSocketType',['../d7/def/structDeviceOptions.html#ad3ff01b2af6fdffad288636b854cb9c3',1,'DeviceOptions']]],
+  ['numberofcellsinx',['numberOfCellsInX',['../d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a139387109c56672b44964060499edf8e',1,'AliceO2::ITS::Segmentation::numberOfCellsInX()'],['../d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a48e4eac0dcb3b91438908811c3fbb162',1,'AliceO2::ITS::UpgradeSegmentationPixel::numberOfCellsInX()']]],
+  ['numberofcellsinz',['numberOfCellsInZ',['../d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a2d01a19dcc205b624e794d7cb97eefd4',1,'AliceO2::ITS::Segmentation::numberOfCellsInZ()'],['../d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a6a17b5af2c0b780293afadc1ec570ee0',1,'AliceO2::ITS::UpgradeSegmentationPixel::numberOfCellsInZ()']]],
+  ['numflps',['numFLPs',['../d7/def/structDeviceOptions.html#a2dbaae8e42a31497aa4a671a0b601a40',1,'DeviceOptions::numFLPs()'],['../d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a9f86aa491afaedd94e0f90cdeca89670a1184bb60b79d338ee68cda3bb66143b7',1,'AliceO2::Devices::EPNReceiver::NumFLPs()']]],
+  ['numinputs',['numInputs',['../d7/def/structDeviceOptions.html#aceaf2af65fd2d6c28dabecc5c81569f6',1,'DeviceOptions']]],
+  ['numoutputs',['numOutputs',['../d7/def/structDeviceOptions.html#a6d17bdc7b62ab4758a035a02d669e507',1,'DeviceOptions']]]
 ];

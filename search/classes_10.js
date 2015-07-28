@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['upgradegeometrytgeo',['UpgradeGeometryTGeo',['../class_alice_o2_1_1_i_t_s_1_1_upgrade_geometry_t_geo.html',1,'AliceO2::ITS']]],
-  ['upgradesegmentationpixel',['UpgradeSegmentationPixel',['../class_alice_o2_1_1_i_t_s_1_1_upgrade_segmentation_pixel.html',1,'AliceO2::ITS']]],
-  ['upgradev1layer',['UpgradeV1Layer',['../class_alice_o2_1_1_i_t_s_1_1_upgrade_v1_layer.html',1,'AliceO2::ITS']]]
+  ['upgradegeometrytgeo',['UpgradeGeometryTGeo',['../d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html',1,'AliceO2::ITS']]],
+  ['upgradesegmentationpixel',['UpgradeSegmentationPixel',['../d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html',1,'AliceO2::ITS']]],
+  ['upgradev1layer',['UpgradeV1Layer',['../d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html',1,'AliceO2::ITS']]]
 ];
