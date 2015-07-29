@@ -37,6 +37,9 @@ var hierarchy =
     [ "AliceO2::ITS::DigitContainer", "db/d18/classAliceO2_1_1ITS_1_1DigitContainer.html", null ],
     [ "AliceO2::ITS::DigitLayer", "d7/d56/classAliceO2_1_1ITS_1_1DigitLayer.html", null ],
     [ "AliceO2::ITS::DigitStave", "db/d02/classAliceO2_1_1ITS_1_1DigitStave.html", null ],
+    [ "exception", null, [
+      [ "AliceO2::ITS::Chip::IndexException", "d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1IndexException.html", null ]
+    ] ],
     [ "f2eHeader", "d9/d55/structf2eHeader.html", null ],
     [ "FairContFact", null, [
       [ "AliceO2::ITS::ContainerFactory", "db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html", null ],
@@ -89,10 +92,14 @@ var hierarchy =
       [ "AliceO2::ITS::MisalignmentParameter", "db/da0/classAliceO2_1_1ITS_1_1MisalignmentParameter.html", null ]
     ] ],
     [ "FairTask", null, [
-      [ "AliceO2::ITS::DigitizerTask", "d0/dcc/classAliceO2_1_1ITS_1_1DigitizerTask.html", null ]
+      [ "AliceO2::ITS::DigitizerTask", "d0/dcc/classAliceO2_1_1ITS_1_1DigitizerTask.html", null ],
+      [ "AliceO2::ITS::HitAnalysis", "d8/da6/classAliceO2_1_1ITS_1_1HitAnalysis.html", null ]
     ] ],
     [ "FairTimeStamp", null, [
       [ "AliceO2::ITS::Digit", "db/d9e/classAliceO2_1_1ITS_1_1Digit.html", null ]
+    ] ],
+    [ "FairWriteoutBuffer", null, [
+      [ "AliceO2::ITS::DigitWriteoutBuffer", "d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html", null ]
     ] ],
     [ "ALICE::HLT::HOMERFactory", "d5/de6/classALICE_1_1HLT_1_1HOMERFactory.html", null ],
     [ "AliceO2::AliceHLT::MessageFormat", "d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html", null ],
@@ -134,6 +141,7 @@ var hierarchy =
         [ "AliceO2::CDB::LocalStorageParameters", "d8/dbb/classAliceO2_1_1CDB_1_1LocalStorageParameters.html", null ]
       ] ],
       [ "AliceO2::CDB::XmlHandler", "d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html", null ],
+      [ "AliceO2::ITS::Chip", "d8/dc7/classAliceO2_1_1ITS_1_1Chip.html", null ],
       [ "AliceO2::ITS::Digitizer", "d0/d2d/classAliceO2_1_1ITS_1_1Digitizer.html", null ],
       [ "AliceO2::ITS::GeometryHandler", "db/daa/classAliceO2_1_1ITS_1_1GeometryHandler.html", null ],
       [ "AliceO2::ITS::GeometryManager", "d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html", null ],

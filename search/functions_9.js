@@ -2,6 +2,8 @@ var searchData=
 [
   ['label',['Label',['../da/d18/classAliceO2_1_1Base_1_1TrackReference.html#a883db10a3941acca5df821aafc67f389',1,'AliceO2::Base::TrackReference']]],
   ['layertovoluid',['layerToVolUID',['../d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#aaca42cd42f5353d05325c3ecbc08afcb',1,'AliceO2::ITS::UpgradeGeometryTGeo']]],
+  ['linesegmentglobal',['LineSegmentGlobal',['../d8/dc7/classAliceO2_1_1ITS_1_1Chip.html#a8d918ff1daf47690f62488969d7fc4ea',1,'AliceO2::ITS::Chip']]],
+  ['linesegmentlocal',['LineSegmentLocal',['../d8/dc7/classAliceO2_1_1ITS_1_1Chip.html#aea41f2ba5bf9474697822aade9e9408e',1,'AliceO2::ITS::Chip']]],
   ['listenforacks',['ListenForAcks',['../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a9fcd18397d36426facf2e696d36432a3',1,'AliceO2::Devices::FLPSyncSampler']]],
   ['loaddata',['loadData',['../d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html#a1dbfbb62ba1f1afbfca16acea32748d8',1,'AliceO2::MathUtils::Chebyshev3D::loadData(const char *inpFile)'],['../d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html#ab3d60feae1960788aa0a6776646ec15b',1,'AliceO2::MathUtils::Chebyshev3D::loadData(FILE *stream)'],['../d6/db8/classAliceO2_1_1MathUtils_1_1Chebyshev3DCalc.html#a62038e88714b2f34e9cdd03c268eef77',1,'AliceO2::MathUtils::Chebyshev3DCalc::loadData()']]],
   ['loadlibrary',['loadLibrary',['../d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#aa6aee7bbc925d0771aeac61c4ab9695c',1,'ALICE::HLT::SystemInterface']]],

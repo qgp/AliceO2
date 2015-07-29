@@ -15,6 +15,8 @@ var searchData=
   ['matrix',['Matrix',['../d3/d5c/classAliceO2_1_1Base_1_1Detector.html#ac9d86b97dd20e2778876cfb70259e362',1,'AliceO2::Base::Detector']]],
   ['max',['Max',['../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#a7cec1e379755df7c0dd1c2a975e1fad2',1,'AliceO2::Field::MagneticField']]],
   ['mctrack',['MCTrack',['../d9/d12/classMCTrack.html#a1a2ed104ebe1a4d772129405be8b2a8d',1,'MCTrack::MCTrack()'],['../d9/d12/classMCTrack.html#a98902371b0f19f170fc9cafb97a79de1',1,'MCTrack::MCTrack(Int_t pdgCode, Int_t motherID, Double_t px, Double_t py, Double_t pz, Double_t x, Double_t y, Double_t z, Double_t t, Int_t nPoints)'],['../d9/d12/classMCTrack.html#a5f5ed29b12ebe6e72313ef565492b19a',1,'MCTrack::MCTrack(const MCTrack &amp;track)'],['../d9/d12/classMCTrack.html#adae9e2c38a80eedf9ad363b356d02f2b',1,'MCTrack::MCTrack(TParticle *particle)']]],
+  ['medianhitglobal',['MedianHitGlobal',['../d8/dc7/classAliceO2_1_1ITS_1_1Chip.html#a254bdb302823a55d521e3c1f4bc016e1',1,'AliceO2::ITS::Chip']]],
+  ['medianhitlocal',['MedianHitLocal',['../d8/dc7/classAliceO2_1_1ITS_1_1Chip.html#ab1391eeccdc7c83a834895e10b990407',1,'AliceO2::ITS::Chip']]],
   ['medium',['Medium',['../d3/d5c/classAliceO2_1_1Base_1_1Detector.html#a7ec7fc6114005a71c1c76be541b75889',1,'AliceO2::Base::Detector']]],
   ['messageformat',['MessageFormat',['../d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a73f254207f45e88091d3a50b0480a227',1,'AliceO2::AliceHLT::MessageFormat']]],
   ['misalignmentparameter',['MisalignmentParameter',['../db/da0/classAliceO2_1_1ITS_1_1MisalignmentParameter.html#a556c3210c99764c315aeb3528776c2a7',1,'AliceO2::ITS::MisalignmentParameter']]],

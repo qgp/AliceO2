@@ -90,6 +90,8 @@ var searchData=
   ['mdy',['mDy',['../d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#ad2a961e0b00e11c27b6c3bbe0df62393',1,'AliceO2::ITS::Segmentation']]],
   ['mdz',['mDz',['../d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a2219946694c96449373b26630d42058d',1,'AliceO2::ITS::Segmentation']]],
   ['mdzactive',['mDzActive',['../d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a5b16d9117cb1deb0182f277dc5cfa078',1,'AliceO2::ITS::UpgradeSegmentationPixel']]],
+  ['medianhitglobal',['MedianHitGlobal',['../d8/dc7/classAliceO2_1_1ITS_1_1Chip.html#a254bdb302823a55d521e3c1f4bc016e1',1,'AliceO2::ITS::Chip']]],
+  ['medianhitlocal',['MedianHitLocal',['../d8/dc7/classAliceO2_1_1ITS_1_1Chip.html#ab1391eeccdc7c83a834895e10b990407',1,'AliceO2::ITS::Chip']]],
   ['medium',['Medium',['../d3/d5c/classAliceO2_1_1Base_1_1Detector.html#a7ec7fc6114005a71c1c76be541b75889',1,'AliceO2::Base::Detector']]],
   ['mendrunlhcperiod',['mEndRunLhcPeriod',['../db/dea/classAliceO2_1_1CDB_1_1Manager.html#a8ad9b493c8814ff05ce420a4a405f679',1,'AliceO2::CDB::Manager']]],
   ['menergydepositionstep',['mEnergyDepositionStep',['../d9/d51/classAliceO2_1_1ITS_1_1Detector.html#a48153b7f5e2bbc5fd92f05d53dad0ac3',1,'AliceO2::ITS::Detector']]],

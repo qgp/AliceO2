@@ -118,20 +118,29 @@ $(document).ready(function(){initNavTree('d3/daa/Digit_8cxx_source.html','../../
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;Digit::Digit():</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    FairTimeStamp(),</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    fIndex(0),</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    fCharge(0.),</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    fLabels()</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;Digit::Digit(Int_t index, Double_t charge, Double_t time):</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    FairTimeStamp(time),</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    fIndex(index),</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    fCharge(charge),</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    fLabels()</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#ad451d3b0f50985ed2730ba0eb7d09b03">   25</a></span>&#160;Digit::~Digit(){}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;FairTimeStamp(),</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;fChipIndex(-1),</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;fPixelIndex(-1),</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;fCharge(0.),</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;fLabels()</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;Digit::Digit(Int_t chipindex, Double_t pixelindex, Double_t charge, Double_t time):</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;FairTimeStamp(time),</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;fChipIndex(chipindex),</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;fPixelIndex(pixelindex),</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;fCharge(charge),</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;fLabels()</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#ad451d3b0f50985ed2730ba0eb7d09b03">   29</a></span>&#160;Digit::~Digit(){}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a9068c765c8a7d1f34ba02ef1097e6e9e">   31</a></span>&#160;std::ostream &amp;Digit::Print(std::ostream &amp;output)<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  output &lt;&lt; <span class="stringliteral">&quot;ITS Digit of chip index [&quot;</span> &lt;&lt; fChipIndex &lt;&lt; <span class="stringliteral">&quot;] and pixel [&quot;</span> &lt;&lt; fPixelIndex &lt;&lt; <span class="stringliteral">&quot;]with charge &quot;</span> &lt;&lt; fCharge &lt;&lt; <span class="stringliteral">&quot; at time stamp&quot;</span> &lt;&lt; fTimeStamp;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">return</span> output;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 <div class="ttc" id="classAliceO2_1_1ITS_1_1Digit_html"><div class="ttname"><a href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html">AliceO2::ITS::Digit</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5d/Digit_8h_source.html#l00019">Digit.h:19</a></div></div>
 <div class="ttc" id="namespaceAliceO2_html"><div class="ttname"><a href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de1/Base_2Detector_8h_source.html#l00009">Detector.h:9</a></div></div>
 <div class="ttc" id="TrackReference_8cxx_html_a3009a839d083cbdd1c18dfe7d9fee024"><div class="ttname"><a href="../../da/d10/TrackReference_8cxx.html#a3009a839d083cbdd1c18dfe7d9fee024">ClassImp</a></div><div class="ttdeci">ClassImp(AliceO2::Base::TrackReference) TrackReference</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d10/TrackReference_8cxx_source.html#l00015">TrackReference.cxx:15</a></div></div>
@@ -142,7 +151,7 @@ $(document).ready(function(){initNavTree('d3/daa/Digit_8cxx_source.html','../../
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_c49a90538e657794d466cec6e89de17c.html">its</a></li><li class="navelem"><a class="el" href="../../d3/daa/Digit_8cxx.html">Digit.cxx</a></li>
-    <li class="footer">Generated on Wed Jul 29 2015 13:50:00 for AliceO2 by
+    <li class="footer">Generated on Wed Jul 29 2015 17:41:19 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

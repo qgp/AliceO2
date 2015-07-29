@@ -9,7 +9,7 @@ var searchData=
   ['nextstepsockettype',['nextStepSocketType',['../d7/def/structDeviceOptions.html#ad3ff01b2af6fdffad288636b854cb9c3',1,'DeviceOptions']]],
   ['numberofcellsinx',['numberOfCellsInX',['../d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a139387109c56672b44964060499edf8e',1,'AliceO2::ITS::Segmentation::numberOfCellsInX()'],['../d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a48e4eac0dcb3b91438908811c3fbb162',1,'AliceO2::ITS::UpgradeSegmentationPixel::numberOfCellsInX()']]],
   ['numberofcellsinz',['numberOfCellsInZ',['../d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a2d01a19dcc205b624e794d7cb97eefd4',1,'AliceO2::ITS::Segmentation::numberOfCellsInZ()'],['../d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a6a17b5af2c0b780293afadc1ec570ee0',1,'AliceO2::ITS::UpgradeSegmentationPixel::numberOfCellsInZ()']]],
-  ['numflps',['numFLPs',['../d7/def/structDeviceOptions.html#a2dbaae8e42a31497aa4a671a0b601a40',1,'DeviceOptions::numFLPs()'],['../d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a9f86aa491afaedd94e0f90cdeca89670a1184bb60b79d338ee68cda3bb66143b7',1,'AliceO2::Devices::EPNReceiver::NumFLPs()']]],
+  ['numflps',['NumFLPs',['../d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a9f86aa491afaedd94e0f90cdeca89670a1184bb60b79d338ee68cda3bb66143b7',1,'AliceO2::Devices::EPNReceiver::NumFLPs()'],['../d7/def/structDeviceOptions.html#a2dbaae8e42a31497aa4a671a0b601a40',1,'DeviceOptions::numFLPs()']]],
   ['numinputs',['numInputs',['../d7/def/structDeviceOptions.html#aceaf2af65fd2d6c28dabecc5c81569f6',1,'DeviceOptions']]],
   ['numoutputs',['numOutputs',['../d7/def/structDeviceOptions.html#a6d17bdc7b62ab4758a035a02d669e507',1,'DeviceOptions']]]
 ];

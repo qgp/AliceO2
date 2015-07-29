@@ -522,25 +522,25 @@ $(document).ready(function(){initNavTree('da/d63/its_2Detector_8cxx_source.html'
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  Int_t copy = vol-&gt;getCopyNo();</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  Int_t <span class="keywordtype">id</span> = vol-&gt;getMCid();</div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  Int_t lay = 0;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  Int_t cpn0, cpn1, mod;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <span class="comment">// FIXME: Determine the layer number. Is this information available directly from the FairVolume?</span></div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <span class="keywordflow">while</span> ((lay &lt; mNumberLayers) &amp;&amp; <span class="keywordtype">id</span> != <a class="code" href="../../d9/d51/classAliceO2_1_1ITS_1_1Detector.html#adea1765ba5caf680b27d8f485e8d8477">mLayerID</a>[lay]) {</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    ++lay;</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  }</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  <span class="comment">// FIXME: Is it needed to keep a track reference when the outer ITS volume is encountered?</span></div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  <span class="comment">// if(gMC-&gt;IsTrackExiting()) {</span></div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  <span class="comment">//  AddTrackReference(gAlice-&gt;GetMCApp()-&gt;GetCurrentTrackNumber(), AliTrackReference::kITS);</span></div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  <span class="comment">// } // if Outer ITS mother Volume</span></div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  <span class="comment">// Retrieve the indices with the volume path</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  copy = 1;</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  gMC-&gt;CurrentVolOffID(1, cpn1);</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  gMC-&gt;CurrentVolOffID(2, cpn0);</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  mod = <a class="code" href="../../d9/d51/classAliceO2_1_1ITS_1_1Detector.html#af81d4c93bc8d76f80db99bd109916b5c">mGeometryTGeo</a>-&gt;<a class="code" href="../../d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a79e559372365f3e4b69aad6e25f6b44a">getChipIndex</a>(lay, cpn0, cpn1);</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  <span class="comment">// FIXME: Determine the layer number. Is this information available directly from the FairVolume?</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <span class="keywordflow">while</span> ((lay &lt; mNumberLayers) &amp;&amp; <span class="keywordtype">id</span> != <a class="code" href="../../d9/d51/classAliceO2_1_1ITS_1_1Detector.html#adea1765ba5caf680b27d8f485e8d8477">mLayerID</a>[lay]) {</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    ++lay;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  }</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  <span class="comment">// FIXME: Is it needed to keep a track reference when the outer ITS volume is encountered?</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  <span class="comment">// if(gMC-&gt;IsTrackExiting()) {</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  <span class="comment">//  AddTrackReference(gAlice-&gt;GetMCApp()-&gt;GetCurrentTrackNumber(), AliTrackReference::kITS);</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  <span class="comment">// } // if Outer ITS mother Volume</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  <span class="comment">// Retrieve the indices with the volume path</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  <span class="keywordtype">int</span> stave(0), halfstave(0), chipinmodule(0), module;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  gMC-&gt;CurrentVolOffID(1, chipinmodule);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  gMC-&gt;CurrentVolOffID(2, module);</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  gMC-&gt;CurrentVolOffID(3, halfstave);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  gMC-&gt;CurrentVolOffID(4, stave);</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <span class="keywordtype">int</span> chipindex = <a class="code" href="../../d9/d51/classAliceO2_1_1ITS_1_1Detector.html#af81d4c93bc8d76f80db99bd109916b5c">mGeometryTGeo</a>-&gt;<a class="code" href="../../d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a79e559372365f3e4b69aad6e25f6b44a">getChipIndex</a>(lay, stave, halfstave, module, chipinmodule);</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  </div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  <span class="comment">// Record information on the points</span></div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;  mEnergyLoss = gMC-&gt;Edep();</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  mTime = gMC-&gt;TrackTime();</div>
@@ -570,7 +570,7 @@ $(document).ready(function(){initNavTree('da/d63/its_2Detector_8cxx_source.html'
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;  }</div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;  <span class="comment">// Create Point on every step of the active volume</span></div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;  <a class="code" href="../../d9/d51/classAliceO2_1_1ITS_1_1Detector.html#a7054c859eead1d57c8235072254cbda1">addHit</a>(mTrackNumberID, mVolumeID,</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;  <a class="code" href="../../d9/d51/classAliceO2_1_1ITS_1_1Detector.html#a7054c859eead1d57c8235072254cbda1">addHit</a>(mTrackNumberID, chipindex, <span class="comment">//mVolumeID,</span></div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;         TVector3(mEntrancePosition.X(), mEntrancePosition.Y(), mEntrancePosition.Z()),</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;         TVector3(mPosition.X(), mPosition.Y(), mPosition.Z()),</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;         TVector3(mMomentum.Px(), mMomentum.Py(), mMomentum.Pz()), mEntranceTime, mTime, mLength,</div>
@@ -1340,7 +1340,7 @@ $(document).ready(function(){initNavTree('da/d63/its_2Detector_8cxx_source.html'
 <div class="ttc" id="classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo_html_a556fa07aa085aca44e3e534b1a82ebe1"><div class="ttname"><a href="../../d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a556fa07aa085aca44e3e534b1a82ebe1">AliceO2::ITS::UpgradeGeometryTGeo::getITSVolPattern</a></div><div class="ttdeci">static const char * getITSVolPattern()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d61/UpgradeGeometryTGeo_8h_source.html#l00260">UpgradeGeometryTGeo.h:260</a></div></div>
 <div class="ttc" id="namespaceAliceO2_1_1ITS_html_a4d231f84f6b195b623253dd863147d8f"><div class="ttname"><a href="../../db/d51/namespaceAliceO2_1_1ITS.html#a4d231f84f6b195b623253dd863147d8f">AliceO2::ITS::operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;os, Detector &amp;source)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d63/its_2Detector_8cxx_source.html#l01146">Detector.cxx:1146</a></div></div>
 <div class="ttc" id="classAliceO2_1_1ITS_1_1MisalignmentParameter_html"><div class="ttname"><a href="../../db/da0/classAliceO2_1_1ITS_1_1MisalignmentParameter.html">AliceO2::ITS::MisalignmentParameter</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2f/MisalignmentParameter_8h_source.html#l00018">MisalignmentParameter.h:18</a></div></div>
-<div class="ttc" id="namespaceAliceO2_1_1ITS_html"><div class="ttname"><a href="../../db/d51/namespaceAliceO2_1_1ITS.html">AliceO2::ITS</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d25/its_2ContainerFactory_8h_source.html#l00012">ContainerFactory.h:12</a></div></div>
+<div class="ttc" id="namespaceAliceO2_1_1ITS_html"><div class="ttname"><a href="../../db/d51/namespaceAliceO2_1_1ITS.html">AliceO2::ITS</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d55/Chip_8h_source.html#l00020">Chip.h:20</a></div></div>
 <div class="ttc" id="classAliceO2_1_1ITS_1_1Detector_html_ae16b7bf62f39cb287927d56ca17663d7"><div class="ttname"><a href="../../d9/d51/classAliceO2_1_1ITS_1_1Detector.html#ae16b7bf62f39cb287927d56ca17663d7">AliceO2::ITS::Detector::~Detector</a></div><div class="ttdeci">virtual ~Detector()</div><div class="ttdoc">Default destructor. </div><div class="ttdef"><b>Definition:</b> <a href="../../da/d63/its_2Detector_8cxx_source.html#l00248">Detector.cxx:248</a></div></div>
 <div class="ttc" id="classAliceO2_1_1ITS_1_1MisalignmentParameter_html_a5bad908c3af9e526985b56f3d9fa1cf6"><div class="ttname"><a href="../../db/da0/classAliceO2_1_1ITS_1_1MisalignmentParameter.html#a5bad908c3af9e526985b56f3d9fa1cf6">AliceO2::ITS::MisalignmentParameter::getShiftY</a></div><div class="ttdeci">TArrayD getShiftY()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2f/MisalignmentParameter_8h_source.html#l00034">MisalignmentParameter.h:34</a></div></div>
 <div class="ttc" id="classAliceO2_1_1ITS_1_1UpgradeV1Layer_html_a7ab207f363eb1707a37b81ee578c9e95"><div class="ttname"><a href="../../d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#a7ab207f363eb1707a37b81ee578c9e95">AliceO2::ITS::UpgradeV1Layer::setStaveModel</a></div><div class="ttdeci">void setStaveModel(AliceO2::ITS::Detector::UpgradeModel model)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d8d/UpgradeV1Layer_8h_source.html#l00164">UpgradeV1Layer.h:164</a></div></div>
@@ -1370,7 +1370,7 @@ $(document).ready(function(){initNavTree('da/d63/its_2Detector_8cxx_source.html'
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_c49a90538e657794d466cec6e89de17c.html">its</a></li><li class="navelem"><a class="el" href="../../da/d63/its_2Detector_8cxx.html">Detector.cxx</a></li>
-    <li class="footer">Generated on Wed Jul 29 2015 13:49:59 for AliceO2 by
+    <li class="footer">Generated on Wed Jul 29 2015 17:41:18 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

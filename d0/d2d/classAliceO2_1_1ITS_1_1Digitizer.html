@@ -135,14 +135,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4fdc8b84c8f2c20803263601a9536c7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2d/classAliceO2_1_1ITS_1_1Digitizer.html#a4fdc8b84c8f2c20803263601a9536c7d">Init</a> ()</td></tr>
 <tr class="separator:a4fdc8b84c8f2c20803263601a9536c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61e1ebd1dd426b5fb27f4bdaa4a9c985"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d18/classAliceO2_1_1ITS_1_1DigitContainer.html">DigitContainer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2d/classAliceO2_1_1ITS_1_1Digitizer.html#a61e1ebd1dd426b5fb27f4bdaa4a9c985">Process</a> (TClonesArray *points)</td></tr>
-<tr class="memdesc:a61e1ebd1dd426b5fb27f4bdaa4a9c985"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exec function.  <a href="#a61e1ebd1dd426b5fb27f4bdaa4a9c985">More...</a><br /></td></tr>
 <tr class="separator:a61e1ebd1dd426b5fb27f4bdaa4a9c985"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a47cdb4eb9039e90e463dc51ae3f24c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2d/classAliceO2_1_1ITS_1_1Digitizer.html#a9a47cdb4eb9039e90e463dc51ae3f24c">SetGainFactor</a> (Double_t gain)</td></tr>
 <tr class="separator:a9a47cdb4eb9039e90e463dc51ae3f24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fdbe1633fa2e6f5c020866a4f863b40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2d/classAliceO2_1_1ITS_1_1Digitizer.html#a3fdbe1633fa2e6f5c020866a4f863b40">ClearChips</a> ()</td></tr>
+<tr class="separator:a3fdbe1633fa2e6f5c020866a4f863b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="../../d1/dd1/Digitizer_8h_source.html#l00016">16</a> of file <a class="el" href="../../d1/dd1/Digitizer_8h_source.html">Digitizer.h</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/dd1/Digitizer_8h_source.html#l00022">22</a> of file <a class="el" href="../../d1/dd1/Digitizer_8h_source.html">Digitizer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a71d9f223a5aba2b8100a7296473992b8"></a>
 <div class="memitem">
@@ -173,13 +174,29 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Destructor. </p>
-<p>Destructor </p>
 
-<p>Definition at line <a class="el" href="../../de/d03/Digitizer_8cxx_source.html#l00035">35</a> of file <a class="el" href="../../de/d03/Digitizer_8cxx_source.html">Digitizer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d03/Digitizer_8cxx_source.html#l00031">31</a> of file <a class="el" href="../../de/d03/Digitizer_8cxx_source.html">Digitizer.cxx</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a3fdbe1633fa2e6f5c020866a4f863b40"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Digitizer::ClearChips </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../de/d03/Digitizer_8cxx_source.html#l00084">84</a> of file <a class="el" href="../../de/d03/Digitizer_8cxx_source.html">Digitizer.cxx</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a4fdc8b84c8f2c20803263601a9536c7d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -193,7 +210,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../de/d03/Digitizer_8cxx_source.html#l00040">40</a> of file <a class="el" href="../../de/d03/Digitizer_8cxx_source.html">Digitizer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d03/Digitizer_8cxx_source.html#l00036">36</a> of file <a class="el" href="../../de/d03/Digitizer_8cxx_source.html">Digitizer.cxx</a>.</p>
 
 </div>
 </div>
@@ -210,11 +227,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Steer conversion of points to digits </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">points</td><td>Container with <a class="el" href="../../db/d51/namespaceAliceO2_1_1ITS.html">ITS</a> points </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>digits container </dd></dl>
 
-<p>Exec function. </p>
-<p>Main function converting hits to digits </p>
-
-<p>Definition at line <a class="el" href="../../de/d03/Digitizer_8cxx_source.html#l00049">49</a> of file <a class="el" href="../../de/d03/Digitizer_8cxx_source.html">Digitizer.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d03/Digitizer_8cxx_source.html#l00044">44</a> of file <a class="el" href="../../de/d03/Digitizer_8cxx_source.html">Digitizer.cxx</a>.</p>
 
 </div>
 </div>
@@ -240,7 +261,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d1/dd1/Digitizer_8h_source.html#l00024">24</a> of file <a class="el" href="../../d1/dd1/Digitizer_8h_source.html">Digitizer.h</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/dd1/Digitizer_8h_source.html#l00036">36</a> of file <a class="el" href="../../d1/dd1/Digitizer_8h_source.html">Digitizer.h</a>.</p>
 
 </div>
 </div>
@@ -254,7 +275,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></li><li class="navelem"><a class="el" href="../../db/d51/namespaceAliceO2_1_1ITS.html">ITS</a></li><li class="navelem"><a class="el" href="../../d0/d2d/classAliceO2_1_1ITS_1_1Digitizer.html">Digitizer</a></li>
-    <li class="footer">Generated on Wed Jul 29 2015 13:50:01 for AliceO2 by
+    <li class="footer">Generated on Wed Jul 29 2015 17:41:20 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -19,5 +19,7 @@ var searchData=
   ['digitlayer_2ecxx',['DigitLayer.cxx',['../d7/d1c/DigitLayer_8cxx.html',1,'']]],
   ['digitlayer_2eh',['DigitLayer.h',['../dd/d7e/DigitLayer_8h.html',1,'']]],
   ['digitstave_2ecxx',['DigitStave.cxx',['../d1/df2/DigitStave_8cxx.html',1,'']]],
-  ['digitstave_2eh',['DigitStave.h',['../d2/d48/DigitStave_8h.html',1,'']]]
+  ['digitstave_2eh',['DigitStave.h',['../d2/d48/DigitStave_8h.html',1,'']]],
+  ['digitwriteoutbuffer_2ecxx',['DigitWriteoutBuffer.cxx',['../db/d60/DigitWriteoutBuffer_8cxx.html',1,'']]],
+  ['digitwriteoutbuffer_2eh',['DigitWriteoutBuffer.h',['../d9/dea/DigitWriteoutBuffer_8h.html',1,'']]]
 ];

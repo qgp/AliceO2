@@ -10,6 +10,7 @@ var searchData=
   ['addlabel',['AddLabel',['../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a37f9387d9e0f841172c8aa3743f9be70',1,'AliceO2::ITS::Digit']]],
   ['addmessage',['addMessage',['../d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#acc9be4cbe5b7e81a9db1cc605120fb86',1,'AliceO2::AliceHLT::MessageFormat']]],
   ['addmessages',['addMessages',['../d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a45124937dd4d3b9bb63a2cafa3190b32',1,'AliceO2::AliceHLT::MessageFormat']]],
+  ['addnewdatatotclonesarray',['AddNewDataToTClonesArray',['../d9/d26/classAliceO2_1_1ITS_1_1DigitWriteoutBuffer.html#a772a27b60c9e4a56499eeae72234b7fe',1,'AliceO2::ITS::DigitWriteoutBuffer']]],
   ['addparticle',['AddParticle',['../d8/d98/classAliceO2_1_1Data_1_1Stack.html#a70184b73be4b9cca3f5ae154d904b40c',1,'AliceO2::Data::Stack']]],
   ['addpoint',['AddPoint',['../d8/d98/classAliceO2_1_1Data_1_1Stack.html#aad8c05bbeb36817a4a90bb66d5c39346',1,'AliceO2::Data::Stack::AddPoint(DetectorId iDet)'],['../d8/d98/classAliceO2_1_1Data_1_1Stack.html#a145b31a7f786e87a12fdaefa1ecd92c5',1,'AliceO2::Data::Stack::AddPoint(DetectorId iDet, Int_t iTrack)']]],
   ['addrefnodes',['addRefNodes',['../dc/d29/classAliceO2_1_1Passive_1_1GeoCave.html#ac8132f6604453484e774b165a44b420b',1,'AliceO2::Passive::GeoCave']]],
