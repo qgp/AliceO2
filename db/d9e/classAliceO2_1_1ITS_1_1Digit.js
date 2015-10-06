@@ -9,6 +9,8 @@ var classAliceO2_1_1ITS_1_1Digit =
     [ "GetChipIndex", "db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a5f11e5fbd314abe4e3609ebe5db1c5b4", null ],
     [ "GetListOfLabels", "db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a80845086fd1f8b9ef8c7cf6c3654dfa3", null ],
     [ "GetPixelIndex", "db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a9e1e4f8684630e240baba8891f4d2585", null ],
+    [ "operator+", "db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a094b3af19d66bacde71922f6cbb71ac2", null ],
+    [ "operator+=", "db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a82f315393275aaf2f175fa411a8f1ff2", null ],
     [ "operator<", "db/d9e/classAliceO2_1_1ITS_1_1Digit.html#ad9c3f683ed27a74f2dfe693009047a0e", null ],
     [ "Print", "db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a9068c765c8a7d1f34ba02ef1097e6e9e", null ],
     [ "serialize", "db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a01c9039ee2926da76ae53db97c9d2a80", null ],

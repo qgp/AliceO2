@@ -31,7 +31,7 @@ var classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel =
     [ "getShiftXLoc", "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a921a41213e84f39d6f504fd3fd4d76b5", null ],
     [ "getShiftZLoc", "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a1420e29b7a605fa4afc9845a1f29fdf5", null ],
     [ "Init", "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#ae74d517c49a8a2f5354b7a41b71b5e96", null ],
-    [ "localToDetector", "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a314bffda1a45aafa7caf3937e6cdbcdb", null ],
+    [ "localToDetector", "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a3161f624396450948dac9d995fc658f2", null ],
     [ "neighbours", "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#ad826562b26da32b8f4acca661d4c5957", null ],
     [ "numberOfCellsInX", "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a48e4eac0dcb3b91438908811c3fbb162", null ],
     [ "numberOfCellsInZ", "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a6a17b5af2c0b780293afadc1ec570ee0", null ],

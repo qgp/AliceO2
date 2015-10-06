@@ -38,7 +38,9 @@ var hierarchy =
     [ "AliceO2::ITS::DigitLayer", "d7/d56/classAliceO2_1_1ITS_1_1DigitLayer.html", null ],
     [ "AliceO2::ITS::DigitStave", "db/d02/classAliceO2_1_1ITS_1_1DigitStave.html", null ],
     [ "exception", null, [
-      [ "AliceO2::ITS::Chip::IndexException", "d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1IndexException.html", null ]
+      [ "AliceO2::ITS::Chip::IndexException", "d7/d4f/classAliceO2_1_1ITS_1_1Chip_1_1IndexException.html", null ],
+      [ "AliceO2::ITS::Segmentation::InvalidPixelException", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html", null ],
+      [ "AliceO2::ITS::Segmentation::OutOfActiveAreaException", "d2/dbe/classAliceO2_1_1ITS_1_1Segmentation_1_1OutOfActiveAreaException.html", null ]
     ] ],
     [ "f2eHeader", "d9/d55/structf2eHeader.html", null ],
     [ "FairContFact", null, [

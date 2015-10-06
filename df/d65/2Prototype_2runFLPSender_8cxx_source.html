@@ -268,8 +268,8 @@ $(document).ready(function(){initNavTree('df/d65/2Prototype_2runFLPSender_8cxx_s
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="comment">// DDS</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="comment">// Waiting for properties</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  dds::CKeyValue ddsKeyValue;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  dds::CKeyValue::valuesMap_t values;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  dds::key_value::CKeyValue ddsKeyValue;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  dds::key_value::CKeyValue::valuesMap_t values;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="comment">// In test mode, retreive the output address of FLPSyncSampler to connect to</span></div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordflow">if</span> (options.<a class="code" href="../../d7/def/structDeviceOptions.html#a7e5a32da381711f7a0f6b9aa0dd26cbe">testMode</a> == 1) {</div>
@@ -341,7 +341,7 @@ $(document).ready(function(){initNavTree('df/d65/2Prototype_2runFLPSender_8cxx_s
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  ddsKeyValue.putValue(<span class="stringliteral">&quot;FLPSenderHeartbeatInputAddress&quot;</span>, flp.fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(1).GetAddress());</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  dds::CKeyValue::valuesMap_t values2;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  dds::key_value::CKeyValue::valuesMap_t values2;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="comment">// Receive the EPNReceiver input addresses from DDS.</span></div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  {</div>
@@ -358,7 +358,7 @@ $(document).ready(function(){initNavTree('df/d65/2Prototype_2runFLPSender_8cxx_s
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  }</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="comment">// Assign the received EPNReceiver input addresses to the device.</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  dds::CKeyValue::valuesMap_t::const_iterator it_values2 = values2.begin();</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  dds::key_value::CKeyValue::valuesMap_t::const_iterator it_values2 = values2.begin();</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; options.<a class="code" href="../../d7/def/structDeviceOptions.html#a6d17bdc7b62ab4758a035a02d669e507">numOutputs</a>; ++i) {</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    flp.fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].at(i).UpdateAddress(it_values2-&gt;second);</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    it_values2++;</div>
@@ -393,7 +393,7 @@ $(document).ready(function(){initNavTree('df/d65/2Prototype_2runFLPSender_8cxx_s
 <div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html">AliceO2::Devices::FLPSender</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/FLPSender_8h_source.html#l00022">FLPSender.h:22</a></div></div>
 <div class="ttc" id="structDeviceOptions_html_ac8e7fc081bde26b3fcaa289e9981c35a"><div class="ttname"><a href="../../d7/def/structDeviceOptions.html#ac8e7fc081bde26b3fcaa289e9981c35a">DeviceOptions::outputMethod</a></div><div class="ttdeci">string outputMethod</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d77/runFLP_8cxx_source.html#l00053">runFLP.cxx:53</a></div></div>
 <div class="ttc" id="structDeviceOptions_html_a8c020b376db57283f5e0614c567acfea"><div class="ttname"><a href="../../d7/def/structDeviceOptions.html#a8c020b376db57283f5e0614c567acfea">DeviceOptions::sendOffset</a></div><div class="ttdeci">int sendOffset</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d26/runFLPSender_8cxx_source.html#l00053">runFLPSender.cxx:53</a></div></div>
-<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d34/AliHLTDataTypes_8h_source.html#l01436">AliHLTDataTypes.h:1436</a></div></div>
 <div class="ttc" id="structDeviceOptions_html_a5cbc080c2ae568ded93cfe19fe9dbffe"><div class="ttname"><a href="../../d7/def/structDeviceOptions.html#a5cbc080c2ae568ded93cfe19fe9dbffe">DeviceOptions::inputSocketType</a></div><div class="ttdeci">string inputSocketType</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d52/runEPN_8cxx_source.html#l00050">runEPN.cxx:50</a></div></div>
 <div class="ttc" id="structDeviceOptions_html_a8df1f887d9e5fcc7bbe0c3644f430be9"><div class="ttname"><a href="../../d7/def/structDeviceOptions.html#a8df1f887d9e5fcc7bbe0c3644f430be9">DeviceOptions::outputSocketType</a></div><div class="ttdeci">string outputSocketType</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d77/runFLP_8cxx_source.html#l00051">runFLP.cxx:51</a></div></div>
 <div class="ttc" id="structDeviceOptions_html_a024dfcf496849348cb63f85bbff7483f"><div class="ttname"><a href="../../d7/def/structDeviceOptions.html#a024dfcf496849348cb63f85bbff7483f">DeviceOptions::inputBufSize</a></div><div class="ttdeci">int inputBufSize</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d52/runEPN_8cxx_source.html#l00051">runEPN.cxx:51</a></div></div>
@@ -419,7 +419,7 @@ $(document).ready(function(){initNavTree('df/d65/2Prototype_2runFLPSender_8cxx_s
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d8825559e0a3f2643aa079b2cf0ac6c3.html">devices</a></li><li class="navelem"><a class="el" href="../../dir_0286deae6ce289509f1af9894c5e2ae4.html">flp2epn-distributed</a></li><li class="navelem"><a class="el" href="../../dir_95366df2182f46e5638391c037a9018a.html">runO2Prototype</a></li><li class="navelem"><a class="el" href="../../df/d65/2Prototype_2runFLPSender_8cxx.html">runFLPSender.cxx</a></li>
-    <li class="footer">Generated on Mon Aug 3 2015 11:31:13 for AliceO2 by
+    <li class="footer">Generated on Tue Oct 6 2015 08:28:27 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

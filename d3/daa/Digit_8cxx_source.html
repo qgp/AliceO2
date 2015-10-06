@@ -137,11 +137,23 @@ $(document).ready(function(){initNavTree('d3/daa/Digit_8cxx_source.html','../../
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#ad451d3b0f50985ed2730ba0eb7d09b03">   29</a></span>&#160;Digit::~Digit(){}</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a9068c765c8a7d1f34ba02ef1097e6e9e">   31</a></span>&#160;std::ostream &amp;Digit::Print(std::ostream &amp;output)<span class="keyword"> const</span>{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  output &lt;&lt; <span class="stringliteral">&quot;ITS Digit of chip index [&quot;</span> &lt;&lt; fChipIndex &lt;&lt; <span class="stringliteral">&quot;] and pixel [&quot;</span> &lt;&lt; fPixelIndex &lt;&lt; <span class="stringliteral">&quot;]with charge &quot;</span> &lt;&lt; fCharge &lt;&lt; <span class="stringliteral">&quot; at time stamp&quot;</span> &lt;&lt; fTimeStamp;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">return</span> output;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a82f315393275aaf2f175fa411a8f1ff2">   31</a></span>&#160;<a class="code" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html">Digit</a> &amp;Digit::operator+=(<span class="keyword">const</span> <a class="code" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html">Digit</a> &amp;other){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  fCharge += other.fCharge;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="ttc" id="classAliceO2_1_1ITS_1_1Digit_html"><div class="ttname"><a href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html">AliceO2::ITS::Digit</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5d/Digit_8h_source.html#l00019">Digit.h:19</a></div></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a094b3af19d66bacde71922f6cbb71ac2">   36</a></span>&#160;<span class="keyword">const</span> <a class="code" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html">Digit</a> Digit::operator+(<span class="keyword">const</span> <a class="code" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html">Digit</a> &amp;other){</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html">Digit</a> result(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  result += other;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a9068c765c8a7d1f34ba02ef1097e6e9e">   43</a></span>&#160;std::ostream &amp;Digit::Print(std::ostream &amp;output)<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  output &lt;&lt; <span class="stringliteral">&quot;ITS Digit of chip index [&quot;</span> &lt;&lt; fChipIndex &lt;&lt; <span class="stringliteral">&quot;] and pixel [&quot;</span> &lt;&lt; fPixelIndex &lt;&lt; <span class="stringliteral">&quot;]with charge &quot;</span> &lt;&lt; fCharge &lt;&lt; <span class="stringliteral">&quot; at time stamp&quot;</span> &lt;&lt; fTimeStamp;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">return</span> output;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="ttc" id="classAliceO2_1_1ITS_1_1Digit_html"><div class="ttname"><a href="../../db/d9e/classAliceO2_1_1ITS_1_1Digit.html">AliceO2::ITS::Digit</a></div><div class="ttdoc">Digit class for the ITS. </div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5d/Digit_8h_source.html#l00022">Digit.h:22</a></div></div>
 <div class="ttc" id="namespaceAliceO2_html"><div class="ttname"><a href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de1/Base_2Detector_8h_source.html#l00009">Detector.h:9</a></div></div>
 <div class="ttc" id="TrackReference_8cxx_html_a3009a839d083cbdd1c18dfe7d9fee024"><div class="ttname"><a href="../../da/d10/TrackReference_8cxx.html#a3009a839d083cbdd1c18dfe7d9fee024">ClassImp</a></div><div class="ttdeci">ClassImp(AliceO2::Base::TrackReference) TrackReference</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d10/TrackReference_8cxx_source.html#l00015">TrackReference.cxx:15</a></div></div>
 <div class="ttc" id="Digit_8h_html"><div class="ttname"><a href="../../da/d5d/Digit_8h.html">Digit.h</a></div></div>
@@ -151,7 +163,7 @@ $(document).ready(function(){initNavTree('d3/daa/Digit_8cxx_source.html','../../
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_c49a90538e657794d466cec6e89de17c.html">its</a></li><li class="navelem"><a class="el" href="../../d3/daa/Digit_8cxx.html">Digit.cxx</a></li>
-    <li class="footer">Generated on Mon Aug 3 2015 11:31:14 for AliceO2 by
+    <li class="footer">Generated on Tue Oct 6 2015 08:28:27 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

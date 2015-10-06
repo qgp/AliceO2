@@ -1,5 +1,7 @@
 var classAliceO2_1_1ITS_1_1Segmentation =
 [
+    [ "InvalidPixelException", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException" ],
+    [ "OutOfActiveAreaException", "d2/dbe/classAliceO2_1_1ITS_1_1Segmentation_1_1OutOfActiveAreaException.html", "d2/dbe/classAliceO2_1_1ITS_1_1Segmentation_1_1OutOfActiveAreaException" ],
     [ "Segmentation", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#ad11348d7823677c4e4e95ef163ce37ae", null ],
     [ "Segmentation", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#ab9d26f6af16534c29c669af1494d0b4c", null ],
     [ "~Segmentation", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#ab346c55c2cc6c6269929ac065c5eb44a", null ],
@@ -23,7 +25,7 @@ var classAliceO2_1_1ITS_1_1Segmentation =
     [ "getPadIxz", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#ae9cfa6aabda5d23f7e23248ed8281d79", null ],
     [ "getPadTxz", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a3779ed07329f3fc700e402ad39667684", null ],
     [ "Init", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a997588a605bede41b890a7282c9a0fbe", null ],
-    [ "localToDetector", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#ad95554b644ea822bccc33bdd8f944edf", null ],
+    [ "localToDetector", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a522f077eae908b7f3bb57710a1e16a4b", null ],
     [ "neighbours", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a32d4698687cc221d4a0d53f2968d23d6", null ],
     [ "numberOfCellsInX", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a139387109c56672b44964060499edf8e", null ],
     [ "numberOfCellsInZ", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html#a2d01a19dcc205b624e794d7cb97eefd4", null ],

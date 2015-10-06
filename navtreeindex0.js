@@ -85,7 +85,7 @@ var NAVTREEINDEX0 =
 "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a2a585b367701af307e016fbd96527a2b":[2,0,1,6,17,54],
 "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a2edaa2b0e114abf00e4dc5bdd87b31a4":[2,0,1,6,17,43],
 "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a3007c2c135ad6ec3fe7a9107e758a646":[2,0,1,6,17,11],
-"d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a314bffda1a45aafa7caf3937e6cdbcdb":[2,0,1,6,17,31],
+"d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a3161f624396450948dac9d995fc658f2":[2,0,1,6,17,31],
 "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a356f625fc67500647143b2494618f4a3":[2,0,1,6,17,56],
 "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a35e08516fa2d1dcf557cade510dcc058":[2,0,1,6,17,23],
 "d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a374fb112a2fb2dc2e84e6ada511aa964":[2,0,1,6,17,44],

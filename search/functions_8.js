@@ -16,6 +16,7 @@ var searchData=
   ['initializeparametercontainers',['initializeParameterContainers',['../d9/d51/classAliceO2_1_1ITS_1_1Detector.html#a39b5879c1b971fd8393ed1278a82cae3',1,'AliceO2::ITS::Detector']]],
   ['initializerows',['initializeRows',['../d6/db8/classAliceO2_1_1MathUtils_1_1Chebyshev3DCalc.html#ac62569b2c59fed705940221203dae204',1,'AliceO2::MathUtils::Chebyshev3DCalc']]],
   ['initsystem',['initSystem',['../d9/d19/classALICE_1_1HLT_1_1SystemInterface.html#ac8723540bcc49a63ba40e130e97ee912',1,'ALICE::HLT::SystemInterface']]],
+  ['inittask',['InitTask',['../d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html#a098d27b71cba991079b0083c69d0ae44',1,'ALICE::HLT::WrapperDevice']]],
   ['insertevtdata',['insertEvtData',['../d9/ddc/classAliceO2_1_1AliceHLT_1_1MessageFormat.html#a0cb44738ac036c4c389212e9e90da75d',1,'AliceO2::AliceHLT::MessageFormat']]],
   ['insertpoint',['InsertPoint',['../d8/dc7/classAliceO2_1_1ITS_1_1Chip.html#aad839bcb5320e70fad7e0e638561d233',1,'AliceO2::ITS::Chip']]],
   ['insidepoint',['insidePoint',['../dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a228885b5e773398d0b9152f90b4cc247',1,'AliceO2::ITS::V11Geometry::insidePoint(const TGeoPcon *p, Int_t i1, Int_t i2, Int_t i3, Double_t Cthick, TGeoPcon *q, Int_t j1, Bool_t max) const '],['../dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#acd20b8952d467d33cf95c515589f4403',1,'AliceO2::ITS::V11Geometry::insidePoint(Double_t x0, Double_t y0, Double_t x1, Double_t y1, Double_t x2, Double_t y2, Double_t c, Double_t &amp;x, Double_t &amp;y) const ']]],
@@ -23,6 +24,7 @@ var searchData=
   ['integral',['Integral',['../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#a030282ad6055d6e83af539460fd27624',1,'AliceO2::Field::MagneticField']]],
   ['intersectcircle',['intersectCircle',['../dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a0ca2e1bde702e864395d9ef539527e07',1,'AliceO2::ITS::V11Geometry']]],
   ['intersectlines',['intersectLines',['../dc/dc9/classAliceO2_1_1ITS_1_1V11Geometry.html#a01a6f01c570eda938ba93bfcbe4435a5',1,'AliceO2::ITS::V11Geometry']]],
+  ['invalidpixelexception',['InvalidPixelException',['../d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a68cfa8fe6b9e2521f75f2ac1293e6c25',1,'AliceO2::ITS::Segmentation::InvalidPixelException']]],
   ['invertsign',['invertSign',['../d6/d1d/classAliceO2_1_1MathUtils_1_1Chebyshev3D.html#a3e792ed43166862502a7cd7f370021e5',1,'AliceO2::MathUtils::Chebyshev3D']]],
   ['isalive',['IsAlive',['../df/d7a/classAliceO2_1_1ITS_1_1Point.html#a59f2c5fc9a15947804de1562a995f0c4',1,'AliceO2::ITS::Point']]],
   ['isalivestart',['IsAliveStart',['../df/d7a/classAliceO2_1_1ITS_1_1Point.html#ab1aad04acb53c7e57a51225e2ae4e4bf',1,'AliceO2::ITS::Point']]],
@@ -51,5 +53,7 @@ var searchData=
   ['isturbo',['isTurbo',['../d4/d2b/classAliceO2_1_1ITS_1_1UpgradeV1Layer.html#ac00b26b063c218e6c3f3e64cddc4bbe9',1,'AliceO2::ITS::UpgradeV1Layer']]],
   ['isuniform',['IsUniform',['../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#a00c610b3e2b05e1434d7de603688a0d2',1,'AliceO2::Field::MagneticField']]],
   ['isvalid',['isValid',['../df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#a78e0979f374036e197ae9b5ffbe83364',1,'AliceO2::CDB::ConditionId::isValid()'],['../d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a2a45ebc3428ca654c4e98937b2bbb44f',1,'AliceO2::CDB::IdPath::isValid()'],['../d6/d60/classAliceO2_1_1CDB_1_1IdRunRange.html#a99dc550817853fd0a5c2022185cfe324',1,'AliceO2::CDB::IdRunRange::isValid()']]],
-  ['iswildcard',['isWildcard',['../df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#a2456ab68d5a3d1b10c17ef6969419e74',1,'AliceO2::CDB::ConditionId::isWildcard()'],['../d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a421184345d538b9dcbfa504248ff72dd',1,'AliceO2::CDB::IdPath::isWildcard()']]]
+  ['iswildcard',['isWildcard',['../df/de3/classAliceO2_1_1CDB_1_1ConditionId.html#a2456ab68d5a3d1b10c17ef6969419e74',1,'AliceO2::CDB::ConditionId::isWildcard()'],['../d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a421184345d538b9dcbfa504248ff72dd',1,'AliceO2::CDB::IdPath::isWildcard()']]],
+  ['isx',['IsX',['../d2/dbe/classAliceO2_1_1ITS_1_1Segmentation_1_1OutOfActiveAreaException.html#a7b01eb42ab53ffe652bf20549e027451',1,'AliceO2::ITS::Segmentation::OutOfActiveAreaException::IsX()'],['../d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a65df7a680f54ce0c4646331c7702af2d',1,'AliceO2::ITS::Segmentation::InvalidPixelException::IsX()']]],
+  ['isz',['IsZ',['../d2/dbe/classAliceO2_1_1ITS_1_1Segmentation_1_1OutOfActiveAreaException.html#a0ac7bfc8e4d90562a6f1959083e2d36e',1,'AliceO2::ITS::Segmentation::OutOfActiveAreaException::IsZ()'],['../d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a8dc710a9a9c1d7952bd91774c8780245',1,'AliceO2::ITS::Segmentation::InvalidPixelException::IsZ()']]]
 ];

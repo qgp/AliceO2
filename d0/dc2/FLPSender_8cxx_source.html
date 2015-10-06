@@ -112,314 +112,316 @@ $(document).ready(function(){initNavTree('d0/dc2/FLPSender_8cxx_source.html','..
 <a href="../../d0/dc2/FLPSender_8cxx.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span> <span class="comment">// UINT64_MAX</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;boost/thread.hpp&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;boost/bind.hpp&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;FairMQLogger.h&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;FairMQPoller.h&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d8b/FLPSender_8h.html">FLPSender.h</a>&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d8/dcc/namespacestd.html">std</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> boost::posix_time::ptime;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d3/d4f/namespaceAliceO2_1_1Devices.html">AliceO2::Devices</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  uint64_t timeFrameId;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">int</span>      flpIndex;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#aaf7dbef904ad8752dd3aa9d59227ef52">   29</a></span>&#160;FLPSender::FLPSender()</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  : fHeartbeatTimeoutInMs(20000)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  , fOutputHeartbeat()</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  , fIndex(0)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  , fSendOffset(0)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  , fSendDelay(8)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  , fHeaderBuffer()</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  , fDataBuffer()</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  , fEventSize(10000)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  , fTestMode(0)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab718322adbeaea98d487aa5d9402ae9b">   42</a></span>&#160;<a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab718322adbeaea98d487aa5d9402ae9b">FLPSender::~FLPSender</a>()</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a1f33485e7c90118967c08db9d424b3f7">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a1f33485e7c90118967c08db9d424b3f7">FLPSender::Init</a>()</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  ptime nullTime;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].size(); ++i) {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    fOutputHeartbeat.push_back(nullTime);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">bool</span> FLPSender::updateIPHeartbeat(<span class="keywordtype">string</span> reply)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].size(); ++i) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> (fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].at(i).GetAddress() == reply) {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      ptime currentTime = boost::posix_time::microsec_clock::local_time();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      ptime storedHeartbeat = <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ac304c791dfae39447ceaf34e2c44a60b">GetProperty</a>(<a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42">OutputHeartbeat</a>, storedHeartbeat, i);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">if</span> (to_simple_string(storedHeartbeat) != <span class="stringliteral">&quot;not-a-date-time&quot;</span>) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">// LOG(INFO) &lt;&lt; &quot;EPN &quot; &lt;&lt; i &lt;&lt; &quot; (&quot; &lt;&lt; reply &lt;&lt; &quot;)&quot; &lt;&lt; &quot; last seen &quot;</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">//           &lt;&lt; (currentTime - storedHeartbeat).total_milliseconds() &lt;&lt; &quot; ms ago.&quot;;</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;IP has no heartbeat associated. Adding heartbeat: &quot;</span> &lt;&lt; currentTime;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab453be7e0ed7d4f53b31f85d941f006d">SetProperty</a>(<a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42">OutputHeartbeat</a>, currentTime, i);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;IP &quot;</span> &lt;&lt; reply &lt;&lt; <span class="stringliteral">&quot; unknown, not provided at execution time&quot;</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a0344b996ea24dc86cb0b045e3893010c">   80</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a0344b996ea24dc86cb0b045e3893010c">FLPSender::Run</a>()</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  FairMQPoller* poller = fTransportFactory-&gt;CreatePoller(fChannels[<span class="stringliteral">&quot;data-in&quot;</span>]);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// base buffer, to be copied from for every timeframe body</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">void</span>* buffer = <span class="keyword">operator</span> <span class="keyword">new</span>[](fEventSize);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  FairMQMessage* baseMsg = fTransportFactory-&gt;CreateMessage(buffer, fEventSize);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  ptime currentTime;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  ptime storedHeartbeat;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  uint64_t timeFrameId = 0;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordflow">while</span> (GetCurrentState() == RUNNING) {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    poller-&gt;Poll(2);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">// input 0 - commands</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (poller-&gt;CheckInput(0)) {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      FairMQMessage* commandMsg = fTransportFactory-&gt;CreateMessage();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keywordflow">if</span> (fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(0).Receive(commandMsg) &gt; 0) {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="comment">//... handle command ...</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keyword">delete</span> commandMsg;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">// input 1 - heartbeats</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span> (poller-&gt;CheckInput(1)) {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      FairMQMessage* heartbeatMsg = fTransportFactory-&gt;CreateMessage();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="keywordflow">if</span> (fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(1).Receive(heartbeatMsg) &gt; 0) {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">string</span> reply = string(static_cast&lt;char*&gt;(heartbeatMsg-&gt;GetData()), heartbeatMsg-&gt;GetSize());</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        updateIPHeartbeat(reply);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="keyword">delete</span> heartbeatMsg;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">// input 2 - data (in test-mode: signal with a timeframe ID)</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">if</span> (poller-&gt;CheckInput(2)) {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="comment">// initialize f2e header</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a>* h = <span class="keyword">new</span> <a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordflow">if</span> (fTestMode &gt; 0) {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="comment">// test-mode: receive and store id part in the buffer.</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        FairMQMessage* idPart = fTransportFactory-&gt;CreateMessage();</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(2).Receive(idPart);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a9b9606e4af74582bed9d990f184a2011">timeFrameId</a> = *(<span class="keyword">reinterpret_cast&lt;</span>uint64_t*<span class="keyword">&gt;</span>(idPart-&gt;GetData()));</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a08b6283854fb6fa5cbb37641ce314f35">flpIndex</a> = fIndex;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keyword">delete</span> idPart;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="comment">// regular mode: use the id generated locally</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a9b9606e4af74582bed9d990f184a2011">timeFrameId</a> = timeFrameId;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="comment">// h-&gt;flpIndex = stoi(fId);</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a08b6283854fb6fa5cbb37641ce314f35">flpIndex</a> = fIndex;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">if</span> (++timeFrameId == UINT64_MAX - 1) {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;          timeFrameId = 0;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        }</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      FairMQMessage* headerPart = fTransportFactory-&gt;CreateMessage(h, <span class="keyword">sizeof</span>(<a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a>));</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      fHeaderBuffer.push(headerPart);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <span class="comment">// save the arrival time of the message.</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      fArrivalTime.push(boost::posix_time::microsec_clock::local_time());</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="keywordflow">if</span> (fTestMode &gt; 0) {</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="comment">// test-mode: initialize and store data part in the buffer.</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        FairMQMessage* dataPart = fTransportFactory-&gt;CreateMessage();</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        dataPart-&gt;Copy(baseMsg);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        fDataBuffer.push(dataPart);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="comment">// regular mode: receive data part from input</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        FairMQMessage* dataPart = fTransportFactory-&gt;CreateMessage();</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(2).Receive(dataPart);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        fDataBuffer.push(dataPart);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="comment">// LOG(INFO) &lt;&lt; fDataBuffer.size();</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">// if offset is 0 - send data out without staggering.</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (fSendOffset == 0 &amp;&amp; fDataBuffer.size() &gt; 0) {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      sendFrontData();</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fDataBuffer.size() &gt; 0) {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      <span class="keywordtype">size_t</span> dataSize = fDataBuffer.front()-&gt;GetSize();</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      ptime now = boost::posix_time::microsec_clock::local_time();</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <span class="keywordflow">if</span> ((now - fArrivalTime.front()).total_milliseconds() &gt;= (fSendDelay * fSendOffset)) {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        sendFrontData();</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="comment">// LOG(INFO) &lt;&lt; &quot;buffering...&quot;;</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      }</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="keyword">delete</span> baseMsg;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> FLPSender::sendFrontData()</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;{</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a> h = *(<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a>*<span class="keyword">&gt;</span>(fHeaderBuffer.front()-&gt;GetData()));</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  uint64_t currentTimeframeId = h.<a class="code" href="../../d9/d55/structf2eHeader.html#a9b9606e4af74582bed9d990f184a2011">timeFrameId</a>;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keywordtype">int</span> SNDMORE = fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(0).fSocket-&gt;SNDMORE;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordtype">int</span> NOBLOCK = fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(0).fSocket-&gt;NOBLOCK;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="comment">// for which EPN is the message?</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="keywordtype">int</span> direction = currentTimeframeId % fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].size();</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="comment">// LOG(INFO) &lt;&lt; &quot;Sending event &quot; &lt;&lt; currentTimeframeId &lt;&lt; &quot; to EPN#&quot; &lt;&lt; direction &lt;&lt; &quot;...&quot;;</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  ptime currentTime = boost::posix_time::microsec_clock::local_time();</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  ptime storedHeartbeat = <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ac304c791dfae39447ceaf34e2c44a60b">GetProperty</a>(<a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42">OutputHeartbeat</a>, storedHeartbeat, direction);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="comment">// if the heartbeat from the corresponding EPN is within timeout period, send the data.</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordflow">if</span> (to_simple_string(storedHeartbeat) != <span class="stringliteral">&quot;not-a-date-time&quot;</span> ||</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      (currentTime - storedHeartbeat).total_milliseconds() &lt; fHeartbeatTimeoutInMs) {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">if</span>(fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].at(direction).Send(fHeaderBuffer.front(), SNDMORE|NOBLOCK) == 0) {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;Could not queue ID part of event #&quot;</span> &lt;&lt; currentTimeframeId &lt;&lt; <span class="stringliteral">&quot; without blocking&quot;</span>;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">if</span> (fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].at(direction).Send(fDataBuffer.front(), NOBLOCK) == 0) {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;Could not send message with event #&quot;</span> &lt;&lt; currentTimeframeId &lt;&lt; <span class="stringliteral">&quot; without blocking&quot;</span>;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    fHeaderBuffer.pop();</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    fArrivalTime.pop();</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    fDataBuffer.pop();</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  } <span class="keywordflow">else</span> { <span class="comment">// if the heartbeat is too old, discard the data.</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    LOG(WARN) &lt;&lt; <span class="stringliteral">&quot;Heartbeat too old for EPN#&quot;</span> &lt;&lt; direction &lt;&lt; <span class="stringliteral">&quot;, discarding message.&quot;</span>;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    fHeaderBuffer.pop();</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    fArrivalTime.pop();</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    fDataBuffer.pop();</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab453be7e0ed7d4f53b31f85d941f006d">FLPSender::SetProperty</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; value)</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;{</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keywordflow">switch</span> (key) {</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      FairMQDevice::SetProperty(key, value);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  }</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keywordtype">string</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ac304c791dfae39447ceaf34e2c44a60b">FLPSender::GetProperty</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; default_<span class="comment">/*= &quot;&quot;*/</span>)</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;{</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="keywordflow">switch</span> (key) {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keywordflow">return</span> FairMQDevice::GetProperty(key, default_);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  }</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
-<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a9c17f4e9e5dc57f1ed805b40e181f684">  236</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab453be7e0ed7d4f53b31f85d941f006d">FLPSender::SetProperty</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key, <span class="keyword">const</span> <span class="keywordtype">int</span> value)</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;{</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="keywordflow">switch</span> (key) {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa1811789e4c8f75ee4e7d4a0fc3360ec5">HeartbeatTimeoutInMs</a>:</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      fHeartbeatTimeoutInMs = value;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa5c5fa98c5a45f7b87ca6fe838ae7193c">Index</a>:</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      fIndex = value;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa5db41f8317a6229b4cc6c778c34a5fb1">TestMode</a>:</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      fTestMode = value;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa158d99cf4f96f1fcb0f1666c2ed4e5d3">SendOffset</a>:</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      fSendOffset = value;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa6b870fe852c8ad1e12a7fabfadb070be">SendDelay</a>:</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      fSendDelay = value;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa01071308069fc41f45897c66b5ffe8ef">EventSize</a>:</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      fEventSize = value;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      FairMQDevice::SetProperty(key, value);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  }</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
-<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a77f2d551d6716ab3749272e70c78a5f9">  263</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ac304c791dfae39447ceaf34e2c44a60b">FLPSender::GetProperty</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key, <span class="keyword">const</span> <span class="keywordtype">int</span> default_<span class="comment">/*= 0*/</span>)</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;{</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="keywordflow">switch</span> (key) {</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa1811789e4c8f75ee4e7d4a0fc3360ec5">HeartbeatTimeoutInMs</a>:</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      <span class="keywordflow">return</span> fHeartbeatTimeoutInMs;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa5c5fa98c5a45f7b87ca6fe838ae7193c">Index</a>:</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      <span class="keywordflow">return</span> fIndex;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa5db41f8317a6229b4cc6c778c34a5fb1">TestMode</a>:</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      <span class="keywordflow">return</span> fTestMode;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa158d99cf4f96f1fcb0f1666c2ed4e5d3">SendOffset</a>:</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;      <span class="keywordflow">return</span> fSendOffset;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa6b870fe852c8ad1e12a7fabfadb070be">SendDelay</a>:</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      <span class="keywordflow">return</span> fSendDelay;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa01071308069fc41f45897c66b5ffe8ef">EventSize</a>:</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      <span class="keywordflow">return</span> fEventSize;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      <span class="keywordflow">return</span> FairMQDevice::GetProperty(key, default_);</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  }</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;}</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment">// Method for setting properties represented as a heartbeat.</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab453be7e0ed7d4f53b31f85d941f006d">FLPSender::SetProperty</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key, <span class="keyword">const</span> ptime value, <span class="keyword">const</span> <span class="keywordtype">int</span> slot <span class="comment">/*= 0*/</span>)</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;{</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keywordflow">switch</span> (key) {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42">OutputHeartbeat</a>:</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      fOutputHeartbeat.erase(fOutputHeartbeat.begin() + slot);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      fOutputHeartbeat.insert(fOutputHeartbeat.begin() + slot, value);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;}</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment">// Method for getting properties represented as a heartbeat.</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;ptime <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ac304c791dfae39447ceaf34e2c44a60b">FLPSender::GetProperty</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key, <span class="keyword">const</span> ptime default_, <span class="keyword">const</span> <span class="keywordtype">int</span> slot <span class="comment">/*= 0*/</span>)</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;{</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <span class="keywordflow">switch</span> (key) {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42">OutputHeartbeat</a>:</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      <span class="keywordflow">return</span> fOutputHeartbeat.at(slot);</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  }</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;boost/thread.hpp&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;boost/bind.hpp&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;FairMQLogger.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;FairMQPoller.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d8b/FLPSender_8h.html">FLPSender.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d8/dcc/namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> boost::posix_time::ptime;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d3/d4f/namespaceAliceO2_1_1Devices.html">AliceO2::Devices</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">struct </span><a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  uint64_t timeFrameId;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">int</span>      flpIndex;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#aaf7dbef904ad8752dd3aa9d59227ef52">   30</a></span>&#160;FLPSender::FLPSender()</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  : fHeartbeatTimeoutInMs(20000)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  , fOutputHeartbeat()</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  , fIndex(0)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  , fSendOffset(0)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  , fSendDelay(8)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  , fHeaderBuffer()</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  , fDataBuffer()</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  , fEventSize(10000)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  , fTestMode(0)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab718322adbeaea98d487aa5d9402ae9b">   43</a></span>&#160;<a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab718322adbeaea98d487aa5d9402ae9b">FLPSender::~FLPSender</a>()</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a1f33485e7c90118967c08db9d424b3f7">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a1f33485e7c90118967c08db9d424b3f7">FLPSender::Init</a>()</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  ptime nullTime;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].size(); ++i) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    fOutputHeartbeat.push_back(nullTime);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">bool</span> FLPSender::updateIPHeartbeat(<span class="keywordtype">string</span> reply)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].size(); ++i) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span> (fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].at(i).GetAddress() == reply) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      ptime currentTime = boost::posix_time::microsec_clock::local_time();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      ptime storedHeartbeat = <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ac304c791dfae39447ceaf34e2c44a60b">GetProperty</a>(<a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42">OutputHeartbeat</a>, storedHeartbeat, i);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordflow">if</span> (to_simple_string(storedHeartbeat) != <span class="stringliteral">&quot;not-a-date-time&quot;</span>) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// LOG(INFO) &lt;&lt; &quot;EPN &quot; &lt;&lt; i &lt;&lt; &quot; (&quot; &lt;&lt; reply &lt;&lt; &quot;)&quot; &lt;&lt; &quot; last seen &quot;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">//           &lt;&lt; (currentTime - storedHeartbeat).total_milliseconds() &lt;&lt; &quot; ms ago.&quot;;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        LOG(INFO) &lt;&lt; <span class="stringliteral">&quot;IP has no heartbeat associated. Adding heartbeat: &quot;</span> &lt;&lt; currentTime;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab453be7e0ed7d4f53b31f85d941f006d">SetProperty</a>(<a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42">OutputHeartbeat</a>, currentTime, i);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;IP &quot;</span> &lt;&lt; reply &lt;&lt; <span class="stringliteral">&quot; unknown, not provided at execution time&quot;</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a0344b996ea24dc86cb0b045e3893010c">   81</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a0344b996ea24dc86cb0b045e3893010c">FLPSender::Run</a>()</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  FairMQPoller* poller = fTransportFactory-&gt;CreatePoller(fChannels[<span class="stringliteral">&quot;data-in&quot;</span>]);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="comment">// base buffer, to be copied from for every timeframe body</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">void</span>* buffer = <span class="keyword">operator</span> <span class="keyword">new</span>[](fEventSize);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  FairMQMessage* baseMsg = fTransportFactory-&gt;CreateMessage(buffer, fEventSize);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  ptime currentTime;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  ptime storedHeartbeat;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  uint64_t timeFrameId = 0;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordflow">while</span> (GetCurrentState() == RUNNING) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    poller-&gt;Poll(2);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// input 0 - commands</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (poller-&gt;CheckInput(0)) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      FairMQMessage* commandMsg = fTransportFactory-&gt;CreateMessage();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordflow">if</span> (fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(0).Receive(commandMsg) &gt; 0) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="comment">//... handle command ...</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="keyword">delete</span> commandMsg;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// input 1 - heartbeats</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">if</span> (poller-&gt;CheckInput(1)) {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      FairMQMessage* heartbeatMsg = fTransportFactory-&gt;CreateMessage();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordflow">if</span> (fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(1).Receive(heartbeatMsg) &gt; 0) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordtype">string</span> reply = string(static_cast&lt;char*&gt;(heartbeatMsg-&gt;GetData()), heartbeatMsg-&gt;GetSize());</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        updateIPHeartbeat(reply);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="keyword">delete</span> heartbeatMsg;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">// input 2 - data (in test-mode: signal with a timeframe ID)</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">if</span> (poller-&gt;CheckInput(2)) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="comment">// initialize f2e header</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a>* h = <span class="keyword">new</span> <a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      <span class="keywordflow">if</span> (fTestMode &gt; 0) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="comment">// test-mode: receive and store id part in the buffer.</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        FairMQMessage* idPart = fTransportFactory-&gt;CreateMessage();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(2).Receive(idPart);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a9b9606e4af74582bed9d990f184a2011">timeFrameId</a> = *(<span class="keyword">reinterpret_cast&lt;</span>uint64_t*<span class="keyword">&gt;</span>(idPart-&gt;GetData()));</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a08b6283854fb6fa5cbb37641ce314f35">flpIndex</a> = fIndex;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keyword">delete</span> idPart;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="comment">// regular mode: use the id generated locally</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a9b9606e4af74582bed9d990f184a2011">timeFrameId</a> = timeFrameId;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="comment">// h-&gt;flpIndex = stoi(fId);</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        h-&gt;<a class="code" href="../../d9/d55/structf2eHeader.html#a08b6283854fb6fa5cbb37641ce314f35">flpIndex</a> = fIndex;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">if</span> (++timeFrameId == UINT64_MAX - 1) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;          timeFrameId = 0;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      FairMQMessage* headerPart = fTransportFactory-&gt;CreateMessage(h, <span class="keyword">sizeof</span>(<a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a>));</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      fHeaderBuffer.push(headerPart);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <span class="comment">// save the arrival time of the message.</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      fArrivalTime.push(boost::posix_time::microsec_clock::local_time());</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <span class="keywordflow">if</span> (fTestMode &gt; 0) {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="comment">// test-mode: initialize and store data part in the buffer.</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        FairMQMessage* dataPart = fTransportFactory-&gt;CreateMessage();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        dataPart-&gt;Copy(baseMsg);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        fDataBuffer.push(dataPart);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="comment">// regular mode: receive data part from input</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        FairMQMessage* dataPart = fTransportFactory-&gt;CreateMessage();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(2).Receive(dataPart);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        fDataBuffer.push(dataPart);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">// LOG(INFO) &lt;&lt; fDataBuffer.size();</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="comment">// if offset is 0 - send data out without staggering.</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">if</span> (fSendOffset == 0 &amp;&amp; fDataBuffer.size() &gt; 0) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      sendFrontData();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fDataBuffer.size() &gt; 0) {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keywordtype">size_t</span> dataSize = fDataBuffer.front()-&gt;GetSize();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      ptime now = boost::posix_time::microsec_clock::local_time();</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <span class="keywordflow">if</span> ((now - fArrivalTime.front()).total_milliseconds() &gt;= (fSendDelay * fSendOffset)) {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        sendFrontData();</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="comment">// LOG(INFO) &lt;&lt; &quot;buffering...&quot;;</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keyword">delete</span> baseMsg;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> FLPSender::sendFrontData()</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a> h = *(<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="../../d9/d55/structf2eHeader.html">f2eHeader</a>*<span class="keyword">&gt;</span>(fHeaderBuffer.front()-&gt;GetData()));</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  uint64_t currentTimeframeId = h.<a class="code" href="../../d9/d55/structf2eHeader.html#a9b9606e4af74582bed9d990f184a2011">timeFrameId</a>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordtype">int</span> SNDMORE = fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(0).fSocket-&gt;SNDMORE;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordtype">int</span> NOBLOCK = fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(0).fSocket-&gt;NOBLOCK;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="comment">// for which EPN is the message?</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordtype">int</span> direction = currentTimeframeId % fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].size();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="comment">// LOG(INFO) &lt;&lt; &quot;Sending event &quot; &lt;&lt; currentTimeframeId &lt;&lt; &quot; to EPN#&quot; &lt;&lt; direction &lt;&lt; &quot;...&quot;;</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  ptime currentTime = boost::posix_time::microsec_clock::local_time();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  ptime storedHeartbeat = <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ac304c791dfae39447ceaf34e2c44a60b">GetProperty</a>(<a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42">OutputHeartbeat</a>, storedHeartbeat, direction);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="comment">// if the heartbeat from the corresponding EPN is within timeout period, send the data.</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keywordflow">if</span> (to_simple_string(storedHeartbeat) != <span class="stringliteral">&quot;not-a-date-time&quot;</span> ||</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      (currentTime - storedHeartbeat).total_milliseconds() &lt; fHeartbeatTimeoutInMs) {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">if</span>(fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].at(direction).Send(fHeaderBuffer.front(), SNDMORE|NOBLOCK) == 0) {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;Could not queue ID part of event #&quot;</span> &lt;&lt; currentTimeframeId &lt;&lt; <span class="stringliteral">&quot; without blocking&quot;</span>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">if</span> (fChannels[<span class="stringliteral">&quot;data-out&quot;</span>].at(direction).Send(fDataBuffer.front(), NOBLOCK) == 0) {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      LOG(ERROR) &lt;&lt; <span class="stringliteral">&quot;Could not send message with event #&quot;</span> &lt;&lt; currentTimeframeId &lt;&lt; <span class="stringliteral">&quot; without blocking&quot;</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    fHeaderBuffer.pop();</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    fArrivalTime.pop();</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    fDataBuffer.pop();</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  } <span class="keywordflow">else</span> { <span class="comment">// if the heartbeat is too old, discard the data.</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    LOG(WARN) &lt;&lt; <span class="stringliteral">&quot;Heartbeat too old for EPN#&quot;</span> &lt;&lt; direction &lt;&lt; <span class="stringliteral">&quot;, discarding message.&quot;</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    fHeaderBuffer.pop();</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    fArrivalTime.pop();</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    fDataBuffer.pop();</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab453be7e0ed7d4f53b31f85d941f006d">FLPSender::SetProperty</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; value)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;{</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="keywordflow">switch</span> (key) {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      FairMQDevice::SetProperty(key, value);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="keywordtype">string</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ac304c791dfae39447ceaf34e2c44a60b">FLPSender::GetProperty</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; default_<span class="comment">/*= &quot;&quot;*/</span>)</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;{</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <span class="keywordflow">switch</span> (key) {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <span class="keywordflow">return</span> FairMQDevice::GetProperty(key, default_);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a9c17f4e9e5dc57f1ed805b40e181f684">  237</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab453be7e0ed7d4f53b31f85d941f006d">FLPSender::SetProperty</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key, <span class="keyword">const</span> <span class="keywordtype">int</span> value)</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;{</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keywordflow">switch</span> (key) {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa1811789e4c8f75ee4e7d4a0fc3360ec5">HeartbeatTimeoutInMs</a>:</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      fHeartbeatTimeoutInMs = value;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa5c5fa98c5a45f7b87ca6fe838ae7193c">Index</a>:</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      fIndex = value;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa5db41f8317a6229b4cc6c778c34a5fb1">TestMode</a>:</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      fTestMode = value;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa158d99cf4f96f1fcb0f1666c2ed4e5d3">SendOffset</a>:</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      fSendOffset = value;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa6b870fe852c8ad1e12a7fabfadb070be">SendDelay</a>:</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      fSendDelay = value;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa01071308069fc41f45897c66b5ffe8ef">EventSize</a>:</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      fEventSize = value;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      FairMQDevice::SetProperty(key, value);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a77f2d551d6716ab3749272e70c78a5f9">  264</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ac304c791dfae39447ceaf34e2c44a60b">FLPSender::GetProperty</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key, <span class="keyword">const</span> <span class="keywordtype">int</span> default_<span class="comment">/*= 0*/</span>)</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;{</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keywordflow">switch</span> (key) {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa1811789e4c8f75ee4e7d4a0fc3360ec5">HeartbeatTimeoutInMs</a>:</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      <span class="keywordflow">return</span> fHeartbeatTimeoutInMs;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa5c5fa98c5a45f7b87ca6fe838ae7193c">Index</a>:</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      <span class="keywordflow">return</span> fIndex;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa5db41f8317a6229b4cc6c778c34a5fb1">TestMode</a>:</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      <span class="keywordflow">return</span> fTestMode;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa158d99cf4f96f1fcb0f1666c2ed4e5d3">SendOffset</a>:</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;      <span class="keywordflow">return</span> fSendOffset;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa6b870fe852c8ad1e12a7fabfadb070be">SendDelay</a>:</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      <span class="keywordflow">return</span> fSendDelay;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa01071308069fc41f45897c66b5ffe8ef">EventSize</a>:</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      <span class="keywordflow">return</span> fEventSize;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;      <span class="keywordflow">return</span> FairMQDevice::GetProperty(key, default_);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment">// Method for setting properties represented as a heartbeat.</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab453be7e0ed7d4f53b31f85d941f006d">FLPSender::SetProperty</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key, <span class="keyword">const</span> ptime value, <span class="keyword">const</span> <span class="keywordtype">int</span> slot <span class="comment">/*= 0*/</span>)</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;{</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="keywordflow">switch</span> (key) {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42">OutputHeartbeat</a>:</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      fOutputHeartbeat.erase(fOutputHeartbeat.begin() + slot);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      fOutputHeartbeat.insert(fOutputHeartbeat.begin() + slot, value);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">// Method for getting properties represented as a heartbeat.</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;ptime <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ac304c791dfae39447ceaf34e2c44a60b">FLPSender::GetProperty</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> key, <span class="keyword">const</span> ptime default_, <span class="keyword">const</span> <span class="keywordtype">int</span> slot <span class="comment">/*= 0*/</span>)</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;{</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="keywordflow">switch</span> (key) {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42">OutputHeartbeat</a>:</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      <span class="keywordflow">return</span> fOutputHeartbeat.at(slot);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  assert(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
 <div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_a22bbb7a9c3d43d17493b82585c39bf0fa1811789e4c8f75ee4e7d4a0fc3360ec5"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa1811789e4c8f75ee4e7d4a0fc3360ec5">AliceO2::Devices::FLPSender::HeartbeatTimeoutInMs</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/FLPSender_8h_source.html#l00027">FLPSender.h:27</a></div></div>
 <div class="ttc" id="structf2eHeader_html_a08b6283854fb6fa5cbb37641ce314f35"><div class="ttname"><a href="../../d9/d55/structf2eHeader.html#a08b6283854fb6fa5cbb37641ce314f35">f2eHeader::flpIndex</a></div><div class="ttdeci">int flpIndex</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d45/EPNReceiver_8cxx_source.html#l00021">EPNReceiver.cxx:21</a></div></div>
 <div class="ttc" id="structf2eHeader_html_a9b9606e4af74582bed9d990f184a2011"><div class="ttname"><a href="../../d9/d55/structf2eHeader.html#a9b9606e4af74582bed9d990f184a2011">f2eHeader::timeFrameId</a></div><div class="ttdeci">uint64_t timeFrameId</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d45/EPNReceiver_8cxx_source.html#l00020">EPNReceiver.cxx:20</a></div></div>
-<div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_ab718322adbeaea98d487aa5d9402ae9b"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab718322adbeaea98d487aa5d9402ae9b">AliceO2::Devices::FLPSender::~FLPSender</a></div><div class="ttdeci">virtual ~FLPSender()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc2/FLPSender_8cxx_source.html#l00042">FLPSender.cxx:42</a></div></div>
-<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div></div>
+<div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_ab718322adbeaea98d487aa5d9402ae9b"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab718322adbeaea98d487aa5d9402ae9b">AliceO2::Devices::FLPSender::~FLPSender</a></div><div class="ttdeci">virtual ~FLPSender()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc2/FLPSender_8cxx_source.html#l00043">FLPSender.cxx:43</a></div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d34/AliHLTDataTypes_8h_source.html#l01436">AliHLTDataTypes.h:1436</a></div></div>
 <div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_a22bbb7a9c3d43d17493b82585c39bf0fa01071308069fc41f45897c66b5ffe8ef"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa01071308069fc41f45897c66b5ffe8ef">AliceO2::Devices::FLPSender::EventSize</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/FLPSender_8h_source.html#l00031">FLPSender.h:31</a></div></div>
 <div class="ttc" id="structf2eHeader_html"><div class="ttname"><a href="../../d9/d55/structf2eHeader.html">f2eHeader</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d45/EPNReceiver_8cxx_source.html#l00019">EPNReceiver.cxx:19</a></div></div>
 <div class="ttc" id="FLPSender_8h_html"><div class="ttname"><a href="../../d0/d8b/FLPSender_8h.html">FLPSender.h</a></div></div>
 <div class="ttc" id="namespaceAliceO2_1_1Devices_html"><div class="ttname"><a href="../../d3/d4f/namespaceAliceO2_1_1Devices.html">AliceO2::Devices</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dcc/EPNReceiver_8h_source.html#l00020">EPNReceiver.h:20</a></div></div>
 <div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_a22bbb7a9c3d43d17493b82585c39bf0fa5db41f8317a6229b4cc6c778c34a5fb1"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa5db41f8317a6229b4cc6c778c34a5fb1">AliceO2::Devices::FLPSender::TestMode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/FLPSender_8h_source.html#l00032">FLPSender.h:32</a></div></div>
-<div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_a0344b996ea24dc86cb0b045e3893010c"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a0344b996ea24dc86cb0b045e3893010c">AliceO2::Devices::FLPSender::Run</a></div><div class="ttdeci">virtual void Run()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc2/FLPSender_8cxx_source.html#l00080">FLPSender.cxx:80</a></div></div>
+<div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_a0344b996ea24dc86cb0b045e3893010c"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a0344b996ea24dc86cb0b045e3893010c">AliceO2::Devices::FLPSender::Run</a></div><div class="ttdeci">virtual void Run()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc2/FLPSender_8cxx_source.html#l00081">FLPSender.cxx:81</a></div></div>
 <div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_a22bbb7a9c3d43d17493b82585c39bf0fa158d99cf4f96f1fcb0f1666c2ed4e5d3"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa158d99cf4f96f1fcb0f1666c2ed4e5d3">AliceO2::Devices::FLPSender::SendOffset</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/FLPSender_8h_source.html#l00029">FLPSender.h:29</a></div></div>
 <div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_a22bbb7a9c3d43d17493b82585c39bf0fa5c5fa98c5a45f7b87ca6fe838ae7193c"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa5c5fa98c5a45f7b87ca6fe838ae7193c">AliceO2::Devices::FLPSender::Index</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/FLPSender_8h_source.html#l00028">FLPSender.h:28</a></div></div>
 <div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_ac304c791dfae39447ceaf34e2c44a60b"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ac304c791dfae39447ceaf34e2c44a60b">AliceO2::Devices::FLPSender::GetProperty</a></div><div class="ttdeci">virtual std::string GetProperty(const int key, const std::string &amp;default_=&quot;&quot;)</div></div>
 <div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_a22bbb7a9c3d43d17493b82585c39bf0fa6b870fe852c8ad1e12a7fabfadb070be"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa6b870fe852c8ad1e12a7fabfadb070be">AliceO2::Devices::FLPSender::SendDelay</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/FLPSender_8h_source.html#l00030">FLPSender.h:30</a></div></div>
-<div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_a1f33485e7c90118967c08db9d424b3f7"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a1f33485e7c90118967c08db9d424b3f7">AliceO2::Devices::FLPSender::Init</a></div><div class="ttdeci">virtual void Init()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc2/FLPSender_8cxx_source.html#l00046">FLPSender.cxx:46</a></div></div>
+<div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_a1f33485e7c90118967c08db9d424b3f7"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a1f33485e7c90118967c08db9d424b3f7">AliceO2::Devices::FLPSender::Init</a></div><div class="ttdeci">virtual void Init()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc2/FLPSender_8cxx_source.html#l00047">FLPSender.cxx:47</a></div></div>
 <div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42">AliceO2::Devices::FLPSender::OutputHeartbeat</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d8b/FLPSender_8h_source.html#l00026">FLPSender.h:26</a></div></div>
 <div class="ttc" id="classAliceO2_1_1Devices_1_1FLPSender_html_ab453be7e0ed7d4f53b31f85d941f006d"><div class="ttname"><a href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab453be7e0ed7d4f53b31f85d941f006d">AliceO2::Devices::FLPSender::SetProperty</a></div><div class="ttdeci">virtual void SetProperty(const int key, const std::string &amp;value)</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -428,7 +430,7 @@ $(document).ready(function(){initNavTree('d0/dc2/FLPSender_8cxx_source.html','..
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d8825559e0a3f2643aa079b2cf0ac6c3.html">devices</a></li><li class="navelem"><a class="el" href="../../dir_0286deae6ce289509f1af9894c5e2ae4.html">flp2epn-distributed</a></li><li class="navelem"><a class="el" href="../../d0/dc2/FLPSender_8cxx.html">FLPSender.cxx</a></li>
-    <li class="footer">Generated on Mon Aug 3 2015 11:31:13 for AliceO2 by
+    <li class="footer">Generated on Tue Oct 6 2015 08:28:27 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

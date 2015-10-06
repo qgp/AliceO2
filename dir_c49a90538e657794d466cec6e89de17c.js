@@ -58,7 +58,9 @@ var dir_c49a90538e657794d466cec6e89de17c =
     ] ],
     [ "Segmentation.cxx", "d3/d28/Segmentation_8cxx.html", "d3/d28/Segmentation_8cxx" ],
     [ "Segmentation.h", "dc/d4a/Segmentation_8h.html", [
-      [ "Segmentation", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation" ]
+      [ "Segmentation", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation.html", "d6/d00/classAliceO2_1_1ITS_1_1Segmentation" ],
+      [ "OutOfActiveAreaException", "d2/dbe/classAliceO2_1_1ITS_1_1Segmentation_1_1OutOfActiveAreaException.html", "d2/dbe/classAliceO2_1_1ITS_1_1Segmentation_1_1OutOfActiveAreaException" ],
+      [ "InvalidPixelException", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException" ]
     ] ],
     [ "UpgradeGeometryTGeo.cxx", "d3/d99/UpgradeGeometryTGeo_8cxx.html", null ],
     [ "UpgradeGeometryTGeo.h", "d0/d61/UpgradeGeometryTGeo_8h.html", "d0/d61/UpgradeGeometryTGeo_8h" ],
