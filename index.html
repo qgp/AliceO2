@@ -103,37 +103,67 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="title">AliceO2 Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This is the groundwork for the Hough Transform algorithm implementation. The runHough executable takes as an argument an event number (i.e. runHough 032) and for the given event it loads all clusters from the corresponding data files.</p>
-<h3>Step by Step installation and execution</h3>
-<ol type="1">
-<li><p class="startli">The runHough executable depends on the AliRoot HLT libraries. For this, an optional dependency to AliRoot has been added to the <a class="el" href="dc/d65/namespaceAliceO2.html">AliceO2</a> framework. To build the executable, the path to the AliRoot installation must be given at configuration time. For example:</p>
-<p class="startli">cmake -DCMAKE_INSTALL_PREFIX:PATH=.. -DCMAKE_CXX_FLAGS="-std=c++11" .. -DALIROOT="/opt/alice/external/AliRoot"</p>
-</li>
-</ol>
-<p>It is important that AliRoot, FairRoot and <a class="el" href="dc/d65/namespaceAliceO2.html">AliceO2</a> have been built against the same version of ROOT. To ensure that the prerequisite packages were compiled and installed correctly, the alfaconfig.sh script that is included as part of the FairSoft installation can be used.</p>
-<ol type="1">
-<li><p class="startli">Raw data files should be retrieved from AliEn for a given run. The implementation can be tested using the raw files corresponding to run 167808:</p>
-<p class="startli">alien-token-init &lt;username&gt; aliensh</p>
-<p class="startli">cd /alice/data/2011/LHC11h/000167808/raw/ cp 11000167808000.10.root <a href="file://tmp">file://tmp</a> exit</p>
-<p class="startli">mv /tmp/11000167808000.10.root raw.root</p>
-</li>
-</ol>
-<p>Then, the necessary scripts to perform the clusterization for the data should be coppied to the current directory: </p><pre class="fragment">cp ${AliRoot}/HLT/exa/recraw-local.C .
-cp ${AliRoot}/HLT/exa/EnableHLTInGRP.C .
-cp ${AliceO2}devices/aliceHLTwrapper/macros/hltConfigurations.C .
-</pre><p>Finally, the following commands should executed: </p><pre class="fragment">aliroot -b -q -l hltConfigurations.C recraw-local.C'("raw.root", "raw://", 0, 0, "HLT TPC", "loglevel=0x79 chains=cluster-collection", "local://./OCDB")'
-
-aliroot -b -q -l EnableHLTInGRP.C'(167808, "local://./OCDB", "local://./OCDB")'
-rm galice.root QA.root
-aliroot -b -q -l hltConfigurations.C recraw-local.C'("raw.root", "local://OCDB", -1, -1, "HLT", "loglevel=0x79 chains=cluster-collection")' 2&gt;&amp;1 | tee cluster-collection.log
-</pre><p>The result should be a directory, called "emulated-tpc-clusters" that will be the input of runHough. By executing </p><pre class="fragment">runHough 032
-</pre><p>the executable will load all the clusters from the emulated-tpc-clusters/event032 subdirectory. After the execution, a graphics file "clusters.pdf" will be created in the current directory depicting the coordinates of the loaded clusters. </p>
+<div class="textblock"><h4>General</h4>
+<p>The devices implement following topology:</p>
+<div class="image">
+<img src="../../docs/images/flp2epn-distr-rtt.png?raw=true"  alt="FLP2EPN topology" title="FLP2EPN topology"/>
+</div>
+<ul>
+<li><b>flpSyncSampler</b> publishes timeframe IDs at configurable rate (only for the <em>test mode</em>).</li>
+<li><b>flpSenders</b> generate dummy data of configurable size and distribute it to the available epnReceivers.</li>
+<li><b>epnReceivers</b> collect all sub-timeframes (according to number of FLPs), merge them and send further.</li>
+<li>flpSenders choose which epnReceiver to send a given sub-timeframe to based on its ID (<code>timeframeId % NumEPNs</code>), ensuring that sub-timeframes with the same ID arrive at the same epnReceiver (without need for additional synchronization).</li>
+<li>Upon collecting sub-timeframes from all flpSenders, epnReceivers send confirmation to the sampler with the timeframe ID to measure roundtrip time.</li>
+<li>epnReceivers can also measure intervals between receiving from the same FLP (used to see the effect of traffic shaping).</li>
+<li>The devices can run in <em>test mode</em> (as described above) and <em>default mode</em> where flpSenders receive data instead of generating it (as used by the Alice HLT devices).</li>
+<li>Optional deployment and execution via DDS.</li>
+</ul>
+<h4>Device configuration</h4>
+<p>The devices are configured via command line options. Most of the command line options have default values. These default values are for running in the <em>default mode</em>. Running in <em>test mode</em> requires a few modifications.</p>
+<p>These are the required device options:</p>
+<p><b>flpSyncSampler</b> (only for the <em>test mode</em>)</p>
+<ul>
+<li><code>--id arg</code> Device ID</li>
+<li><code>--data-out-address arg</code> Data output address, e.g.: "tcp://localhost:5555"</li>
+<li><code>--ack-in-address arg</code> Acknowledgement Input address, e.g.: "tcp://localhost:5556"</li>
+</ul>
+<p><b>flpSender</b></p>
+<ul>
+<li><code>--id arg</code> Device ID</li>
+<li><code>--num-epns arg</code> Number of EPNs</li>
+<li><code>--data-in-address arg</code> Data input address, e.g.: "tcp://localhost:5555"</li>
+<li><code>--data-out-address arg</code> Data output address, e.g.: "tcp://localhost:5555"</li>
+<li><code>--hb-in-address arg</code> Heartbeat input address, e.g.: "tcp://localhost:5555"</li>
+</ul>
+<p>Default overrides for <em>test mode</em>:</p>
+<ul>
+<li><code>--test-mode arg (=0)</code> "1" to run in test mode</li>
+<li><code>--data-in-socket-type arg (=pull)</code> "sub" for test mode</li>
+<li><code>--data-in-method arg (=bind)</code> "connect" for test mode</li>
+<li><code>--data-in-address arg</code> In test mode, the signal from flpSyncSampler sends to this address (data is generated).</li>
+</ul>
+<p><b>epnReceiver</b></p>
+<ul>
+<li><code>--id arg</code> Device ID</li>
+<li><code>--num-flps arg</code> Number of FLPs</li>
+<li><code>--data-in-address arg</code> Data input address, e.g.: "tcp://localhost:5555"</li>
+<li><code>--data-out-address arg</code> Output address, e.g.: "tcp://localhost:5555"</li>
+<li><code>--hb-out-address arg</code> Heartbeat output address, e.g.: "tcp://localhost:5555"</li>
+</ul>
+<p>Default overrides for <em>test mode</em>:</p>
+<ul>
+<li><code>--data-out-socket-type arg (=push)</code> "pub" for test mode (pub will just discard the data because no receiver in test mode).</li>
+<li><code>--ack-out-address arg</code> For test mode provide address of the flpSyncSampler.</li>
+</ul>
+<p>To list <em>all</em> available device options, run the executable with <code>--help</code>.</p>
+<p>When running with DDS, configuration of addresses is also not required, because these are configured dynamically.</p>
+<p>Example for the <em>test mode</em> can be found in <code>run/startFLP2EPN-distributed.sh.in</code> for manual run, or <code>runO2Prototype/flp_epn_topology.xml</code> for DDS run. For <em>default mode</em> there is an example DDS topology in <code>../topologies/o2prototype_topology.xml</code>. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Oct 6 2015 08:28:29 for AliceO2 by
+    <li class="footer">Generated on Tue Oct 13 2015 11:29:20 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

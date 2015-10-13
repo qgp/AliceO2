@@ -110,16 +110,16 @@ $(document).ready(function(){initNavTree('dd/de5/XmlHandler_8cxx_source.html','.
 </div><!--header-->
 <div class="contents">
 <a href="../../dd/de5/XmlHandler_8cxx.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  The SAX XML file handler used in the CDBManager                       //</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;Riostream.h&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;TList.h&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;TObject.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;TXMLAttr.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;TSAXParser.h&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;FairLogger.h&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/de8/XmlHandler_8h.html">XmlHandler.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/de8/XmlHandler_8h.html">XmlHandler.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;FairLogger.h&gt;</span>   <span class="comment">// for LOG</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;TList.h&gt;</span>        <span class="comment">// for TList</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;TObject.h&gt;</span>      <span class="comment">// for TObject</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;TXMLAttr.h&gt;</span>     <span class="comment">// for TXMLAttr</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;TCollection.h&quot;</span>  <span class="comment">// for TIter</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;Riostream.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d8/dc7/namespaceAliceO2_1_1CDB.html">AliceO2::CDB</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../dd/de5/XmlHandler_8cxx.html#a234e3877d04c08bebf0b4ae5a2f695ef">   14</a></span>&#160;<a class="code" href="../../dd/de5/XmlHandler_8cxx.html#a234e3877d04c08bebf0b4ae5a2f695ef">ClassImp</a>(<a class="code" href="../../d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html">XmlHandler</a>)</div>
@@ -271,17 +271,17 @@ $(document).ready(function(){initNavTree('dd/de5/XmlHandler_8cxx_source.html','.
 <div class="ttc" id="XmlHandler_8h_html"><div class="ttname"><a href="../../d8/de8/XmlHandler_8h.html">XmlHandler.h</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1XmlHandler_html_a87806f7d9e9985a1dd3acb98395327bd"><div class="ttname"><a href="../../d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html#a87806f7d9e9985a1dd3acb98395327bd">AliceO2::CDB::XmlHandler::~XmlHandler</a></div><div class="ttdeci">virtual ~XmlHandler()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de5/XmlHandler_8cxx_source.html#l00054">XmlHandler.cxx:54</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1XmlHandler_html_a2ab7f26c7029a17418fa058955ca8395"><div class="ttname"><a href="../../d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html#a2ab7f26c7029a17418fa058955ca8395">AliceO2::CDB::XmlHandler::OnFatalError</a></div><div class="ttdeci">void OnFatalError(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de5/XmlHandler_8cxx_source.html#l00139">XmlHandler.cxx:139</a></div></div>
-<div class="ttc" id="namespaceAliceO2_1_1CDB_html"><div class="ttname"><a href="../../d8/dc7/namespaceAliceO2_1_1CDB.html">AliceO2::CDB</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/Condition_8h_source.html#l00011">Condition.h:11</a></div></div>
+<div class="ttc" id="namespaceAliceO2_1_1CDB_html"><div class="ttname"><a href="../../d8/dc7/namespaceAliceO2_1_1CDB.html">AliceO2::CDB</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1c/Condition_8cxx_source.html#l00007">Condition.cxx:7</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1XmlHandler_html_a242ad7f710e6c7ef0f0985d70f526d55"><div class="ttname"><a href="../../d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html#a242ad7f710e6c7ef0f0985d70f526d55">AliceO2::CDB::XmlHandler::OnComment</a></div><div class="ttdeci">void OnComment(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de5/XmlHandler_8cxx_source.html#l00122">XmlHandler.cxx:122</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1XmlHandler_html_a8884b51a01cdab753847cea254b5116a"><div class="ttname"><a href="../../d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html#a8884b51a01cdab753847cea254b5116a">AliceO2::CDB::XmlHandler::OnError</a></div><div class="ttdeci">void OnError(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de5/XmlHandler_8cxx_source.html#l00133">XmlHandler.cxx:133</a></div></div>
-<div class="ttc" id="classAliceO2_1_1CDB_1_1XmlHandler_html"><div class="ttname"><a href="../../d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html">AliceO2::CDB::XmlHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de8/XmlHandler_8h_source.html#l00010">XmlHandler.h:10</a></div></div>
+<div class="ttc" id="classAliceO2_1_1CDB_1_1XmlHandler_html"><div class="ttname"><a href="../../d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html">AliceO2::CDB::XmlHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de8/XmlHandler_8h_source.html#l00015">XmlHandler.h:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_3472b3ea63d1c5eec14900552ebe61c1.html">o2cdb</a></li><li class="navelem"><a class="el" href="../../dd/de5/XmlHandler_8cxx.html">XmlHandler.cxx</a></li>
-    <li class="footer">Generated on Tue Oct 6 2015 08:28:28 for AliceO2 by
+    <li class="footer">Generated on Tue Oct 13 2015 11:29:19 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

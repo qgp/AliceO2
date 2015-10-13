@@ -1,6 +1,5 @@
 var classAliceO2_1_1Devices_1_1FLPSender =
 [
-    [ "OutputHeartbeat", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42", null ],
     [ "HeartbeatTimeoutInMs", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa1811789e4c8f75ee4e7d4a0fc3360ec5", null ],
     [ "Index", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa5c5fa98c5a45f7b87ca6fe838ae7193c", null ],
     [ "SendOffset", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa158d99cf4f96f1fcb0f1666c2ed4e5d3", null ],
@@ -12,11 +11,8 @@ var classAliceO2_1_1Devices_1_1FLPSender =
     [ "~FLPSender", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab718322adbeaea98d487aa5d9402ae9b", null ],
     [ "GetProperty", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ac304c791dfae39447ceaf34e2c44a60b", null ],
     [ "GetProperty", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a77f2d551d6716ab3749272e70c78a5f9", null ],
-    [ "GetProperty", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a532c80a66c49bc715b27bbfb5156c656", null ],
-    [ "Init", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a1f33485e7c90118967c08db9d424b3f7", null ],
-    [ "ResetEventCounter", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a917c3571a9507068420fa36bf3dbab32", null ],
+    [ "InitTask", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a404d9e344939933bf61a2e955249a9bd", null ],
     [ "Run", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a0344b996ea24dc86cb0b045e3893010c", null ],
     [ "SetProperty", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab453be7e0ed7d4f53b31f85d941f006d", null ],
-    [ "SetProperty", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a9c17f4e9e5dc57f1ed805b40e181f684", null ],
-    [ "SetProperty", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ada57418dae2569c86152b25ddaf8e725", null ]
+    [ "SetProperty", "d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a9c17f4e9e5dc57f1ed805b40e181f684", null ]
 ];

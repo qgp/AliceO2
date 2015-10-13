@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('dd/dce/O2EpnMerger_8cxx_source.html','
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">bool</span> received = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">int</span> NoOfMsgParts = fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].size() - 1;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">while</span> (GetCurrentState() == RUNNING) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">while</span> (CheckCurrentState(RUNNING)) {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    FairMQMessage* msg = fTransportFactory-&gt;CreateMessage();</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    poller-&gt;Poll(100);</div>
@@ -154,32 +154,29 @@ $(document).ready(function(){initNavTree('dd/dce/O2EpnMerger_8cxx_source.html','
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">//--------------------</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// editor comment: i think following block shouldn&#39;t be here, but i&#39;ll just leave it here...</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">while</span> (GetCurrentState() == RUNNING) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    FairMQMessage* msg = fTransportFactory-&gt;CreateMessage();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">// while (CheckCurrentState(RUNNING)) {</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">//   FairMQMessage* msg = fTransportFactory-&gt;CreateMessage();</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">//   fChannels[&quot;data-in&quot;].at(0).Receive(msg);</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(0).Receive(msg);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">int</span> inputSize = msg-&gt;GetSize();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> numInput = inputSize / <span class="keyword">sizeof</span>(<a class="code" href="../../d0/dc6/structContent.html">Content</a>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../d0/dc6/structContent.html">Content</a>* input = <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="../../d0/dc6/structContent.html">Content</a>*<span class="keyword">&gt;</span>(msg-&gt;GetData());</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// for (int i = 0; i &lt; numInput; ++i) {</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">//     LOG(INFO) &lt;&lt; (&amp;input[i])-&gt;x &lt;&lt; &quot; &quot; &lt;&lt; (&amp;input[i])-&gt;y &lt;&lt; &quot; &quot; &lt;&lt; (&amp;input[i])-&gt;z &lt;&lt; &quot; &quot; &lt;&lt; (&amp;input[i])-&gt;a &lt;&lt; &quot; &quot; &lt;&lt; (&amp;input[i])-&gt;b;</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// }</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">delete</span> msg;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="../../d0/d48/classO2EpnMerger.html#af645b2b028f830d8c91158426ff21143">   71</a></span>&#160;<a class="code" href="../../d0/d48/classO2EpnMerger.html#af645b2b028f830d8c91158426ff21143">O2EpnMerger::~O2EpnMerger</a>()</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">//   int inputSize = msg-&gt;GetSize();</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">//   int numInput = inputSize / sizeof(Content);</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="comment">//   Content* input = reinterpret_cast&lt;Content*&gt;(msg-&gt;GetData());</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="comment">//   // for (int i = 0; i &lt; numInput; ++i) {</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="comment">//   //     LOG(INFO) &lt;&lt; (&amp;input[i])-&gt;x &lt;&lt; &quot; &quot; &lt;&lt; (&amp;input[i])-&gt;y &lt;&lt; &quot; &quot; &lt;&lt; (&amp;input[i])-&gt;z &lt;&lt; &quot; &quot; &lt;&lt; (&amp;input[i])-&gt;a &lt;&lt; &quot; &quot; &lt;&lt; (&amp;input[i])-&gt;b;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="comment">//   // }</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="comment">//   delete msg;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="comment">// }</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../d0/d48/classO2EpnMerger.html#af645b2b028f830d8c91158426ff21143">   69</a></span>&#160;<a class="code" href="../../d0/d48/classO2EpnMerger.html#af645b2b028f830d8c91158426ff21143">O2EpnMerger::~O2EpnMerger</a>()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 <div class="ttc" id="O2EpnMerger_8h_html"><div class="ttname"><a href="../../d6/db0/O2EpnMerger_8h.html">O2EpnMerger.h</a></div></div>
-<div class="ttc" id="structContent_html"><div class="ttname"><a href="../../d0/dc6/structContent.html">Content</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/ddd/O2EPNex_8h_source.html#l00013">O2EPNex.h:13</a></div></div>
 <div class="ttc" id="classO2EpnMerger_html_ac420536976f823962732862d670087a9"><div class="ttname"><a href="../../d0/d48/classO2EpnMerger.html#ac420536976f823962732862d670087a9">O2EpnMerger::O2EpnMerger</a></div><div class="ttdeci">O2EpnMerger()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dce/O2EpnMerger_8cxx_source.html#l00014">O2EpnMerger.cxx:14</a></div></div>
-<div class="ttc" id="classO2EpnMerger_html_af645b2b028f830d8c91158426ff21143"><div class="ttname"><a href="../../d0/d48/classO2EpnMerger.html#af645b2b028f830d8c91158426ff21143">O2EpnMerger::~O2EpnMerger</a></div><div class="ttdeci">virtual ~O2EpnMerger()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dce/O2EpnMerger_8cxx_source.html#l00071">O2EpnMerger.cxx:71</a></div></div>
+<div class="ttc" id="classO2EpnMerger_html_af645b2b028f830d8c91158426ff21143"><div class="ttname"><a href="../../d0/d48/classO2EpnMerger.html#af645b2b028f830d8c91158426ff21143">O2EpnMerger::~O2EpnMerger</a></div><div class="ttdeci">virtual ~O2EpnMerger()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dce/O2EpnMerger_8cxx_source.html#l00069">O2EpnMerger.cxx:69</a></div></div>
 <div class="ttc" id="classO2EpnMerger_html_a41ba3ee5feeea954e0773de5f924da8d"><div class="ttname"><a href="../../d0/d48/classO2EpnMerger.html#a41ba3ee5feeea954e0773de5f924da8d">O2EpnMerger::Run</a></div><div class="ttdeci">virtual void Run()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dce/O2EpnMerger_8cxx_source.html#l00018">O2EpnMerger.cxx:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -187,7 +184,7 @@ $(document).ready(function(){initNavTree('dd/dce/O2EpnMerger_8cxx_source.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d8825559e0a3f2643aa079b2cf0ac6c3.html">devices</a></li><li class="navelem"><a class="el" href="../../dir_ce40628757e3bffb4840225cf7b8335a.html">flp2epn</a></li><li class="navelem"><a class="el" href="../../dd/dce/O2EpnMerger_8cxx.html">O2EpnMerger.cxx</a></li>
-    <li class="footer">Generated on Tue Oct 6 2015 08:28:27 for AliceO2 by
+    <li class="footer">Generated on Tue Oct 13 2015 11:29:18 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

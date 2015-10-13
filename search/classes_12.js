@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wrapperdevice',['WrapperDevice',['../d5/d21/classALICE_1_1HLT_1_1WrapperDevice.html',1,'ALICE::HLT']]]
+  ['xmlhandler',['XmlHandler',['../d8/def/classAliceO2_1_1CDB_1_1XmlHandler.html',1,'AliceO2::CDB']]]
 ];

@@ -130,7 +130,7 @@ $(document).ready(function(){initNavTree('d8/d6a/O2Merger_8cxx_source.html','../
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">int</span> NoOfMsgParts = fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].size() - 1;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">while</span> (GetCurrentState() == RUNNING) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">while</span> (CheckCurrentState(RUNNING)) {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    FairMQMessage* msg = fTransportFactory-&gt;CreateMessage();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    poller-&gt;Poll(100);</div>
@@ -166,7 +166,7 @@ $(document).ready(function(){initNavTree('d8/d6a/O2Merger_8cxx_source.html','../
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d8825559e0a3f2643aa079b2cf0ac6c3.html">devices</a></li><li class="navelem"><a class="el" href="../../dir_ce40628757e3bffb4840225cf7b8335a.html">flp2epn</a></li><li class="navelem"><a class="el" href="../../d8/d6a/O2Merger_8cxx.html">O2Merger.cxx</a></li>
-    <li class="footer">Generated on Tue Oct 6 2015 08:28:27 for AliceO2 by
+    <li class="footer">Generated on Tue Oct 13 2015 11:29:18 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

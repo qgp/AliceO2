@@ -24,7 +24,6 @@ var searchData=
   ['flat',['flat',['../d5/d4d/classPyTr1Rng.html#ad8db8819c40eb0932cfb12f0b8852b68',1,'PyTr1Rng::flat()'],['../dd/d80/classPyTr3Rng.html#a7180fe38e3c7311e4a742b045d8d21a5',1,'PyTr3Rng::flat()']]],
   ['flpsender',['FLPSender',['../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#aaf7dbef904ad8752dd3aa9d59227ef52',1,'AliceO2::Devices::FLPSender']]],
   ['flpsyncsampler',['FLPSyncSampler',['../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a1eb2bfe565600050dfdcbda7d90d9a8e',1,'AliceO2::Devices::FLPSyncSampler']]],
-  ['framebuilder',['FrameBuilder',['../d0/d4f/classAliceO2_1_1Devices_1_1FrameBuilder.html#a625488138eb9bee8cc4df917bebcf9c9',1,'AliceO2::Devices::FrameBuilder']]],
   ['freedatasources',['FreeDataSources',['../d5/d54/classAliHLTHOMERReader.html#adcc765c664462ec6086c917ad1931a9c',1,'AliHLTHOMERReader']]],
   ['freeshmdatasource',['FreeShmDataSource',['../d5/d54/classAliHLTHOMERReader.html#a54fa4d2bf4f792730031100e45d879c0',1,'AliHLTHOMERReader']]],
   ['freetcpdatasource',['FreeTCPDataSource',['../d5/d54/classAliHLTHOMERReader.html#a982316fe75d026c6195eee636c9cfb5b',1,'AliHLTHOMERReader']]]

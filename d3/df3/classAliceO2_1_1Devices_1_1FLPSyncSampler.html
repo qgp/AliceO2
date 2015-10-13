@@ -131,7 +131,6 @@ Inheritance diagram for AliceO2::Devices::FLPSyncSampler:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a89869f5b1e094a23fb98e0be5a20f76f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89869f5b1e094a23fb98e0be5a20f76fab89a032dcf3b382f1d336c3841596c46">EventRate</a> = FairMQDevice::Last, 
-<a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89869f5b1e094a23fb98e0be5a20f76faf7d0884a089eed401f83582411525631">EventSize</a>, 
 <a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89869f5b1e094a23fb98e0be5a20f76fa0c119352cc77b3dfa0fed55c0862e612">Last</a>
  }</td></tr>
 <tr class="separator:a89869f5b1e094a23fb98e0be5a20f76f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,21 +156,23 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a89e04b495375a00b22428e8701721878"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a89e04b495375a00b22428e8701721878">InitTask</a> ()</td></tr>
+<tr class="separator:a89e04b495375a00b22428e8701721878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d0e314f29399e6a690efe5c88d96313"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a0d0e314f29399e6a690efe5c88d96313">Run</a> ()</td></tr>
 <tr class="separator:a0d0e314f29399e6a690efe5c88d96313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a91004bf3fb37978ccfae1dd143e496b5"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="../../d2/d9a/structAliceO2_1_1Devices_1_1timeframeDuration.html">timeframeDuration</a>, UINT16_MAX &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a91004bf3fb37978ccfae1dd143e496b5">fTimeframeRTT</a></td></tr>
+<tr class="separator:a91004bf3fb37978ccfae1dd143e496b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad39dd0425d8bf23a261fc3675841e8c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#ad39dd0425d8bf23a261fc3675841e8c4">fEventRate</a></td></tr>
 <tr class="separator:ad39dd0425d8bf23a261fc3675841e8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dfe02c40ef863b6394ebe585b25530e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a2dfe02c40ef863b6394ebe585b25530e">fEventCounter</a></td></tr>
 <tr class="separator:a2dfe02c40ef863b6394ebe585b25530e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3427e21c0150be0b062b52fade8e7c47"><td class="memItemLeft" align="right" valign="top">std::map&lt; uint64_t, <a class="el" href="../../d2/d9a/structAliceO2_1_1Devices_1_1timeframeDuration.html">timeframeDuration</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html#a3427e21c0150be0b062b52fade8e7c47">fTimeframeRTT</a></td></tr>
-<tr class="separator:a3427e21c0150be0b062b52fade8e7c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00026">26</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00027">27</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a89869f5b1e094a23fb98e0be5a20f76f"></a>
 <div class="memitem">
@@ -185,13 +186,11 @@ Protected Attributes</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a89869f5b1e094a23fb98e0be5a20f76fab89a032dcf3b382f1d336c3841596c46"></a>EventRate&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a89869f5b1e094a23fb98e0be5a20f76faf7d0884a089eed401f83582411525631"></a>EventSize&#160;</td><td class="fielddoc">
-</td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a89869f5b1e094a23fb98e0be5a20f76fa0c119352cc77b3dfa0fed55c0862e612"></a>Last&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00029">29</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00030">30</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
 
 </div>
 </div>
@@ -209,7 +208,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00023">23</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00022">22</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
 
 </div>
 </div>
@@ -305,7 +304,32 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00157">157</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00156">156</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a89e04b495375a00b22428e8701721878"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FLPSyncSampler::InitTask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00033">33</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
 
 </div>
 </div>
@@ -322,7 +346,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00077">77</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00082">82</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
 
 </div>
 </div>
@@ -339,7 +363,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00116">116</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00114">114</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
 
 </div>
 </div>
@@ -364,7 +388,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00033">33</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00040">40</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
 
 </div>
 </div>
@@ -434,7 +458,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00145">145</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html#l00144">144</a> of file <a class="el" href="../../d3/d87/FLPSyncSampler_8cxx_source.html">FLPSyncSampler.cxx</a>.</p>
 
 </div>
 </div>
@@ -457,7 +481,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00050">50</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00052">52</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
 
 </div>
 </div>
@@ -479,11 +503,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00049">49</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00051">51</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3427e21c0150be0b062b52fade8e7c47"></a>
+<a class="anchor" id="a91004bf3fb37978ccfae1dd143e496b5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -491,7 +515,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;uint64_t,<a class="el" href="../../d2/d9a/structAliceO2_1_1Devices_1_1timeframeDuration.html">timeframeDuration</a>&gt; AliceO2::Devices::FLPSyncSampler::fTimeframeRTT</td>
+          <td class="memname">std::array&lt;<a class="el" href="../../d2/d9a/structAliceO2_1_1Devices_1_1timeframeDuration.html">timeframeDuration</a>, UINT16_MAX&gt; AliceO2::Devices::FLPSyncSampler::fTimeframeRTT</td>
         </tr>
       </table>
   </td>
@@ -501,7 +525,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00052">52</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html#l00050">50</a> of file <a class="el" href="../../d6/d0a/FLPSyncSampler_8h_source.html">FLPSyncSampler.h</a>.</p>
 
 </div>
 </div>
@@ -515,7 +539,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></li><li class="navelem"><a class="el" href="../../d3/d4f/namespaceAliceO2_1_1Devices.html">Devices</a></li><li class="navelem"><a class="el" href="../../d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html">FLPSyncSampler</a></li>
-    <li class="footer">Generated on Tue Oct 6 2015 08:28:28 for AliceO2 by
+    <li class="footer">Generated on Tue Oct 13 2015 11:29:19 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

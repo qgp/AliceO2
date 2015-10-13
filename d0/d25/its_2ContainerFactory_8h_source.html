@@ -113,36 +113,38 @@ $(document).ready(function(){initNavTree('d0/d25/its_2ContainerFactory_8h_source
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef ALICEO2_ITS_CONTAINERFACTORY_H_</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define ALICEO2_ITS_CONTAINERFACTORY_H_</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;FairContFact.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">class </span>FairContainer;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;FairContFact.h&quot;</span>  <span class="comment">// for FairContFact, FairContainer (ptr only)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Rtypes.h&quot;</span>        <span class="comment">// for ContainerFactory::Class, ClassDef, etc</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">class </span>FairParSet;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../dc/d65/namespaceAliceO2.html">AliceO2</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>ITS {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html">ContainerFactory</a> : <span class="keyword">public</span> FairContFact {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordtype">void</span> mSetAllContainers();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html#a950548ab08081ebaf8b2593fe7617598">ContainerFactory</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html#acc9f3d04e340cf66a6e708a333677807">   26</a></span>&#160;  <a class="code" href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html#acc9f3d04e340cf66a6e708a333677807">~ContainerFactory</a>()</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  FairParSet* <a class="code" href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html#a204e88a3bd9667c98ad967c4158f8756">createContainer</a>(FairContainer*);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  ClassDef(<a class="code" href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html">ContainerFactory</a>, 0) <span class="comment">// Factory for all AliceO2 ITS parameter containers</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classAliceO2_1_1ITS_1_1ContainerFactory_html"><div class="ttname"><a href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html">AliceO2::ITS::ContainerFactory</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d25/its_2ContainerFactory_8h_source.html#l00014">ContainerFactory.h:14</a></div></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">class </span>FairContainer;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../dc/d65/namespaceAliceO2.html">AliceO2</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>ITS {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html">ContainerFactory</a> : <span class="keyword">public</span> FairContFact {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">void</span> mSetAllContainers();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html#a950548ab08081ebaf8b2593fe7617598">ContainerFactory</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html#acc9f3d04e340cf66a6e708a333677807">   28</a></span>&#160;  <a class="code" href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html#acc9f3d04e340cf66a6e708a333677807">~ContainerFactory</a>()</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  FairParSet* <a class="code" href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html#a204e88a3bd9667c98ad967c4158f8756">createContainer</a>(FairContainer*);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  ClassDef(<a class="code" href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html">ContainerFactory</a>, 0) <span class="comment">// Factory for all AliceO2 ITS parameter containers</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classAliceO2_1_1ITS_1_1ContainerFactory_html"><div class="ttname"><a href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html">AliceO2::ITS::ContainerFactory</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d25/its_2ContainerFactory_8h_source.html#l00016">ContainerFactory.h:16</a></div></div>
 <div class="ttc" id="classAliceO2_1_1ITS_1_1ContainerFactory_html_a204e88a3bd9667c98ad967c4158f8756"><div class="ttname"><a href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html#a204e88a3bd9667c98ad967c4158f8756">AliceO2::ITS::ContainerFactory::createContainer</a></div><div class="ttdeci">FairParSet * createContainer(FairContainer *)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dfe/its_2ContainerFactory_8cxx_source.html#l00033">ContainerFactory.cxx:33</a></div></div>
-<div class="ttc" id="classAliceO2_1_1ITS_1_1ContainerFactory_html_acc9f3d04e340cf66a6e708a333677807"><div class="ttname"><a href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html#acc9f3d04e340cf66a6e708a333677807">AliceO2::ITS::ContainerFactory::~ContainerFactory</a></div><div class="ttdeci">~ContainerFactory()</div><div class="ttdoc">Default destructor. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d25/its_2ContainerFactory_8h_source.html#l00026">ContainerFactory.h:26</a></div></div>
-<div class="ttc" id="namespaceAliceO2_html"><div class="ttname"><a href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de1/Base_2Detector_8h_source.html#l00009">Detector.h:9</a></div></div>
+<div class="ttc" id="classAliceO2_1_1ITS_1_1ContainerFactory_html_acc9f3d04e340cf66a6e708a333677807"><div class="ttname"><a href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html#acc9f3d04e340cf66a6e708a333677807">AliceO2::ITS::ContainerFactory::~ContainerFactory</a></div><div class="ttdeci">~ContainerFactory()</div><div class="ttdoc">Default destructor. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d25/its_2ContainerFactory_8h_source.html#l00028">ContainerFactory.h:28</a></div></div>
+<div class="ttc" id="namespaceAliceO2_html"><div class="ttname"><a href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de1/Base_2Detector_8h_source.html#l00010">Detector.h:10</a></div></div>
 <div class="ttc" id="classAliceO2_1_1ITS_1_1ContainerFactory_html_a950548ab08081ebaf8b2593fe7617598"><div class="ttname"><a href="../../db/d8e/classAliceO2_1_1ITS_1_1ContainerFactory.html#a950548ab08081ebaf8b2593fe7617598">AliceO2::ITS::ContainerFactory::ContainerFactory</a></div><div class="ttdeci">ContainerFactory()</div><div class="ttdoc">Default constructor. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dfe/its_2ContainerFactory_8cxx_source.html#l00015">ContainerFactory.cxx:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -150,7 +152,7 @@ $(document).ready(function(){initNavTree('d0/d25/its_2ContainerFactory_8h_source
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_c49a90538e657794d466cec6e89de17c.html">its</a></li><li class="navelem"><a class="el" href="../../d0/d25/its_2ContainerFactory_8h.html">ContainerFactory.h</a></li>
-    <li class="footer">Generated on Tue Oct 6 2015 08:28:27 for AliceO2 by
+    <li class="footer">Generated on Tue Oct 13 2015 11:29:18 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

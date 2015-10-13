@@ -20,7 +20,6 @@ var searchData=
   ['determineuint32alignment',['DetermineUInt32Alignment',['../dd/d46/classAliHLTHOMERWriter.html#a9d4fe8f9dbaef32830a948965c1bde86',1,'AliHLTHOMERWriter']]],
   ['determineuint64alignment',['DetermineUInt64Alignment',['../dd/d46/classAliHLTHOMERWriter.html#aebfad1c85ee1264fae936fef96ea29de',1,'AliHLTHOMERWriter']]],
   ['determineuint8alignment',['DetermineUInt8Alignment',['../dd/d46/classAliHLTHOMERWriter.html#a1d4e31486973427d01f0a22de01692f2',1,'AliHLTHOMERWriter']]],
-  ['deviceoptions',['DeviceOptions',['../d7/def/structDeviceOptions.html#a0af7166adac2bcb9de2b433121f77293',1,'DeviceOptions']]],
   ['diffobjects',['diffObjects',['../db/dea/classAliceO2_1_1CDB_1_1Manager.html#a7c3ef179bc7c67c4eac29dc5d549de63',1,'AliceO2::CDB::Manager']]],
   ['digit',['Digit',['../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#abe2f705fded71b8cfda1d36e11f5e7a4',1,'AliceO2::ITS::Digit::Digit()'],['../db/d9e/classAliceO2_1_1ITS_1_1Digit.html#a5f4fa88fb8ba2849b7d519e9694a77cc',1,'AliceO2::ITS::Digit::Digit(Int_t chipindex, Double_t pixelindex, Double_t charge, Double_t timestamp)']]],
   ['digitcontainer',['DigitContainer',['../db/d18/classAliceO2_1_1ITS_1_1DigitContainer.html#a5b5697bd7c8bfd0d72688552eb2be622',1,'AliceO2::ITS::DigitContainer']]],

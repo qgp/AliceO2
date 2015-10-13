@@ -61,7 +61,6 @@ var searchData=
   ['mdzactive',['mDzActive',['../d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a5b16d9117cb1deb0182f277dc5cfa078',1,'AliceO2::ITS::UpgradeSegmentationPixel']]],
   ['mendrunlhcperiod',['mEndRunLhcPeriod',['../db/dea/classAliceO2_1_1CDB_1_1Manager.html#a8ad9b493c8814ff05ce420a4a405f679',1,'AliceO2::CDB::Manager']]],
   ['menergydepositionstep',['mEnergyDepositionStep',['../d9/d51/classAliceO2_1_1ITS_1_1Detector.html#a48153b7f5e2bbc5fd92f05d53dad0ac3',1,'AliceO2::ITS::Detector']]],
-  ['merger',['merger',['../d3/d4e/runMerger_8cxx.html#a54e54fe0e2d76b8635a04f2655a66f13',1,'runMerger.cxx']]],
   ['method',['method',['../dc/d2f/structSocketProperties__t.html#af0ee5286c2cefe8ae34cc6e204f72d20',1,'SocketProperties_t']]],
   ['mfactories',['mFactories',['../db/dea/classAliceO2_1_1CDB_1_1Manager.html#a2dfb653ecd7ee317a8cafb31235dbc97',1,'AliceO2::CDB::Manager']]],
   ['mgeometrytgeo',['mGeometryTGeo',['../d9/d51/classAliceO2_1_1ITS_1_1Detector.html#af81d4c93bc8d76f80db99bd109916b5c',1,'AliceO2::ITS::Detector']]],

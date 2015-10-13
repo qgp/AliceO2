@@ -111,135 +111,137 @@ $(document).ready(function(){initNavTree('d0/dd7/ConditionMetaData_8cxx_source.h
 <div class="contents">
 <a href="../../d0/dd7/ConditionMetaData_8cxx.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  Set of data describing the object            //</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  but not used to identify the object          //</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;TObjString.h&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;TTimeStamp.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;FairLogger.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d3f/ConditionMetaData_8h.html">ConditionMetaData.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d8/dc7/namespaceAliceO2_1_1CDB.html">AliceO2::CDB</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d3f/ConditionMetaData_8h.html">ConditionMetaData.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;TObjString.h&gt;</span>   <span class="comment">// for TObjString</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;TTimeStamp.h&gt;</span>   <span class="comment">// for TTimeStamp</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span>         <span class="comment">// for time</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;TCollection.h&quot;</span>  <span class="comment">// for TIter</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;THashTable.h&quot;</span>   <span class="comment">// for THashTable</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;TMap.h&quot;</span>         <span class="comment">// for TMap, TPair</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;TObject.h&quot;</span>      <span class="comment">// for TObject</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d0/dd7/ConditionMetaData_8cxx.html#a61347ee1c0878362cc62263ca7825cb2">   12</a></span>&#160;<a class="code" href="../../d0/dd7/ConditionMetaData_8cxx.html#a61347ee1c0878362cc62263ca7825cb2">ClassImp</a>(<a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html">ConditionMetaData</a>)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d8/dc7/namespaceAliceO2_1_1CDB.html">AliceO2::CDB</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html">ConditionMetaData</a>::<a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html">ConditionMetaData</a>()</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  : TObject(), mObjectClassName(&quot;&quot;), mResponsible(&quot;&quot;), mBeamPeriod(0), mAliRootVersion(&quot;&quot;), mComment(&quot;&quot;), mProperties()</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="comment">// default constructor</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  mProperties.SetOwner(1);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#af7109aef150a9e233f1564e34f52d335">   22</a></span>&#160;<a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a44a3b10e15b8014daf04ba47f91ffc96">ConditionMetaData::ConditionMetaData</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* responsible, UInt_t beamPeriod, <span class="keyword">const</span> <span class="keywordtype">char</span>* alirootVersion, <span class="keyword">const</span> <span class="keywordtype">char</span>* comment)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  : TObject(),</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    mObjectClassName(<span class="stringliteral">&quot;&quot;</span>),</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    mResponsible(responsible),</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    mBeamPeriod(beamPeriod),</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    mAliRootVersion(alirootVersion),</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    mComment(comment),</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    mProperties()</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">// constructor</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  mProperties.SetOwner(1);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a3d417cd415f889d1c73fe4737014b3d3">   36</a></span>&#160;<a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a3d417cd415f889d1c73fe4737014b3d3">ConditionMetaData::~ConditionMetaData</a>()</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">// destructor</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a6ce10e1d2d338fae8aceac1eed725eab">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a6ce10e1d2d338fae8aceac1eed725eab">ConditionMetaData::setProperty</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* property, TObject* <span class="keywordtype">object</span>)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="comment">// add something to the list of properties</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  mProperties.Add(<span class="keyword">new</span> TObjString(property), <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ae9bd45a5b6adde542f30b06f2d82bae7">   48</a></span>&#160;TObject* <a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ae9bd45a5b6adde542f30b06f2d82bae7">ConditionMetaData::getProperty</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* property)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">// get a property specified by its name (property)</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">return</span> mProperties.GetValue(property);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ab37382c2e72eb42bde768de71e295ec6">   55</a></span>&#160;Bool_t <a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ab37382c2e72eb42bde768de71e295ec6">ConditionMetaData::removeProperty</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* property)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">// removes a property</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  TObjString objStrProperty(property);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  TObjString* aKey = (TObjString*)mProperties.Remove(&amp;objStrProperty);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">if</span> (aKey) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">delete</span> aKey;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> kTRUE;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> kFALSE;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ab25dd995dd2d7c7a9be92a6e577c36b8">   70</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ab25dd995dd2d7c7a9be92a6e577c36b8">ConditionMetaData::addDateToComment</a>()</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="comment">// add the date to the comment.</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="comment">// This method is supposed to be useful if called at the time when the object</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="comment">// is created, so that later it can more easily be tracked, in particular</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="comment">// when the date of the file can be lost or when one is interested in the</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="comment">// date of creation, irrespective of a later copy of it</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  TTimeStamp ts(time(0));</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  TString comment(<a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a194683e45d60f0ee10373e0f9b50ce1e">getComment</a>());</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  comment += Form(<span class="stringliteral">&quot;\tDate of production: %s\n&quot;</span>, ts.AsString());</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  comment.Remove(comment.Last(<span class="charliteral">&#39;+&#39;</span>));</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a9dbc17cdfc4f05d7d2c44e584c9c3489">setComment</a>(comment);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#add22d23f0011a7dc97f93acf510868d7">   85</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#add22d23f0011a7dc97f93acf510868d7">ConditionMetaData::printConditionMetaData</a>()</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="comment">// print the object&#39;s metaData</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  TString message;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordflow">if</span> (mObjectClassName != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    message += TString::Format(<span class="stringliteral">&quot;\tObject&#39;s class name:  %s\n&quot;</span>, mObjectClassName.Data());</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">if</span> (mResponsible != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    message += TString::Format(<span class="stringliteral">&quot;\tResponsible:    %s\n&quot;</span>, mResponsible.Data());</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordflow">if</span> (mBeamPeriod != 0)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    message += TString::Format(<span class="stringliteral">&quot;\tBeam period:    %d\n&quot;</span>, mBeamPeriod);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">if</span> (mAliRootVersion != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    message += TString::Format(<span class="stringliteral">&quot;\tAliRoot version:  %s\n&quot;</span>, mAliRootVersion.Data());</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">if</span> (mComment != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    message += TString::Format(<span class="stringliteral">&quot;\tComment:    %s\n&quot;</span>, mComment.Data());</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">if</span> (mProperties.GetEntries() &gt; 0) {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    message += <span class="stringliteral">&quot;\tProperties key names:&quot;</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    TIter iter(mProperties.GetTable());</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    TPair* aPair;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">while</span> ((aPair = (TPair*)iter.Next())) {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      message += TString::Format(<span class="stringliteral">&quot;\t\t%s\n&quot;</span>, ((TObjString*)aPair-&gt;Key())-&gt;String().Data());</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  message += <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  Printf(<span class="stringliteral">&quot;**** Object&#39;s ConditionMetaData parameters **** \n%s&quot;</span>, message.Data());</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
-<div class="ttc" id="ConditionMetaData_8cxx_html_a61347ee1c0878362cc62263ca7825cb2"><div class="ttname"><a href="../../d0/dd7/ConditionMetaData_8cxx.html#a61347ee1c0878362cc62263ca7825cb2">ClassImp</a></div><div class="ttdeci">ClassImp(ConditionMetaData) ConditionMetaData</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/ConditionMetaData_8cxx_source.html#l00012">ConditionMetaData.cxx:12</a></div></div>
-<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_add22d23f0011a7dc97f93acf510868d7"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#add22d23f0011a7dc97f93acf510868d7">AliceO2::CDB::ConditionMetaData::printConditionMetaData</a></div><div class="ttdeci">void printConditionMetaData()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/ConditionMetaData_8cxx_source.html#l00085">ConditionMetaData.cxx:85</a></div></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d0/dd7/ConditionMetaData_8cxx.html#a61347ee1c0878362cc62263ca7825cb2">   14</a></span>&#160;<a class="code" href="../../d0/dd7/ConditionMetaData_8cxx.html#a61347ee1c0878362cc62263ca7825cb2">ClassImp</a>(<a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html">ConditionMetaData</a>)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html">ConditionMetaData</a>::<a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html">ConditionMetaData</a>()</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  : TObject(), mObjectClassName(&quot;&quot;), mResponsible(&quot;&quot;), mBeamPeriod(0), mAliRootVersion(&quot;&quot;), mComment(&quot;&quot;), mProperties()</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="comment">// default constructor</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  mProperties.SetOwner(1);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#af7109aef150a9e233f1564e34f52d335">   24</a></span>&#160;<a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a44a3b10e15b8014daf04ba47f91ffc96">ConditionMetaData::ConditionMetaData</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* responsible, UInt_t beamPeriod, <span class="keyword">const</span> <span class="keywordtype">char</span>* alirootVersion, <span class="keyword">const</span> <span class="keywordtype">char</span>* comment)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  : TObject(),</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    mObjectClassName(<span class="stringliteral">&quot;&quot;</span>),</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    mResponsible(responsible),</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    mBeamPeriod(beamPeriod),</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    mAliRootVersion(alirootVersion),</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    mComment(comment),</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    mProperties()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">// constructor</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  mProperties.SetOwner(1);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a3d417cd415f889d1c73fe4737014b3d3">   38</a></span>&#160;<a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a3d417cd415f889d1c73fe4737014b3d3">ConditionMetaData::~ConditionMetaData</a>()</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="comment">// destructor</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a6ce10e1d2d338fae8aceac1eed725eab">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a6ce10e1d2d338fae8aceac1eed725eab">ConditionMetaData::setProperty</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* property, TObject* <span class="keywordtype">object</span>)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">// add something to the list of properties</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  mProperties.Add(<span class="keyword">new</span> TObjString(property), <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ae9bd45a5b6adde542f30b06f2d82bae7">   50</a></span>&#160;TObject* <a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ae9bd45a5b6adde542f30b06f2d82bae7">ConditionMetaData::getProperty</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* property)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">// get a property specified by its name (property)</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">return</span> mProperties.GetValue(property);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ab37382c2e72eb42bde768de71e295ec6">   57</a></span>&#160;Bool_t <a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ab37382c2e72eb42bde768de71e295ec6">ConditionMetaData::removeProperty</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* property)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="comment">// removes a property</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  TObjString objStrProperty(property);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  TObjString* aKey = (TObjString*)mProperties.Remove(&amp;objStrProperty);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">if</span> (aKey) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">delete</span> aKey;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> kTRUE;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> kFALSE;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ab25dd995dd2d7c7a9be92a6e577c36b8">   72</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ab25dd995dd2d7c7a9be92a6e577c36b8">ConditionMetaData::addDateToComment</a>()</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="comment">// add the date to the comment.</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="comment">// This method is supposed to be useful if called at the time when the object</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="comment">// is created, so that later it can more easily be tracked, in particular</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">// when the date of the file can be lost or when one is interested in the</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="comment">// date of creation, irrespective of a later copy of it</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  TTimeStamp ts(time(0));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  TString comment(<a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a194683e45d60f0ee10373e0f9b50ce1e">getComment</a>());</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  comment += Form(<span class="stringliteral">&quot;\tDate of production: %s\n&quot;</span>, ts.AsString());</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  comment.Remove(comment.Last(<span class="charliteral">&#39;+&#39;</span>));</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a9dbc17cdfc4f05d7d2c44e584c9c3489">setComment</a>(comment);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#add22d23f0011a7dc97f93acf510868d7">   87</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#add22d23f0011a7dc97f93acf510868d7">ConditionMetaData::printConditionMetaData</a>()</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">// print the object&#39;s metaData</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  TString message;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">if</span> (mObjectClassName != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    message += TString::Format(<span class="stringliteral">&quot;\tObject&#39;s class name:  %s\n&quot;</span>, mObjectClassName.Data());</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordflow">if</span> (mResponsible != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    message += TString::Format(<span class="stringliteral">&quot;\tResponsible:    %s\n&quot;</span>, mResponsible.Data());</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">if</span> (mBeamPeriod != 0)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    message += TString::Format(<span class="stringliteral">&quot;\tBeam period:    %d\n&quot;</span>, mBeamPeriod);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">if</span> (mAliRootVersion != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    message += TString::Format(<span class="stringliteral">&quot;\tAliRoot version:  %s\n&quot;</span>, mAliRootVersion.Data());</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">if</span> (mComment != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    message += TString::Format(<span class="stringliteral">&quot;\tComment:    %s\n&quot;</span>, mComment.Data());</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordflow">if</span> (mProperties.GetEntries() &gt; 0) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    message += <span class="stringliteral">&quot;\tProperties key names:&quot;</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    TIter iter(mProperties.GetTable());</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    TPair* aPair;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">while</span> ((aPair = (TPair*)iter.Next())) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      message += TString::Format(<span class="stringliteral">&quot;\t\t%s\n&quot;</span>, ((TObjString*)aPair-&gt;Key())-&gt;String().Data());</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  message += <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  Printf(<span class="stringliteral">&quot;**** Object&#39;s ConditionMetaData parameters **** \n%s&quot;</span>, message.Data());</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="ttc" id="ConditionMetaData_8cxx_html_a61347ee1c0878362cc62263ca7825cb2"><div class="ttname"><a href="../../d0/dd7/ConditionMetaData_8cxx.html#a61347ee1c0878362cc62263ca7825cb2">ClassImp</a></div><div class="ttdeci">ClassImp(ConditionMetaData) ConditionMetaData</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/ConditionMetaData_8cxx_source.html#l00014">ConditionMetaData.cxx:14</a></div></div>
+<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_add22d23f0011a7dc97f93acf510868d7"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#add22d23f0011a7dc97f93acf510868d7">AliceO2::CDB::ConditionMetaData::printConditionMetaData</a></div><div class="ttdeci">void printConditionMetaData()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/ConditionMetaData_8cxx_source.html#l00087">ConditionMetaData.cxx:87</a></div></div>
 <div class="ttc" id="ConditionMetaData_8h_html"><div class="ttname"><a href="../../d1/d3f/ConditionMetaData_8h.html">ConditionMetaData.h</a></div></div>
-<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_a3d417cd415f889d1c73fe4737014b3d3"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a3d417cd415f889d1c73fe4737014b3d3">AliceO2::CDB::ConditionMetaData::~ConditionMetaData</a></div><div class="ttdeci">virtual ~ConditionMetaData()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/ConditionMetaData_8cxx_source.html#l00036">ConditionMetaData.cxx:36</a></div></div>
-<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_a6ce10e1d2d338fae8aceac1eed725eab"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a6ce10e1d2d338fae8aceac1eed725eab">AliceO2::CDB::ConditionMetaData::setProperty</a></div><div class="ttdeci">void setProperty(const char *property, TObject *object)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/ConditionMetaData_8cxx_source.html#l00041">ConditionMetaData.cxx:41</a></div></div>
-<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html">AliceO2::CDB::ConditionMetaData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d3f/ConditionMetaData_8h_source.html#l00012">ConditionMetaData.h:12</a></div></div>
-<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_a194683e45d60f0ee10373e0f9b50ce1e"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a194683e45d60f0ee10373e0f9b50ce1e">AliceO2::CDB::ConditionMetaData::getComment</a></div><div class="ttdeci">const char * getComment() const </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d3f/ConditionMetaData_8h_source.html#l00059">ConditionMetaData.h:59</a></div></div>
-<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_ae9bd45a5b6adde542f30b06f2d82bae7"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ae9bd45a5b6adde542f30b06f2d82bae7">AliceO2::CDB::ConditionMetaData::getProperty</a></div><div class="ttdeci">TObject * getProperty(const char *property) const </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/ConditionMetaData_8cxx_source.html#l00048">ConditionMetaData.cxx:48</a></div></div>
+<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_a3d417cd415f889d1c73fe4737014b3d3"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a3d417cd415f889d1c73fe4737014b3d3">AliceO2::CDB::ConditionMetaData::~ConditionMetaData</a></div><div class="ttdeci">virtual ~ConditionMetaData()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/ConditionMetaData_8cxx_source.html#l00038">ConditionMetaData.cxx:38</a></div></div>
+<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_a6ce10e1d2d338fae8aceac1eed725eab"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a6ce10e1d2d338fae8aceac1eed725eab">AliceO2::CDB::ConditionMetaData::setProperty</a></div><div class="ttdeci">void setProperty(const char *property, TObject *object)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/ConditionMetaData_8cxx_source.html#l00043">ConditionMetaData.cxx:43</a></div></div>
+<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html">AliceO2::CDB::ConditionMetaData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d3f/ConditionMetaData_8h_source.html#l00015">ConditionMetaData.h:15</a></div></div>
+<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_a194683e45d60f0ee10373e0f9b50ce1e"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a194683e45d60f0ee10373e0f9b50ce1e">AliceO2::CDB::ConditionMetaData::getComment</a></div><div class="ttdeci">const char * getComment() const </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d3f/ConditionMetaData_8h_source.html#l00062">ConditionMetaData.h:62</a></div></div>
+<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_ae9bd45a5b6adde542f30b06f2d82bae7"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ae9bd45a5b6adde542f30b06f2d82bae7">AliceO2::CDB::ConditionMetaData::getProperty</a></div><div class="ttdeci">TObject * getProperty(const char *property) const </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/ConditionMetaData_8cxx_source.html#l00050">ConditionMetaData.cxx:50</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_a44a3b10e15b8014daf04ba47f91ffc96"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a44a3b10e15b8014daf04ba47f91ffc96">AliceO2::CDB::ConditionMetaData::ConditionMetaData</a></div><div class="ttdeci">ConditionMetaData()</div></div>
-<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_a9dbc17cdfc4f05d7d2c44e584c9c3489"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a9dbc17cdfc4f05d7d2c44e584c9c3489">AliceO2::CDB::ConditionMetaData::setComment</a></div><div class="ttdeci">void setComment(const char *comment)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d3f/ConditionMetaData_8h_source.html#l00055">ConditionMetaData.h:55</a></div></div>
-<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_ab25dd995dd2d7c7a9be92a6e577c36b8"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ab25dd995dd2d7c7a9be92a6e577c36b8">AliceO2::CDB::ConditionMetaData::addDateToComment</a></div><div class="ttdeci">void addDateToComment()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/ConditionMetaData_8cxx_source.html#l00070">ConditionMetaData.cxx:70</a></div></div>
-<div class="ttc" id="namespaceAliceO2_1_1CDB_html"><div class="ttname"><a href="../../d8/dc7/namespaceAliceO2_1_1CDB.html">AliceO2::CDB</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/Condition_8h_source.html#l00011">Condition.h:11</a></div></div>
-<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_ab37382c2e72eb42bde768de71e295ec6"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ab37382c2e72eb42bde768de71e295ec6">AliceO2::CDB::ConditionMetaData::removeProperty</a></div><div class="ttdeci">Bool_t removeProperty(const char *property)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/ConditionMetaData_8cxx_source.html#l00055">ConditionMetaData.cxx:55</a></div></div>
+<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_a9dbc17cdfc4f05d7d2c44e584c9c3489"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#a9dbc17cdfc4f05d7d2c44e584c9c3489">AliceO2::CDB::ConditionMetaData::setComment</a></div><div class="ttdeci">void setComment(const char *comment)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d3f/ConditionMetaData_8h_source.html#l00058">ConditionMetaData.h:58</a></div></div>
+<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_ab25dd995dd2d7c7a9be92a6e577c36b8"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ab25dd995dd2d7c7a9be92a6e577c36b8">AliceO2::CDB::ConditionMetaData::addDateToComment</a></div><div class="ttdeci">void addDateToComment()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/ConditionMetaData_8cxx_source.html#l00072">ConditionMetaData.cxx:72</a></div></div>
+<div class="ttc" id="namespaceAliceO2_1_1CDB_html"><div class="ttname"><a href="../../d8/dc7/namespaceAliceO2_1_1CDB.html">AliceO2::CDB</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1c/Condition_8cxx_source.html#l00007">Condition.cxx:7</a></div></div>
+<div class="ttc" id="classAliceO2_1_1CDB_1_1ConditionMetaData_html_ab37382c2e72eb42bde768de71e295ec6"><div class="ttname"><a href="../../d3/d08/classAliceO2_1_1CDB_1_1ConditionMetaData.html#ab37382c2e72eb42bde768de71e295ec6">AliceO2::CDB::ConditionMetaData::removeProperty</a></div><div class="ttdeci">Bool_t removeProperty(const char *property)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd7/ConditionMetaData_8cxx_source.html#l00057">ConditionMetaData.cxx:57</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_3472b3ea63d1c5eec14900552ebe61c1.html">o2cdb</a></li><li class="navelem"><a class="el" href="../../d0/dd7/ConditionMetaData_8cxx.html">ConditionMetaData.cxx</a></li>
-    <li class="footer">Generated on Tue Oct 6 2015 08:28:28 for AliceO2 by
+    <li class="footer">Generated on Tue Oct 13 2015 11:29:18 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

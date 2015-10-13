@@ -1,10 +1,10 @@
 var classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo =
 [
-    [ "kITSVNA", "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a5a8c527abb484fdfcee0b352dbade8daa2a3772f38745c1fab78996ac0215f911", null ],
-    [ "kITSVUpg", "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a5a8c527abb484fdfcee0b352dbade8daa3b1d1b7a0cc98c3598fc93bd4a076f05", null ],
-    [ "kChipTypePix", "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a34ecb98ffdb01fb0b1d8a608c876315fa7a2a8d4e5c1f270ce8ad5efbcc7aca45", null ],
-    [ "kNChipTypes", "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a34ecb98ffdb01fb0b1d8a608c876315fa96338241ca8d0e5ea178c0e52a6a4873", null ],
-    [ "kMaxSegmPerChipType", "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a34ecb98ffdb01fb0b1d8a608c876315fa17679163c398361a610a26c176b6e77f", null ],
+    [ "kITSVNA", "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#ab41999cbf10943983fe802580f8cce87a2a3772f38745c1fab78996ac0215f911", null ],
+    [ "kITSVUpg", "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#ab41999cbf10943983fe802580f8cce87a3b1d1b7a0cc98c3598fc93bd4a076f05", null ],
+    [ "kChipTypePix", "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a5a8c527abb484fdfcee0b352dbade8daa7a2a8d4e5c1f270ce8ad5efbcc7aca45", null ],
+    [ "kNChipTypes", "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a5a8c527abb484fdfcee0b352dbade8daa96338241ca8d0e5ea178c0e52a6a4873", null ],
+    [ "kMaxSegmPerChipType", "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a5a8c527abb484fdfcee0b352dbade8daa17679163c398361a610a26c176b6e77f", null ],
     [ "UpgradeGeometryTGeo", "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a771a1958b7034edfaa0f3c420ea6ac56", null ],
     [ "~UpgradeGeometryTGeo", "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#a46ec2a23df6c0d0d6140884ea529ca9d", null ],
     [ "UpgradeGeometryTGeo", "d5/de0/classAliceO2_1_1ITS_1_1UpgradeGeometryTGeo.html#af31bf2fc2b3b7f8857985da6e92d6281", null ],

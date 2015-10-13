@@ -2,6 +2,7 @@ var annotated =
 [
     [ "ALICE", "d3/d1b/namespaceALICE.html", "d3/d1b/namespaceALICE" ],
     [ "AliceO2", "dc/d65/namespaceAliceO2.html", "dc/d65/namespaceAliceO2" ],
+    [ "boost", "d4/da9/namespaceboost.html", null ],
     [ "AliHLTAnalysisEnvironment", "db/d77/structAliHLTAnalysisEnvironment.html", "db/d77/structAliHLTAnalysisEnvironment" ],
     [ "AliHLTComponentBlockData", "d7/d8d/structAliHLTComponentBlockData.html", "d7/d8d/structAliHLTComponentBlockData" ],
     [ "AliHLTComponentDataType", "df/dcd/structAliHLTComponentDataType.html", "df/dcd/structAliHLTComponentDataType" ],
@@ -35,7 +36,5 @@ var annotated =
     [ "Pythia8Generator", "de/d55/classPythia8Generator.html", "de/d55/classPythia8Generator" ],
     [ "PyTr1Rng", "d5/d4d/classPyTr1Rng.html", "d5/d4d/classPyTr1Rng" ],
     [ "PyTr3Rng", "dd/d80/classPyTr3Rng.html", "dd/d80/classPyTr3Rng" ],
-    [ "RoundtripClient", "d4/dec/classRoundtripClient.html", "d4/dec/classRoundtripClient" ],
-    [ "RoundtripServer", "d5/d4e/classRoundtripServer.html", "d5/d4e/classRoundtripServer" ],
     [ "SocketProperties_t", "dc/d2f/structSocketProperties__t.html", "dc/d2f/structSocketProperties__t" ]
 ];

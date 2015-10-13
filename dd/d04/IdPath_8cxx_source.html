@@ -111,13 +111,13 @@ $(document).ready(function(){initNavTree('dd/d04/IdPath_8cxx_source.html','../..
 <div class="contents">
 <a href="../../dd/d04/IdPath_8cxx.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  Path string identifying the object:          //</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  (example: &quot;ZDC/Calib/Pedestals&quot;)                 //</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;TObjArray.h&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;TObjString.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;TRegexp.h&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;FairLogger.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/dd1/IdPath_8h.html">IdPath.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/dd1/IdPath_8h.html">IdPath.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;FairLogger.h&gt;</span>  <span class="comment">// for LOG</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;TObjArray.h&gt;</span>   <span class="comment">// for TObjArray</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;TObjString.h&gt;</span>  <span class="comment">// for TObjString</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;TRegexp.h&gt;</span>     <span class="comment">// for TRegexp</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;TObject.h&quot;</span>     <span class="comment">// for TObject</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;TString.h&quot;</span>     <span class="comment">// for TString, operator==, Form, etc</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d8/dc7/namespaceAliceO2_1_1CDB.html">AliceO2::CDB</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
@@ -326,12 +326,12 @@ $(document).ready(function(){initNavTree('dd/d04/IdPath_8cxx_source.html','../..
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;}</div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1IdPath_html_a51ee6b762a443a39807605abdfaa3011"><div class="ttname"><a href="../../d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a51ee6b762a443a39807605abdfaa3011">AliceO2::CDB::IdPath::doesLevel2Contain</a></div><div class="ttdeci">Bool_t doesLevel2Contain(const TString &amp;str) const </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d04/IdPath_8cxx_source.html#l00180">IdPath.cxx:180</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1IdPath_html_ab4ba3fc5835261ed09a3278347862709"><div class="ttname"><a href="../../d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#ab4ba3fc5835261ed09a3278347862709">AliceO2::CDB::IdPath::IdPath</a></div><div class="ttdeci">IdPath()</div></div>
-<div class="ttc" id="classAliceO2_1_1CDB_1_1IdPath_html"><div class="ttname"><a href="../../d0/d27/classAliceO2_1_1CDB_1_1IdPath.html">AliceO2::CDB::IdPath</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd1/IdPath_8h_source.html#l00013">IdPath.h:13</a></div></div>
+<div class="ttc" id="classAliceO2_1_1CDB_1_1IdPath_html"><div class="ttname"><a href="../../d0/d27/classAliceO2_1_1CDB_1_1IdPath.html">AliceO2::CDB::IdPath</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dd1/IdPath_8h_source.html#l00015">IdPath.h:15</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1IdPath_html_a16653f7f0b5ab5384ca6bbb3af348824"><div class="ttname"><a href="../../d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a16653f7f0b5ab5384ca6bbb3af348824">AliceO2::CDB::IdPath::getLevel</a></div><div class="ttdeci">const char * getLevel(Int_t i) const </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d04/IdPath_8cxx_source.html#l00198">IdPath.cxx:198</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1IdPath_html_a4463e0f262523401e486d47ba28254d3"><div class="ttname"><a href="../../d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a4463e0f262523401e486d47ba28254d3">AliceO2::CDB::IdPath::~IdPath</a></div><div class="ttdeci">virtual ~IdPath()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d04/IdPath_8cxx_source.html#l00137">IdPath.cxx:137</a></div></div>
 <div class="ttc" id="IdPath_8h_html"><div class="ttname"><a href="../../d4/dd1/IdPath_8h.html">IdPath.h</a></div></div>
 <div class="ttc" id="IdPath_8cxx_html_ae2758876da3435663a851baeb8098677"><div class="ttname"><a href="../../dd/d04/IdPath_8cxx.html#ae2758876da3435663a851baeb8098677">ClassImp</a></div><div class="ttdeci">ClassImp(IdPath) IdPath</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d04/IdPath_8cxx_source.html#l00013">IdPath.cxx:13</a></div></div>
-<div class="ttc" id="namespaceAliceO2_1_1CDB_html"><div class="ttname"><a href="../../d8/dc7/namespaceAliceO2_1_1CDB.html">AliceO2::CDB</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/Condition_8h_source.html#l00011">Condition.h:11</a></div></div>
+<div class="ttc" id="namespaceAliceO2_1_1CDB_html"><div class="ttname"><a href="../../d8/dc7/namespaceAliceO2_1_1CDB.html">AliceO2::CDB</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1c/Condition_8cxx_source.html#l00007">Condition.cxx:7</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1IdPath_html_a24e855beea589aaf337ec43727918911"><div class="ttname"><a href="../../d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#a24e855beea589aaf337ec43727918911">AliceO2::CDB::IdPath::isSupersetOf</a></div><div class="ttdeci">Bool_t isSupersetOf(const IdPath &amp;other) const </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d04/IdPath_8cxx_source.html#l00191">IdPath.cxx:191</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1IdPath_html_aa9a5b270230d1f6702da51fb074377ed"><div class="ttname"><a href="../../d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#aa9a5b270230d1f6702da51fb074377ed">AliceO2::CDB::IdPath::doesLevel0Contain</a></div><div class="ttdeci">Bool_t doesLevel0Contain(const TString &amp;str) const </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d04/IdPath_8cxx_source.html#l00158">IdPath.cxx:158</a></div></div>
 <div class="ttc" id="classAliceO2_1_1CDB_1_1IdPath_html_af159c966f803e2ca5e246c61716e01b3"><div class="ttname"><a href="../../d0/d27/classAliceO2_1_1CDB_1_1IdPath.html#af159c966f803e2ca5e246c61716e01b3">AliceO2::CDB::IdPath::doesLevel1Contain</a></div><div class="ttdeci">Bool_t doesLevel1Contain(const TString &amp;str) const </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d04/IdPath_8cxx_source.html#l00169">IdPath.cxx:169</a></div></div>
@@ -341,7 +341,7 @@ $(document).ready(function(){initNavTree('dd/d04/IdPath_8cxx_source.html','../..
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_3472b3ea63d1c5eec14900552ebe61c1.html">o2cdb</a></li><li class="navelem"><a class="el" href="../../dd/d04/IdPath_8cxx.html">IdPath.cxx</a></li>
-    <li class="footer">Generated on Tue Oct 6 2015 08:28:28 for AliceO2 by
+    <li class="footer">Generated on Tue Oct 13 2015 11:29:18 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -6,7 +6,5 @@ var searchData=
   ['flpsender_2ecxx',['FLPSender.cxx',['../d0/dc2/FLPSender_8cxx.html',1,'']]],
   ['flpsender_2eh',['FLPSender.h',['../d0/d8b/FLPSender_8h.html',1,'']]],
   ['flpsyncsampler_2ecxx',['FLPSyncSampler.cxx',['../d3/d87/FLPSyncSampler_8cxx.html',1,'']]],
-  ['flpsyncsampler_2eh',['FLPSyncSampler.h',['../d6/d0a/FLPSyncSampler_8h.html',1,'']]],
-  ['framebuilder_2ecxx',['FrameBuilder.cxx',['../d4/d5e/FrameBuilder_8cxx.html',1,'']]],
-  ['framebuilder_2eh',['FrameBuilder.h',['../d6/dfd/FrameBuilder_8h.html',1,'']]]
+  ['flpsyncsampler_2eh',['FLPSyncSampler.h',['../d6/d0a/FLPSyncSampler_8h.html',1,'']]]
 ];

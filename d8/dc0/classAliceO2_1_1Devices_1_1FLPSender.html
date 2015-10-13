@@ -130,13 +130,12 @@ Inheritance diagram for AliceO2::Devices::FLPSender:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a22bbb7a9c3d43d17493b82585c39bf0f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42">OutputHeartbeat</a> = FairMQDevice::Last, 
-<a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa1811789e4c8f75ee4e7d4a0fc3360ec5">HeartbeatTimeoutInMs</a>, 
+&#160;&#160;<a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa1811789e4c8f75ee4e7d4a0fc3360ec5">HeartbeatTimeoutInMs</a> = FairMQDevice::Last, 
 <a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa5c5fa98c5a45f7b87ca6fe838ae7193c">Index</a>, 
 <a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa158d99cf4f96f1fcb0f1666c2ed4e5d3">SendOffset</a>, 
+<a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa6b870fe852c8ad1e12a7fabfadb070be">SendDelay</a>, 
 <br />
-&#160;&#160;<a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa6b870fe852c8ad1e12a7fabfadb070be">SendDelay</a>, 
-<a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa01071308069fc41f45897c66b5ffe8ef">EventSize</a>, 
+&#160;&#160;<a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa01071308069fc41f45897c66b5ffe8ef">EventSize</a>, 
 <a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0fa5db41f8317a6229b4cc6c778c34a5fb1">TestMode</a>, 
 <a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a22bbb7a9c3d43d17493b82585c39bf0faf6ef0804ce4e5e7055543650c01ea72c">Last</a>
 <br />
@@ -149,8 +148,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaf7dbef904ad8752dd3aa9d59227ef52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab718322adbeaea98d487aa5d9402ae9b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab718322adbeaea98d487aa5d9402ae9b">~FLPSender</a> ()</td></tr>
 <tr class="separator:ab718322adbeaea98d487aa5d9402ae9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a917c3571a9507068420fa36bf3dbab32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a917c3571a9507068420fa36bf3dbab32">ResetEventCounter</a> ()</td></tr>
-<tr class="separator:a917c3571a9507068420fa36bf3dbab32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab453be7e0ed7d4f53b31f85d941f006d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ab453be7e0ed7d4f53b31f85d941f006d">SetProperty</a> (const int key, const std::string &amp;value)</td></tr>
 <tr class="separator:ab453be7e0ed7d4f53b31f85d941f006d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac304c791dfae39447ceaf34e2c44a60b"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ac304c791dfae39447ceaf34e2c44a60b">GetProperty</a> (const int key, const std::string &amp;default_=&quot;&quot;)</td></tr>
@@ -159,15 +156,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9c17f4e9e5dc57f1ed805b40e181f684"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77f2d551d6716ab3749272e70c78a5f9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a77f2d551d6716ab3749272e70c78a5f9">GetProperty</a> (const int key, const int default_=0)</td></tr>
 <tr class="separator:a77f2d551d6716ab3749272e70c78a5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada57418dae2569c86152b25ddaf8e725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#ada57418dae2569c86152b25ddaf8e725">SetProperty</a> (const int key, const boost::posix_time::ptime value, const int slot=0)</td></tr>
-<tr class="separator:ada57418dae2569c86152b25ddaf8e725"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a532c80a66c49bc715b27bbfb5156c656"><td class="memItemLeft" align="right" valign="top">boost::posix_time::ptime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a532c80a66c49bc715b27bbfb5156c656">GetProperty</a> (const int key, const boost::posix_time::ptime value, const int slot=0)</td></tr>
-<tr class="separator:a532c80a66c49bc715b27bbfb5156c656"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a1f33485e7c90118967c08db9d424b3f7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a1f33485e7c90118967c08db9d424b3f7">Init</a> ()</td></tr>
-<tr class="separator:a1f33485e7c90118967c08db9d424b3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404d9e344939933bf61a2e955249a9bd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a404d9e344939933bf61a2e955249a9bd">InitTask</a> ()</td></tr>
+<tr class="separator:a404d9e344939933bf61a2e955249a9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0344b996ea24dc86cb0b045e3893010c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html#a0344b996ea24dc86cb0b045e3893010c">Run</a> ()</td></tr>
 <tr class="separator:a0344b996ea24dc86cb0b045e3893010c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -185,9 +178,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a22bbb7a9c3d43d17493b82585c39bf0faece03ab758dc0503e15bed5458693a42"></a>OutputHeartbeat&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a22bbb7a9c3d43d17493b82585c39bf0fa1811789e4c8f75ee4e7d4a0fc3360ec5"></a>HeartbeatTimeoutInMs&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a22bbb7a9c3d43d17493b82585c39bf0fa1811789e4c8f75ee4e7d4a0fc3360ec5"></a>HeartbeatTimeoutInMs&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a22bbb7a9c3d43d17493b82585c39bf0fa5c5fa98c5a45f7b87ca6fe838ae7193c"></a>Index&#160;</td><td class="fielddoc">
 </td></tr>
@@ -246,7 +237,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00043">43</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00048">48</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
 
 </div>
 </div>
@@ -317,43 +308,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00264">264</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00259">259</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a532c80a66c49bc715b27bbfb5156c656"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">boost::posix_time::ptime AliceO2::Devices::FLPSender::GetProperty </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const boost::posix_time::ptime&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>slot</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a1f33485e7c90118967c08db9d424b3f7"></a>
+<a class="anchor" id="a404d9e344939933bf61a2e955249a9bd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -361,7 +320,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void FLPSender::Init </td>
+          <td class="memname">void FLPSender::InitTask </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -374,22 +333,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00047">47</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a917c3571a9507068420fa36bf3dbab32"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AliceO2::Devices::FLPSender::ResetEventCounter </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00052">52</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
 
 </div>
 </div>
@@ -414,7 +358,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00081">81</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00099">99</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
 
 </div>
 </div>
@@ -484,39 +428,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00237">237</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ada57418dae2569c86152b25ddaf8e725"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AliceO2::Devices::FLPSender::SetProperty </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const boost::posix_time::ptime&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>slot</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Definition at line <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html#l00232">232</a> of file <a class="el" href="../../d0/dc2/FLPSender_8cxx_source.html">FLPSender.cxx</a>.</p>
 
 </div>
 </div>
@@ -530,7 +442,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d65/namespaceAliceO2.html">AliceO2</a></li><li class="navelem"><a class="el" href="../../d3/d4f/namespaceAliceO2_1_1Devices.html">Devices</a></li><li class="navelem"><a class="el" href="../../d8/dc0/classAliceO2_1_1Devices_1_1FLPSender.html">FLPSender</a></li>
-    <li class="footer">Generated on Tue Oct 6 2015 08:28:28 for AliceO2 by
+    <li class="footer">Generated on Tue Oct 13 2015 11:29:19 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

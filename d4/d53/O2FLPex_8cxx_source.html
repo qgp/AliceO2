@@ -142,7 +142,7 @@ $(document).ready(function(){initNavTree('d4/d53/O2FLPex_8cxx_source.html','../.
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  LOG(DEBUG) &lt;&lt; <span class="stringliteral">&quot;Message size: &quot;</span> &lt;&lt; <a class="code" href="../../d4/d82/classO2FLPex.html#a455a183520ef42e11ba99499df087fea">fEventSize</a> * <span class="keyword">sizeof</span>(<a class="code" href="../../d0/dc6/structContent.html">Content</a>) &lt;&lt; <span class="stringliteral">&quot; bytes.&quot;</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">while</span> (GetCurrentState() == RUNNING) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">while</span> (CheckCurrentState(RUNNING)) {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="../../d0/dc6/structContent.html">Content</a>* payload = <span class="keyword">new</span> <a class="code" href="../../d0/dc6/structContent.html">Content</a>[<a class="code" href="../../d4/d82/classO2FLPex.html#a455a183520ef42e11ba99499df087fea">fEventSize</a>];</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="../../d4/d82/classO2FLPex.html#a455a183520ef42e11ba99499df087fea">fEventSize</a>; ++i) {</div>
@@ -219,7 +219,7 @@ $(document).ready(function(){initNavTree('d4/d53/O2FLPex_8cxx_source.html','../.
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d8825559e0a3f2643aa079b2cf0ac6c3.html">devices</a></li><li class="navelem"><a class="el" href="../../dir_ce40628757e3bffb4840225cf7b8335a.html">flp2epn</a></li><li class="navelem"><a class="el" href="../../d4/d53/O2FLPex_8cxx.html">O2FLPex.cxx</a></li>
-    <li class="footer">Generated on Tue Oct 6 2015 08:28:27 for AliceO2 by
+    <li class="footer">Generated on Tue Oct 13 2015 11:29:18 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

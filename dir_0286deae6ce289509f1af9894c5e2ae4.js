@@ -19,9 +19,5 @@ var dir_0286deae6ce289509f1af9894c5e2ae4 =
     [ "FLPSyncSampler.h", "d6/d0a/FLPSyncSampler_8h.html", [
       [ "timeframeDuration", "d2/d9a/structAliceO2_1_1Devices_1_1timeframeDuration.html", "d2/d9a/structAliceO2_1_1Devices_1_1timeframeDuration" ],
       [ "FLPSyncSampler", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler.html", "d3/df3/classAliceO2_1_1Devices_1_1FLPSyncSampler" ]
-    ] ],
-    [ "FrameBuilder.cxx", "d4/d5e/FrameBuilder_8cxx.html", null ],
-    [ "FrameBuilder.h", "d6/dfd/FrameBuilder_8h.html", [
-      [ "FrameBuilder", "d0/d4f/classAliceO2_1_1Devices_1_1FrameBuilder.html", "d0/d4f/classAliceO2_1_1Devices_1_1FrameBuilder" ]
     ] ]
 ];

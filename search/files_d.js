@@ -1,12 +1,9 @@
 var searchData=
 [
-  ['readme_2emd',['README.md',['../df/dd7/devices_2hough_2README_8md.html',1,'']]],
+  ['readme_2emd',['README.md',['../da/d42/devices_2flp2epn-distributed_2README_8md.html',1,'']]],
   ['readme_2emd',['README.md',['../db/df3/doxygen_2README_8md.html',1,'']]],
   ['readme_2emd',['README.md',['../da/ddd/README_8md.html',1,'']]],
-  ['roundtripclient_2ecxx',['RoundtripClient.cxx',['../d0/d56/RoundtripClient_8cxx.html',1,'']]],
-  ['roundtripclient_2eh',['RoundtripClient.h',['../db/d3d/RoundtripClient_8h.html',1,'']]],
-  ['roundtripserver_2ecxx',['RoundtripServer.cxx',['../de/dcc/RoundtripServer_8cxx.html',1,'']]],
-  ['roundtripserver_2eh',['RoundtripServer.h',['../da/d59/RoundtripServer_8h.html',1,'']]],
+  ['readme_2emd',['README.md',['../df/dd7/devices_2hough_2README_8md.html',1,'']]],
   ['runcomponent_2ecxx',['runComponent.cxx',['../de/d0e/runComponent_8cxx.html',1,'']]],
   ['runepn_2ecxx',['runEPN.cxx',['../de/d52/runEPN_8cxx.html',1,'']]],
   ['runepn_5fdynamic_2ecxx',['runEPN_dynamic.cxx',['../d2/dcc/runEPN__dynamic_8cxx.html',1,'']]],
@@ -21,7 +18,5 @@ var searchData=
   ['runflpsyncsampler_2ecxx',['runFLPSyncSampler.cxx',['../dd/deb/2Prototype_2runFLPSyncSampler_8cxx.html',1,'']]],
   ['runhough_2ecxx',['runHough.cxx',['../d5/df3/runHough_8cxx.html',1,'']]],
   ['runmerger_2ecxx',['runMerger.cxx',['../d3/d4e/runMerger_8cxx.html',1,'']]],
-  ['runproxy_2ecxx',['runProxy.cxx',['../db/d0b/runProxy_8cxx.html',1,'']]],
-  ['runroundtripclient_2ecxx',['runRoundtripClient.cxx',['../d5/ddb/runRoundtripClient_8cxx.html',1,'']]],
-  ['runroundtripserver_2ecxx',['runRoundtripServer.cxx',['../d3/dd3/runRoundtripServer_8cxx.html',1,'']]]
+  ['runproxy_2ecxx',['runProxy.cxx',['../db/d0b/runProxy_8cxx.html',1,'']]]
 ];

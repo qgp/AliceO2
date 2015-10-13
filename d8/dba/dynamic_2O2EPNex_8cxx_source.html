@@ -136,7 +136,7 @@ $(document).ready(function(){initNavTree('d8/dba/dynamic_2O2EPNex_8cxx_source.ht
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">string</span> ownAddress = fChannels[<span class="stringliteral">&quot;data-in&quot;</span>].at(0).GetAddress();</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">int</span> ownAddressLength = strlen(ownAddress.c_str());</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">while</span> (GetCurrentState() == RUNNING) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">while</span> (CheckCurrentState(RUNNING)) {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span> (timeDif &gt;= <a class="code" href="../../d3/d79/classO2EPNex.html#a5d1b747f234b6490a9609b13573d8320">fHeartbeatIntervalInMs</a>) {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      referenceTime = boost::posix_time::microsec_clock::local_time();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
@@ -208,23 +208,23 @@ $(document).ready(function(){initNavTree('d8/dba/dynamic_2O2EPNex_8cxx_source.ht
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keywordflow">return</span> FairMQDevice::GetProperty(key, default_);</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
-<div class="ttc" id="classO2EPNex_html_a2de6cd65df532615797100563fecc87f"><div class="ttname"><a href="../../d3/d79/classO2EPNex.html#a2de6cd65df532615797100563fecc87f">O2EPNex::O2EPNex</a></div><div class="ttdeci">O2EPNex()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d55/O2EPNex_8cxx_source.html#l00014">O2EPNex.cxx:14</a></div></div>
+<div class="ttc" id="classO2EPNex_html_a2de6cd65df532615797100563fecc87f"><div class="ttname"><a href="../../d3/d79/classO2EPNex.html#a2de6cd65df532615797100563fecc87f">O2EPNex::O2EPNex</a></div><div class="ttdeci">O2EPNex()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d55/O2EPNex_8cxx_source.html#l00013">O2EPNex.cxx:13</a></div></div>
 <div class="ttc" id="classO2EPNex_html_ac8462224e41b604e71978cfc5739cb99"><div class="ttname"><a href="../../d3/d79/classO2EPNex.html#ac8462224e41b604e71978cfc5739cb99">O2EPNex::SetProperty</a></div><div class="ttdeci">virtual void SetProperty(const int key, const std::string &amp;value)</div></div>
 <div class="ttc" id="classO2EPNex_html_a2319aa35ab92fd26607668e6684cdc84"><div class="ttname"><a href="../../d3/d79/classO2EPNex.html#a2319aa35ab92fd26607668e6684cdc84">O2EPNex::GetProperty</a></div><div class="ttdeci">virtual std::string GetProperty(const int key, const std::string &amp;default_=&quot;&quot;)</div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d34/AliHLTDataTypes_8h_source.html#l01436">AliHLTDataTypes.h:1436</a></div></div>
 <div class="ttc" id="classO2EPNex_html_a5d1b747f234b6490a9609b13573d8320"><div class="ttname"><a href="../../d3/d79/classO2EPNex.html#a5d1b747f234b6490a9609b13573d8320">O2EPNex::fHeartbeatIntervalInMs</a></div><div class="ttdeci">int fHeartbeatIntervalInMs</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dea/dynamic_2O2EPNex_8h_source.html#l00040">O2EPNex.h:40</a></div></div>
-<div class="ttc" id="classO2EPNex_html_a4c2168fe28bbb7cb21f6efe324b8cbc8"><div class="ttname"><a href="../../d3/d79/classO2EPNex.html#a4c2168fe28bbb7cb21f6efe324b8cbc8">O2EPNex::Run</a></div><div class="ttdeci">virtual void Run()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d55/O2EPNex_8cxx_source.html#l00018">O2EPNex.cxx:18</a></div></div>
+<div class="ttc" id="classO2EPNex_html_a4c2168fe28bbb7cb21f6efe324b8cbc8"><div class="ttname"><a href="../../d3/d79/classO2EPNex.html#a4c2168fe28bbb7cb21f6efe324b8cbc8">O2EPNex::Run</a></div><div class="ttdeci">virtual void Run()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d55/O2EPNex_8cxx_source.html#l00017">O2EPNex.cxx:17</a></div></div>
 <div class="ttc" id="dynamic_2O2EPNex_8h_html"><div class="ttname"><a href="../../d8/dea/dynamic_2O2EPNex_8h.html">O2EPNex.h</a></div></div>
 <div class="ttc" id="classO2EPNex_html_a6811860dd72b7bb5f7aa604d45f3780eae3949a1da9b92057ec73f089e762923a"><div class="ttname"><a href="../../d3/d79/classO2EPNex.html#a6811860dd72b7bb5f7aa604d45f3780eae3949a1da9b92057ec73f089e762923a">O2EPNex::HeartbeatIntervalInMs</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dea/dynamic_2O2EPNex_8h_source.html#l00028">O2EPNex.h:28</a></div></div>
 <div class="ttc" id="structContent_html"><div class="ttname"><a href="../../d0/dc6/structContent.html">Content</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/ddd/O2EPNex_8h_source.html#l00013">O2EPNex.h:13</a></div></div>
-<div class="ttc" id="classO2EPNex_html_a50eb575dab2ade044f215c54ce2c001c"><div class="ttname"><a href="../../d3/d79/classO2EPNex.html#a50eb575dab2ade044f215c54ce2c001c">O2EPNex::~O2EPNex</a></div><div class="ttdeci">virtual ~O2EPNex()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d55/O2EPNex_8cxx_source.html#l00037">O2EPNex.cxx:37</a></div></div>
+<div class="ttc" id="classO2EPNex_html_a50eb575dab2ade044f215c54ce2c001c"><div class="ttname"><a href="../../d3/d79/classO2EPNex.html#a50eb575dab2ade044f215c54ce2c001c">O2EPNex::~O2EPNex</a></div><div class="ttdeci">virtual ~O2EPNex()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d55/O2EPNex_8cxx_source.html#l00036">O2EPNex.cxx:36</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d8825559e0a3f2643aa079b2cf0ac6c3.html">devices</a></li><li class="navelem"><a class="el" href="../../dir_39683754954ac18290f884f822788362.html">flp2epn-dynamic</a></li><li class="navelem"><a class="el" href="../../d8/dba/dynamic_2O2EPNex_8cxx.html">O2EPNex.cxx</a></li>
-    <li class="footer">Generated on Tue Oct 6 2015 08:28:27 for AliceO2 by
+    <li class="footer">Generated on Tue Oct 13 2015 11:29:18 for AliceO2 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

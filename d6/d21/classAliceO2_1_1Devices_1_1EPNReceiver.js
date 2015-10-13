@@ -10,15 +10,15 @@ var classAliceO2_1_1Devices_1_1EPNReceiver =
     [ "DiscardIncompleteTimeframes", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a7d1ebaa240bbc56336f1f212422007a1", null ],
     [ "GetProperty", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#aed2898b004769b322b642648db19c9ea", null ],
     [ "GetProperty", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a489df6743cc0251b59d073c13dfae082", null ],
-    [ "PrintBuffer", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a801fd08914b35309bb948174597b69af", null ],
+    [ "PrintBuffer", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a072f949a8fe9d383ba368953f7ec8f2f", null ],
     [ "Run", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a7fb89e04ae25a99942c305364ee967f3", null ],
     [ "sendHeartbeats", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#aac16f37c83e88c17985b5c9b6982e7fc", null ],
     [ "SetProperty", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#afad6dcfe35334e7a6083b01bc372219c", null ],
     [ "SetProperty", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a70775537b9edc0489825014239aaa3da", null ],
     [ "fBufferTimeoutInMs", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a39e2ed9cbfcdc23871770124812796be", null ],
-    [ "fDiscardedSet", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a1ab690846d159f56b1cc2be9131d5ff1", null ],
+    [ "fDiscardedSet", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a15cadee2f9d5b2498ab0cb4a258f0844", null ],
     [ "fHeartbeatIntervalInMs", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#ab65ee4e5acb98f421b43889d912f8b08", null ],
     [ "fNumFLPs", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a30d9854314dc4615c0bbc0b21e3029c2", null ],
     [ "fTestMode", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#ad43369da16d9e527958e1440c29687dc", null ],
-    [ "fTimeframeBuffer", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#ac5292fdc019a836ad5dfc67696ce1b8b", null ]
+    [ "fTimeframeBuffer", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a8c86222a182465097bffaf0b7413439d", null ]
 ];
