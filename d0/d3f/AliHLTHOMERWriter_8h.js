@@ -11,8 +11,8 @@ var AliHLTHOMERWriter_8h =
     [ "TBlockData", "d8/de3/structAliHLTHOMERWriter_1_1TBlockData.html", "d8/de3/structAliHLTHOMERWriter_1_1TBlockData" ],
     [ "ALIHLTHOMERWRITER_CREATE", "d0/d3f/AliHLTHOMERWriter_8h.html#ac71e3d2609ca40f3a098a8cabeec412c", null ],
     [ "ALIHLTHOMERWRITER_DELETE", "d0/d3f/AliHLTHOMERWriter_8h.html#adb5c424634f02f6873ca437233e803e0", null ],
-    [ "AliHLTHOMERWriterCreate_t", "d0/d3f/AliHLTHOMERWriter_8h.html#a0e38f3ecda09141e5ac45ced90bd78f5", null ],
-    [ "AliHLTHOMERWriterDelete_t", "d0/d3f/AliHLTHOMERWriter_8h.html#abe77eba51cb4e832d864f98dbbc62f77", null ],
+    [ "AliHLTHOMERWriterCreate_t", "d0/d3f/AliHLTHOMERWriter_8h.html#af5ff51fc8f5186024281530a55a60da9", null ],
+    [ "AliHLTHOMERWriterDelete_t", "d0/d3f/AliHLTHOMERWriter_8h.html#a7567a482640c9f29aa664eb709e43beb", null ],
     [ "HOMERWriter", "d0/d3f/AliHLTHOMERWriter_8h.html#a944927f8faf392be3a1052df9368a2f6", null ],
     [ "AliHLTHOMERWriterCreate", "d0/d3f/AliHLTHOMERWriter_8h.html#aeeac8bfc1d6265abb770ffa1da4aa91a", null ],
     [ "AliHLTHOMERWriterDelete", "d0/d3f/AliHLTHOMERWriter_8h.html#a9d5f7ba1f1b61660beac43c0184f7efe", null ]
