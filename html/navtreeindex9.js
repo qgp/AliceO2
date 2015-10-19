@@ -1,10 +1,5 @@
 var NAVTREEINDEX9 =
 {
-"d9/d75/classAliceO2_1_1CDB_1_1LocalStorageFactory.html#a640606e41aad1013fe9d5e514e98dfd5":[5,0,1,2,12,2],
-"d9/d75/classAliceO2_1_1CDB_1_1LocalStorageFactory.html#a96a970ccdf5f8a162becafe8c16dc30d":[5,0,1,2,12,0],
-"d9/d75/classAliceO2_1_1CDB_1_1LocalStorageFactory.html#ad65b58d1419db42b5035e4795b4fc39b":[5,0,1,2,12,1],
-"d9/d9e/runFLPSyncSampler_8cxx.html":[6,0,2,2,0,2],
-"d9/d9e/runFLPSyncSampler_8cxx.html#a2834e294b3c46d43d0b11b24e77c0d62":[6,0,2,2,0,2,1],
 "d9/d9e/runFLPSyncSampler_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627":[6,0,2,2,0,2,2],
 "d9/d9e/runFLPSyncSampler_8cxx.html#a92dd00554a39c05d84f9d6afd961bc37":[6,0,2,2,0,2,3],
 "d9/d9e/runFLPSyncSampler_8cxx_source.html":[6,0,2,2,0,2],
@@ -249,5 +244,10 @@ var NAVTREEINDEX9 =
 "db/daf/classAliHLTMonitoringReader.html#a0954db482c0ca237833a8d47e2155d7d":[5,0,20,16],
 "db/daf/classAliHLTMonitoringReader.html#a0bf0d922c806195909b79f6db50def4c":[5,0,20,1],
 "db/daf/classAliHLTMonitoringReader.html#a0cd26e5da990694132f55e62998405a5":[5,0,20,7],
-"db/daf/classAliHLTMonitoringReader.html#a148a4373b41e2455a5a16177392531fa":[5,0,20,14]
+"db/daf/classAliHLTMonitoringReader.html#a148a4373b41e2455a5a16177392531fa":[5,0,20,14],
+"db/daf/classAliHLTMonitoringReader.html#a164bb55ebc7aa0973b3650ecb935129e":[5,0,20,18],
+"db/daf/classAliHLTMonitoringReader.html#a2720c23dcd0a369fedbfd69adf1157db":[5,0,20,3],
+"db/daf/classAliHLTMonitoringReader.html#a54e66a425c8934ecaa5b0ef517a4bd66":[5,0,20,0],
+"db/daf/classAliHLTMonitoringReader.html#a6e25cab68a6ec5e7aa11d2063fa080bf":[5,0,20,9],
+"db/daf/classAliHLTMonitoringReader.html#a6fd2cb6706dc1abec3a5483861a3ccd7":[5,0,20,10]
 };

@@ -109,7 +109,7 @@ var hierarchy =
     [ "SocketProperties_t", "dc/d2f/structSocketProperties__t.html", null ],
     [ "ALICE::HLT::SystemInterface", "d9/d19/classALICE_1_1HLT_1_1SystemInterface.html", null ],
     [ "AliHLTHOMERWriter::TBlockData", "d8/de3/structAliHLTHOMERWriter_1_1TBlockData.html", null ],
-    [ "AliceO2::Devices::timeframeBuffer", "d2/d7e/structAliceO2_1_1Devices_1_1timeframeBuffer.html", null ],
+    [ "AliceO2::Devices::TFBuffer", "dd/d53/structAliceO2_1_1Devices_1_1TFBuffer.html", null ],
     [ "AliceO2::Devices::timeframeDuration", "d2/d9a/structAliceO2_1_1Devices_1_1timeframeDuration.html", null ],
     [ "TNamed", null, [
       [ "AliceO2::Field::MagneticWrapperChebyshev", "d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html", null ],

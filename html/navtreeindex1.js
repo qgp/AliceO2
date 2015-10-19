@@ -22,11 +22,6 @@ var NAVTREEINDEX1 =
 "d2/d7b/structAliHLTEventDDLV0.html":[5,0,13],
 "d2/d7b/structAliHLTEventDDLV0.html#a30ce9a977e119a27ea13df8cff1ed58c":[5,0,13,0],
 "d2/d7b/structAliHLTEventDDLV0.html#ab0f4005729afb931394ca53f53bac474":[5,0,13,1],
-"d2/d7e/structAliceO2_1_1Devices_1_1timeframeBuffer.html":[5,0,1,4,3],
-"d2/d7e/structAliceO2_1_1Devices_1_1timeframeBuffer.html#a272ccb4539a96533840384e5bcd2cb41":[5,0,1,4,3,3],
-"d2/d7e/structAliceO2_1_1Devices_1_1timeframeBuffer.html#a830db1537a9cdc45eae98b2f4be6d60d":[5,0,1,4,3,2],
-"d2/d7e/structAliceO2_1_1Devices_1_1timeframeBuffer.html#abf5e05e1aca09ac31e6a4d84cfff099d":[5,0,1,4,3,1],
-"d2/d7e/structAliceO2_1_1Devices_1_1timeframeBuffer.html#ac354dad48c665b73f6069875e6b77376":[5,0,1,4,3,0],
 "d2/d90/itsLinkDef_8h.html":[6,0,5,24],
 "d2/d90/itsLinkDef_8h_source.html":[6,0,5,24],
 "d2/d92/aliceHLTWrapper_8cxx.html":[6,0,2,0,1],
@@ -249,5 +244,10 @@ var NAVTREEINDEX1 =
 "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#aa734a769ba216adc0c3d7f5b3e033998":[5,0,1,2,15,18],
 "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#aa7567ef8096546fcc79ccd6e74b5c1dc":[5,0,1,2,15,34],
 "d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#aa7ac84fb7bd1ef2f634ce762db7cd0b0":[5,0,1,2,15,22],
-"d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#ab2f45f084b11acd9b3a56f7b8c8cf66f":[5,0,1,2,15,43]
+"d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#ab2f45f084b11acd9b3a56f7b8c8cf66f":[5,0,1,2,15,43],
+"d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#ab531b45e80c7e59d3cb66442f65d5069":[5,0,1,2,15,54],
+"d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#ab97899581cb16ab9d815241368c3e61c":[5,0,1,2,15,11],
+"d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#abbed9011da6239253b9f254a8528070c":[5,0,1,2,15,13],
+"d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#abed9b1294a10beda959b06a0bcad1360":[5,0,1,2,15,38],
+"d3/d9c/classAliceO2_1_1CDB_1_1Storage.html#ac053bcfe0c8cf46ef840573cdb20dfe5":[5,0,1,2,15,9]
 };

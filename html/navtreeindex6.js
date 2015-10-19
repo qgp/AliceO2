@@ -1,10 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"d6/d34/AliHLTDataTypes_8h.html#a4877bf36b40b6b6770a320c49a63fdb1":[6,0,2,0,2,15],
-"d6/d34/AliHLTDataTypes_8h.html#a4e433520da7eee380dee1808432d52db":[6,0,2,0,2,83],
-"d6/d34/AliHLTDataTypes_8h.html#a5a6171bffdf0e662919b990cda439989":[6,0,2,0,2,98],
-"d6/d34/AliHLTDataTypes_8h.html#a5a6171bffdf0e662919b990cda439989a0eafeea9bc6571f2f6be9ebc493208da":[6,0,2,0,2,98,9],
-"d6/d34/AliHLTDataTypes_8h.html#a5a6171bffdf0e662919b990cda439989a2bb056c00afca933e09244f7c4ba9a02":[6,0,2,0,2,98,6],
 "d6/d34/AliHLTDataTypes_8h.html#a5a6171bffdf0e662919b990cda439989a3316912edb7dead3590d8fa3063374bb":[6,0,2,0,2,98,2],
 "d6/d34/AliHLTDataTypes_8h.html#a5a6171bffdf0e662919b990cda439989a5cd13668bd9e68656051fa8458c0d42e":[6,0,2,0,2,98,4],
 "d6/d34/AliHLTDataTypes_8h.html#a5a6171bffdf0e662919b990cda439989a853ddc5e504645e73d148dc80a0f2f39":[6,0,2,0,2,98,1],
@@ -249,5 +244,10 @@ var NAVTREEINDEX6 =
 "d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a865f4346d33a86568ec33ccf351b4923":[5,0,1,5,1,25],
 "d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a8e2e9bcd0743b6b3ad9f4f17092b0c01":[5,0,1,5,1,84],
 "d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a908615e0d9219be55cf3965ee90a1f09":[5,0,1,5,1,10],
-"d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a93e1e3a491eb83c77075b3c1d5fd201e":[5,0,1,5,1,72]
+"d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a93e1e3a491eb83c77075b3c1d5fd201e":[5,0,1,5,1,72],
+"d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a9522f53335555110980f4c85b5eef9f7":[5,0,1,5,1,47],
+"d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a9890be7716e2da4d02747ba8b88f3de4":[5,0,1,5,1,71],
+"d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a9ad468c58f590b5828b26fc588b6b9a4":[5,0,1,5,1,68],
+"d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a9bb79f7f6afeb02add48cefa044d37d0":[5,0,1,5,1,35],
+"d7/d84/classAliceO2_1_1Field_1_1MagneticWrapperChebyshev.html#a9c9fd907f90d626e9baadbda68b1ab69":[5,0,1,5,1,14]
 };

@@ -6,7 +6,7 @@ var dir_0286deae6ce289509f1af9894c5e2ae4 =
       [ "f2eHeader", "d9/d55/structf2eHeader.html", "d9/d55/structf2eHeader" ]
     ] ],
     [ "EPNReceiver.h", "d5/dcc/EPNReceiver_8h.html", [
-      [ "timeframeBuffer", "d2/d7e/structAliceO2_1_1Devices_1_1timeframeBuffer.html", "d2/d7e/structAliceO2_1_1Devices_1_1timeframeBuffer" ],
+      [ "TFBuffer", "dd/d53/structAliceO2_1_1Devices_1_1TFBuffer.html", "dd/d53/structAliceO2_1_1Devices_1_1TFBuffer" ],
       [ "EPNReceiver", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html", "d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver" ]
     ] ],
     [ "FLPSender.cxx", "d0/dc2/FLPSender_8cxx.html", [
