@@ -27,5 +27,5 @@ var searchData=
   ['ssegmentationslistname',['sSegmentationsListName',['../d0/d90/classAliceO2_1_1ITS_1_1UpgradeSegmentationPixel.html#a204177c250ebc92595af5b6ad11c3334',1,'AliceO2::ITS::UpgradeSegmentationPixel']]],
   ['ssolenoidtodipolez',['sSolenoidToDipoleZ',['../d4/d91/classAliceO2_1_1Field_1_1MagneticField.html#a5ecd015fe7ba02953971808012a972df',1,'AliceO2::Field::MagneticField']]],
   ['start',['start',['../d2/d9a/structAliceO2_1_1Devices_1_1timeframeDuration.html#a0139e29094268e96e246be4582edad21',1,'AliceO2::Devices::timeframeDuration']]],
-  ['starttime',['startTime',['../d2/d7e/structAliceO2_1_1Devices_1_1timeframeBuffer.html#a272ccb4539a96533840384e5bcd2cb41',1,'AliceO2::Devices::timeframeBuffer']]]
+  ['starttime',['startTime',['../dd/d53/structAliceO2_1_1Devices_1_1TFBuffer.html#a376d5fb4210b8fb11d865ba37add0480',1,'AliceO2::Devices::TFBuffer']]]
 ];

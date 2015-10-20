@@ -3,7 +3,7 @@ var searchData=
   ['elayerid',['ELayerID',['../d0/de6/classAliceO2_1_1ITS_1_1GeometryManager.html#a93e25f8c9c4e02febdb30a85f23f15a6',1,'AliceO2::ITS::GeometryManager']]],
   ['end',['end',['../d2/d9a/structAliceO2_1_1Devices_1_1timeframeDuration.html#a2c51ec0a7e7309c10d644bc0daa8adc1',1,'AliceO2::Devices::timeframeDuration']]],
   ['endofevent',['EndOfEvent',['../d9/d51/classAliceO2_1_1ITS_1_1Detector.html#a3fdc6d0c8819ba1e7d39f1a56e511e51',1,'AliceO2::ITS::Detector::EndOfEvent()'],['../d1/d0c/classAliceO2_1_1TPC_1_1Detector.html#a3fdc6d0c8819ba1e7d39f1a56e511e51',1,'AliceO2::TPC::Detector::EndOfEvent()']]],
-  ['endtime',['endTime',['../d2/d7e/structAliceO2_1_1Devices_1_1timeframeBuffer.html#abf5e05e1aca09ac31e6a4d84cfff099d',1,'AliceO2::Devices::timeframeBuffer']]],
+  ['endtime',['endTime',['../dd/d53/structAliceO2_1_1Devices_1_1TFBuffer.html#a639a0e26f85eb4fce1394a2a100bd5b8',1,'AliceO2::Devices::TFBuffer']]],
   ['epnreceiver',['EPNReceiver',['../d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html#a2cf857615a4216a7ac47265c9c9bc00e',1,'AliceO2::Devices::EPNReceiver']]],
   ['epnreceiver',['EPNReceiver',['../d6/d21/classAliceO2_1_1Devices_1_1EPNReceiver.html',1,'AliceO2::Devices']]],
   ['epnreceiver_2ecxx',['EPNReceiver.cxx',['../d9/d45/EPNReceiver_8cxx.html',1,'']]],

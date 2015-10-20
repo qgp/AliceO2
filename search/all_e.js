@@ -17,6 +17,8 @@ var searchData=
   ['o2merger',['O2Merger',['../db/daa/classO2Merger.html',1,'O2Merger'],['../db/daa/classO2Merger.html#a620901acb882a8afec3abca0ba6bfb6d',1,'O2Merger::O2Merger()']]],
   ['o2merger_2ecxx',['O2Merger.cxx',['../d8/d6a/O2Merger_8cxx.html',1,'']]],
   ['o2merger_2eh',['O2Merger.h',['../dc/dce/O2Merger_8h.html',1,'']]],
+  ['o2proto1_5fmagf_5fcreatefieldmap_5fdir',['O2PROTO1_MAGF_CREATEFIELDMAP_DIR',['../d0/d4b/AliceO2Config_8h.html#a37179b175f26049289bfbd56853212c6',1,'AliceO2Config.h']]],
+  ['o2proto1_5fmagf_5fdir',['O2PROTO1_MAGF_DIR',['../d0/d4b/AliceO2Config_8h.html#a4499eceb1e44165b75434248c39a3877',1,'AliceO2Config.h']]],
   ['o2proxy',['O2Proxy',['../d9/d07/classO2Proxy.html',1,'O2Proxy'],['../d9/d07/classO2Proxy.html#a9c83a4cf18716fff71670563aeb24b3a',1,'O2Proxy::O2Proxy()']]],
   ['o2proxy_2ecxx',['O2Proxy.cxx',['../da/d21/O2Proxy_8cxx.html',1,'']]],
   ['o2proxy_2eh',['O2Proxy.h',['../d0/d47/O2Proxy_8h.html',1,'']]],

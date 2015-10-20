@@ -10,5 +10,5 @@ var classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException =
     [ "GetPixelID", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a08ad2a7998cf20f8778648af3d683282", null ],
     [ "IsX", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a65df7a680f54ce0c4646331c7702af2d", null ],
     [ "IsZ", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a8dc710a9a9c1d7952bd91774c8780245", null ],
-    [ "what", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#acffc594c9325de260b3c049b1b65bd6d", null ]
+    [ "what", "d4/d22/classAliceO2_1_1ITS_1_1Segmentation_1_1InvalidPixelException.html#a544146ff4e18e1f3af4d19fbf2600263", null ]
 ];
