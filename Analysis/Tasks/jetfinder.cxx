@@ -21,6 +21,7 @@
 #include "fastjet/ClusterSequenceArea.hh"
 #include "fastjet/AreaDefinition.hh"
 #include "fastjet/JetDefinition.hh"
+#include "fastjet/RangeDefinition.hh"
 
 #include "Analysis/Jet.h"
 
@@ -44,6 +45,16 @@ struct JetFinderTask {
   fastjet::JetAlgorithm algorithm{fastjet::antikt_algorithm};
   fastjet::AreaType areaType{fastjet::passive_area};
 
+  // options for background subtraction
+  enum class BkgMode { none = 0,rhoArea };
+  BkgMode bkgMode = BkgMode::none;
+  Configurable<float> ptMinBkg{"ptMinBkg", 0.15, "min pt for background"};
+  Configurable<double> rParamBkg{"rParamBkg", 0.2, "jet radius for background"};
+  Configurable<double> rapMinBkg{"rapMinBkg", -.9, "min rapidity for background"};
+  Configurable<double> rapMaxBkg{"rapMaxBkg",  .9, "max rapidity for background"};
+  fastjet::JetAlgorithm algorithmBkg{fastjet::kt_algorithm};
+  fastjet::RangeDefinition rangeBkg{rapMinBkg, rapMaxBkg};
+
   void process(aod::Collision const& collision,
                soa::Filtered<aod::Tracks> const& fullTracks)
   {
@@ -62,8 +73,29 @@ struct JetFinderTask {
     fastjet::JetDefinition jetDef(algorithm, rParam, recombScheme, strategy);
     fastjet::ClusterSequenceArea clust_seq(inputParticles, jetDef, areaDef);
 
-    std::vector<fastjet::PseudoJet> inclusiveJets = clust_seq.inclusive_jets();
-    for (const auto& pjet : inclusiveJets) {
+    std::vector<fastjet::PseudoJet> pJets;
+
+    if (bkgMode == BkgMode::none) {
+      pJets = clust_seq.inclusive_jets();
+    }
+    else if (bkgMode == BkgMode::rhoArea) {
+      fastjet::JetDefinition jetDefBkg(algorithmBkg, rParamBkg, recombScheme, strategy);
+      fastjet::ClusterSequenceArea clust_seq_bkg(inputParticles, jetDefBkg, areaDef);
+      std::vector<fastjet::PseudoJet> bkgJets = clust_seq_bkg.inclusive_jets();
+      double rho = 0.;
+      double sigma = 0.;
+      double meanarea = 0.;
+      bool use4VectorArea = false;
+      clust_seq_bkg.get_median_rho_and_sigma(bkgJets, rangeBkg, use4VectorArea, rho, sigma, meanarea, false);
+
+      // TODO: replace by Subtractor tool
+      pJets = fastjet::sorted_by_pt(clust_seq.subtracted_jets(rho, ptMinBkg));
+    }
+    else {
+      LOGF(ERROR, "requested subtraction mode not implemented!");
+    }
+
+    for (const auto& pjet : pJets) {
       jets(collision, pjet.eta(), pjet.phi(), pjet.pt(),
            pjet.area(), pjet.Et(), pjet.m());
       for (const auto& track : pjet.constituents()) {
