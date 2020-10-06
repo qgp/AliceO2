@@ -96,7 +96,7 @@ struct JetFinderHadronRecoilTask {
           trackTTPhi = track.phi();
         }
       }
-      auto energy = std::sqrt(track.p() * track.p() + mPion * mPion);
+      auto energy = std::sqrt(track.p() * track.p() + JetFinder::mPion * JetFinder::mPion);
       inputParticles.emplace_back(track.px(), track.py(), track.pz(), energy);
       inputParticles.back().set_user_index(track.globalIndex());
     }

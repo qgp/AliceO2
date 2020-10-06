@@ -69,7 +69,7 @@ struct JetFinderHFTask {
       jets.clear();
       inputParticles.clear();
       for (auto& track : tracks) {
-        auto energy = std::sqrt(track.p() * track.p() + mPion * mPion);
+        auto energy = std::sqrt(track.p() * track.p() + JetFinder::mPion * JetFinder::mPion);
         if (candidate.index0().globalIndex() == track.globalIndex() || candidate.index1().globalIndex() == track.globalIndex()) { //is it global index?
           continue;
         }
